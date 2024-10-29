@@ -29,6 +29,7 @@ export default {
   nav {
     display: flex;
   }
+  
   nav a {
     flex: 1;
     font-size: 16px;
@@ -40,6 +41,7 @@ export default {
       line-height: 2;
       font-size: 24px;
     }
+
     @include bp(md) {
       font-size: 40px;
     }
@@ -48,16 +50,19 @@ export default {
     margin: auto;
     flex-direction: column;
     width: calc(100vw - 16px);
+
     a {
       line-height: 2;
       font-size: 40px;
     }
-    
+
     @include bp(sm) {
       width: calc(100vw - 32px);
     }
+
     @include bp(md) {
       width: 640px;
+
       a {
         font-size: 80px;
       }
@@ -68,14 +73,17 @@ export default {
     color: $yellow;
     background-color: $green;
   }
+
   .work-link {
     color: $darkorange;
     background-color: $blue;
   }
+
   .about-link {
     color: $orange;
     background-color: $gray;
   }
+
   .feed-link {
     color: $blue;
     background-color: $lightpurple;

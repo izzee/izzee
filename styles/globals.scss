@@ -7,6 +7,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  border-radius: 0;
+}
+
 body {
   background-color: $purple;
 }
@@ -47,5 +52,21 @@ main {
       font-size: 32px;
       line-height: 1.5;
     }
+  }
+}
+
+section {
+  padding: 24px;
+
+  @include bp(sm) {
+    padding: 32px;
+  }
+
+  @include bp(md) {
+    padding: 40px;
+  }
+  
+  @include bp(lg) {
+    padding: 56px;
   }
 }

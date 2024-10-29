@@ -10,6 +10,6 @@
 <style lang="scss" scoped>
   .main-content {
     border-color: $blue;
-    background: $sky;
+    background: $lightblue;
   }
 </style>
