@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <HomeNav/>
+    <Nav variant="alt"/>
   </NuxtLayout>
 </template>
 
