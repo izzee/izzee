@@ -31,20 +31,32 @@ export default {
   }
   nav a {
     flex: 1;
-    font-size: 40px;
+    font-size: 24px;
     line-height: 2;
     font-weight: 400;
     text-align: center;
     text-decoration: none;
+
+    @include bp(md) {
+      font-size: 40px;
+    }
   }
   .nav-alt {
     margin: auto;
-    width: 640px;
     flex-direction: column;
+    width: calc(100vw - 32px);
+
+    a {
+      font-size: 40px;
+    }
+    @include bp(md) {
+      width: 640px;
+      a {
+        font-size: 80px;
+      }
+    }
   }
-  .nav-alt a {
-    font-size: 80px;
-  }
+
   .home-link {
     color: $yellow;
     background-color: $green;
