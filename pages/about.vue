@@ -10,7 +10,7 @@
       </div>
 
       <div class="footer">
-        <button>get in touch!</button>
+        <button>get in touch</button>
         <nav>
           <a href="#">instagram</a>
           <a href="#">are.na</a>
@@ -27,9 +27,8 @@
     border-color: $gray;
     background-color: $darkgray;
   }
-
   .bio {
-    padding: 32px;
+    padding: 24px;
     flex: 1;
     p {
       color: $orange;
@@ -38,44 +37,74 @@
     a {
       color: $yellow;
     }
+    @include bp(sm) {
+      padding: 32px;
+    }
 
     @include bp(md) {
+      padding: 40px;
+    }
+
+    @include bp(lg) {
       padding: 64px;
     }
   }
 
   .footer {
-    padding: 32px;
+    padding: 24px;
     display: flex;
+    gap: 8px;
     flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
     justify-content: space-between;
     background-color: $darkgray;
 
     nav {
       display: inherit;
       gap: inherit;
+      flex-wrap: wrap;
     }
-    button, 
-    a {
+    a,
+    button {
       display: inline-block;
-      padding: 16px;
-      font-size: 24px;
-
+      font-size: 16px;
       line-height: 1;
+      text-align: center;
+    }
+    a {
+      padding: 16px;
+      flex-grow: 1;
       color: $orange;
       background-color: $gray;
+      &:last-child {
+        width: 100%;
+      }
     }
-
     button {
-      color: $gray;
-      background-color: $orange;
+      padding: 16px 40px;
+      color: $yellow;
+      background-color: $green;
       border: 0;
       border-radius: 0;
     }
 
+    @include bp(sm) {
+      gap: 16px;
+      padding: 32px;
+      a:last-child {
+        width: auto;
+      }
+    }
+
     @include bp(md) {
+      padding: 40px;
+ 
+
+      a, button {
+        font-size: 24px;
+      }
+    }
+
+    @include bp(lg) {
       padding: 64px;
       flex-direction: row;
     }

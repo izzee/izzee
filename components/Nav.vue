@@ -31,11 +31,15 @@ export default {
   }
   nav a {
     flex: 1;
-    font-size: 24px;
-    line-height: 2;
+    font-size: 16px;
+    line-height: 3;
     font-weight: 500;
     text-align: center;
 
+    @include bp(sm) {
+      line-height: 2;
+      font-size: 24px;
+    }
     @include bp(md) {
       font-size: 40px;
     }
@@ -43,10 +47,14 @@ export default {
   .nav-alt {
     margin: auto;
     flex-direction: column;
-    width: calc(100vw - 32px);
-
+    width: calc(100vw - 16px);
     a {
+      line-height: 2;
       font-size: 40px;
+    }
+    
+    @include bp(sm) {
+      width: calc(100vw - 32px);
     }
     @include bp(md) {
       width: 640px;
