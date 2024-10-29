@@ -6,7 +6,6 @@ export default defineNuxtConfig({
   css: [
     '@/styles/globals.scss'
   ],
-
   vite: {
     css: {
       preprocessorOptions: {

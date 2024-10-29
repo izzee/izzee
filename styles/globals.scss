@@ -3,7 +3,12 @@
   padding: 0;
 }
 
-.main-content {
+body {
+  background-color: $purple;
+
+}
+
+main {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -13,7 +18,7 @@
   font-family: Helvetica, sans-serif;
 }
 
-.page-content {
+.main-content {
   flex: 1;
   border: 16px solid transparent;
   box-sizing: border-box;

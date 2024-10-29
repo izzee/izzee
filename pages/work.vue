@@ -1,14 +1,15 @@
 <template>
-  <NuxtLayout>
+  <main>
     <Nav/>
-    <div class="page-content">
+    <div class="main-content">
       work
     </div>
-  </NuxtLayout>
+  </main>
 </template>
 
 <style lang="scss" scoped>
-  .page-content {
+  .main-content {
     border-color: $blue;
+    background-color: $darkorange;
   }
 </style>
