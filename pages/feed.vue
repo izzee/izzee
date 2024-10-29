@@ -10,6 +10,6 @@
 <style lang="scss" scoped>
   .main-content {
     border-color: $lightpurple;
-    background-color: $yellow;
+    background-color: $lightestpurple;
   }
 </style>

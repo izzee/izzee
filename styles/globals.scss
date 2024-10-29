@@ -27,10 +27,10 @@ main {
 }
 
 .main-content {
+  padding: 24px;
+  flex: 1;
   display: inherit;
   flex-direction: inherit;
-  flex: 1;
-  border: 8px solid transparent;
   box-sizing: border-box;
 
   p {
@@ -39,27 +39,12 @@ main {
   }
 
   @include bp(sm) {
+    padding: 32px;
     border: 16px solid transparent;
-
     p {
       font-size: 24px;
       line-height: calc(32 / 24);
     }
-  }
-
-  @include bp(lg) {
-    p {
-      font-size: 32px;
-      line-height: 1.5;
-    }
-  }
-}
-
-section {
-  padding: 24px;
-
-  @include bp(sm) {
-    padding: 32px;
   }
 
   @include bp(md) {
@@ -68,5 +53,9 @@ section {
   
   @include bp(lg) {
     padding: 56px;
+    p {
+      font-size: 32px;
+      line-height: 1.5;
+    }
   }
 }

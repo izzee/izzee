@@ -1,13 +1,14 @@
-$gray:        #313846;
-$darkgray:    #21252D;
-$purple:      #6664BC;
-$blue:        #2C49AC;
-$lightblue:   #6D8EFF;
-$green:       #239558;
-$darkorange:  #FF7843;
-$orange:      #FF9900;
-$yellow:      #D4FF00;
-$lightpurple: #BCABFF;
+$gray:           #313846;
+$darkgray:       #21252D;
+$green:          #239558;
+$orange:         #FF9900;
+$darkorange:     #FF7843;
+$yellow:         #D4FF00;
+$blue:           #2C49AC;
+$lightblue:      #6D8EFF;
+$purple:         #6664BC;
+$lightpurple:    #BCABFF;
+$lightestpurple: #CBBEFF;
 
 @mixin bp($class) {
   @if $class == xs {

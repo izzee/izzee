@@ -2,13 +2,13 @@
   <main>
     <Nav/>
     <div class="main-content">
-      <section class="bio">
+      <div class="bio">
         <p>
           I am a freelance web developer, designer, and digital media artist based in Brooklyn, NY. As a developer at <a href="#">Thesis</a>, I built websites for industry-leading clients such as Casper, Roman, Ritual, Talkspace, and Baboon to the Moon. In 2024, I participated in the <a href="#">Recurse Center</a>, where I researched creative coding, human-computer interaction, and rendering 3D content in the browser. I also make art with <a href="#">infinity8rocks</a>.
         </p>
-      </section>
+      </div>
 
-      <section class="links">
+      <div class="links">
         <button class="email-link">get in touch</button>
         <nav>
           <a class="link" href="#">instagram</a>
@@ -19,7 +19,7 @@
             <a href=""> -> </a>
           </span>
         </nav>
-      </section>
+      </div>
 
     </div>
   </main>
@@ -66,7 +66,7 @@
   .link,
   .email-link,
   .webring-link {
-    padding: 16px;
+    padding: 16px 24px;
     display: inline-block;
     font-size: 16px;
     line-height: 1;
@@ -90,7 +90,7 @@
 
   .email-link {
     color: $yellow;
-    background-color: $green;
+    background-color: $gray;
 
     &:hover {
       color: $gray;
