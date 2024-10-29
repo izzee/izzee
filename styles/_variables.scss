@@ -7,6 +7,7 @@ $darkorange:  #FF7843;
 $orange:      #FF9900;
 $yellow:      #D4FF00;
 $lightpurple: #BCABFF;
+$sky: linear-gradient( #6D8EFF, #AFCAFF);
 
 @mixin bp($class) {
   @if $class == xs {
