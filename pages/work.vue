@@ -2,12 +2,12 @@
   <main>
     <Nav/>
     <div class="work-nav">
-      <p>web dev</p>
-      <Dot/>
+      <p>web development</p>
+      <span class="dot"/>
       <p>design</p>
-      <Dot/>
+      <span class="dot"/>
       <p>painting</p>
-      <Dot/>
+      <span class="dot"/>
       <p>video</p>
     </div>
     <div class="main-content">
@@ -17,10 +17,6 @@
 
   </main>
 </template>
-
-<script setup>
-  import Dot from '~/static/icons/dot.svg'
-</script>
 
 <style lang="scss" scoped>
   .main-content {
@@ -41,9 +37,10 @@
     color: $lightestblue;
     background-color: $blue;
 
-    svg {
-      fill: $lightblue;
-      transform: scale(.5);
+    .dot {
+      width: 4px;
+      height: 4px;
+      background-color: $lightblue;
     }
 
     p { 
@@ -64,8 +61,9 @@
       p {
         font-size: 24px;
       }
-      svg {
-        transform: scale(1);
+      .dot {
+        width: 8px;
+        height: 8px;
       }
     }
   }
