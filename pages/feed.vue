@@ -9,7 +9,7 @@
 
 <style lang="scss" scoped>
   .main-content {
-    border-color: $lightpurple;
-    background-color: $lightestpurple;
+    border-color: $red;
+    background-color: $lightyellow;
   }
 </style>

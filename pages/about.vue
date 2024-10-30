@@ -9,8 +9,8 @@
       </div>
 
       <div class="links">
-        <button class="link">
-          <span class="rainbow-text">
+        <button class="link" @click="() => toggleForm = true">
+          <span>
             get in touch
           </span>
         </button>
@@ -30,20 +30,34 @@
           </span>
         </div>
       </div>
+
+      <div class="contact-form-modal" :style="`transform: scale(${toggleForm ? 1 : 0})`">
+        <div class="contact-form-wrapper">
+          <button class="close-button" @click="() => toggleForm = false">x</button>
+          <form action="">
+
+
+          </form>
+        </div>
+
+      </div>
     </div>
   </main>
 </template>
 
 <script setup>
+  import { ref } from 'vue';
   import Arrow from '~/static/icons/arrow.svg'
+
+  const toggleForm = ref(false)
 
 </script>
 
 <style lang="scss" scoped>
   .main-content {
-    border-color: $gray;
     background-color: $darkgray;
     justify-content: space-between;
+    position: relative;
   }
 
   .bio {
@@ -146,6 +160,42 @@
     &:hover{
       svg{ fill: $yellow; }
       .line { background-color: $yellow}
+    }
+  }
+
+  .contact-form-modal {
+    transform: scale(1);
+
+    transition: transform .25s ;
+    transform-origin: 64px calc(100% - 64px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $darkgray;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .contact-form-wrapper {
+    margin: 64px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .close-button {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+      background-color: $yellow;
+      margin-left: auto;
+    }
+
+    form {
+      height: 100%;
+      border: 1px solid black;
     }
   }
 </style>

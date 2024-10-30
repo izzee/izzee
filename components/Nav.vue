@@ -26,6 +26,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>  
+
+  nav a {
+    transition: background-color .25s, color .25s;
+  }
   .nav-primary {
     height: 48px;
     display: flex;
@@ -93,10 +97,21 @@ export default {
   .about-link {
     color: $orange;
     background-color: $gray;
+    
+    &:hover,
+    &.router-link-exact-active {
+      background-color: $darkgray;
+    }
   }
 
   .feed-link {
     color: $blue;
     background-color: $lightpurple;
+
+    &:hover,
+    &.router-link-exact-active {
+      color: $lightyellow;
+      background-color: $red;
+    }
   }
 </style>

@@ -2,13 +2,13 @@
   <main>
     <Nav/>
     <div class="work-nav">
-      <p>web development</p>
+      <a href="">web development</a>
       <span class="dot"/>
-      <p>design</p>
+      <a href="">design</a>
       <span class="dot"/>
-      <p>painting</p>
+      <a href="">painting</a>
       <span class="dot"/>
-      <p>video</p>
+      <a href="">video</a>
     </div>
     <div class="main-content">
 
@@ -34,7 +34,6 @@
     align-items: center; 
     justify-content: center;
     flex-wrap: wrap;
-    color: $lightestblue;
     background-color: $blue;
 
     .dot {
@@ -43,9 +42,11 @@
       background-color: $lightblue;
     }
 
-    p { 
+    a { 
       font-size: 16px;
       line-height: 2;
+      color: $lightestblue;
+
       cursor: pointer;
       &:hover {
         color: $yellow;
@@ -58,7 +59,7 @@
 
     @include bp(md) {
       gap: 16px;
-      p {
+      a {
         font-size: 24px;
       }
       .dot {
