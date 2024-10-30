@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   
   routeRules: {
     '/': { prerender: true },
-    '/contact': { prerender: true }
+    '/about': { prerender: true }
   },
 
   css: [
