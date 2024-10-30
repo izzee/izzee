@@ -3,7 +3,8 @@
 
     <div class="contact-form-wrapper">
       <button class="close-button" @click="toggleForm"><X/></button>
-      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
         <div class="row">
           <input type="text" name="name" placeholder="name">
           <input type="email" name="email" placeholder="email">
