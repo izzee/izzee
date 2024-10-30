@@ -9,21 +9,35 @@
       </div>
 
       <div class="links">
-        <button class="email-link">get in touch</button>
-        <nav>
+        <button class="link">
+          <span class="rainbow-text">
+            get in touch
+          </span>
+        </button>
+        <div class="external-links">
           <a class="link" href="#">instagram</a>
           <a class="link" href="#">are.na</a>
-          <span class="webring-link">
-            <a href=""> <- </a>
+          <span class="link webring">
+            <a class="webring-link" href="">
+              <Arrow/>
+              <span class="line"/>
+            </a>
             recurse webring
-            <a href=""> -> </a>
+            <a class="webring-link" href="">
+              <span class="line"/>
+              <Arrow/>
+            </a>
           </span>
-        </nav>
+        </div>
       </div>
-
     </div>
   </main>
 </template>
+
+<script setup>
+  import Arrow from '~/static/icons/arrow.svg'
+
+</script>
 
 <style lang="scss" scoped>
   .main-content {
@@ -39,6 +53,7 @@
 
     a {
       color: $yellow;
+      animation: hue-rotate 5s linear infinite;
     }
   }
 
@@ -47,12 +62,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    nav {
-      display: inherit;
-      flex-wrap: wrap;
-      gap: inherit;
-    }
 
     @include bp(sm) {
       gap: 16px;
@@ -63,14 +72,24 @@
     }
   }
 
-  .link,
-  .email-link,
-  .webring-link {
-    padding: 16px 24px;
+  .external-links {
+    display: inherit;
+    flex-wrap: wrap;
+    gap: inherit;
+    .link {
+      flex-grow: 1;
+    }
+  }
+
+  .link {
+    padding: 16px;
     display: inline-block;
     font-size: 16px;
     line-height: 1;
     text-align: center;
+    background-color: $gray;
+    color: $lightpurple;
+    fill: $lightpurple;
     cursor: pointer;
 
     @include bp (sm){
@@ -80,52 +99,53 @@
     @include bp(lg) {
       line-height: 2;
     }
-  }
-
-  .link {
-    flex: 1;
-    color: $lightpurple;
-    background-color: $gray;
-    transition: box-shadow .25s;
 
     &:hover {
       color: $gray;
+      fill: $gray;
       background-color: $lightpurple;
-      box-shadow: 4px -4px 0  0 $purple, 3.5px -3.5px 0  0 $purple, 3px -3px 0  0 $purple, 2.5px -2.5px 0  0 $purple, 2px -2px 0  0 $purple,  1px -1px 0  0 $purple;
-
     }
   }
 
-  .email-link {
-    color: $yellow;
-    background-color: $gray;
+  .webring {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
 
-    &:hover {
-      color: $gray;
-      background-color: $yellow;
+    @include bp(md) {
+      flex-basis: auto;
+    }
+
+    &:hover .line {
+      background-color: $gray;
     }
   }
 
   .webring-link {
-    color: $lightpurple;
-    background-color: $gray;
-    flex-basis: 100%;
-
-    a {
-      color: inherit;
-    }
-
-    &:hover {
-      color: $gray;
+    display: flex;
+    align-items: center;
+    color: inherit;
+    flex: 1;
+    
+    .line {
+      height: 1px;
+      flex: 1;
+      width: 100%;
       background-color: $lightpurple;
     }
 
-    a:hover {
-      color: $yellow;
+    svg {
+      fill: inherit;
     }
-    
-    @include bp(md) {
-      flex-basis: auto;
+
+    &:last-child svg {
+      transform: rotate(180deg)
+    }
+
+    &:hover{
+      svg{ fill: $yellow; }
+      .line { background-color: $yellow}
     }
   }
 </style>

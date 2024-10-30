@@ -25,17 +25,11 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-  nav {
-    display: flex;
-  }
-
-  nav a {
-    text-align: center;
-  }
-  
+<style lang="scss" scoped>  
   .nav-primary {
     height: 48px;
+    display: flex;
+
     @include bp(sm) {
       height: 56px;
     }
@@ -47,10 +41,11 @@ export default {
   .nav-primary a {
     flex: 1;
     font-size: 16px;
-    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    font-weight: 500;
     @include bp(sm) {
       font-size: 24px;
     }
@@ -62,10 +57,13 @@ export default {
   
   .nav-alt {
     margin: auto;
+    display: flex;
     flex-direction: column;
     width: calc(100vw - 16px);
 
     a {
+      text-align: center;
+      font-weight: 500;
       font-size: 40px;
       line-height: 2;
     }

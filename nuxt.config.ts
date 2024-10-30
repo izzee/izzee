@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/google-fonts', '@nuxt/image'],
+  modules: ['@nuxtjs/google-fonts', '@nuxt/image', 'nuxt-svgo-loader'],
 
   css: [
     '@/styles/globals.scss'
@@ -20,7 +20,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Inter: '200..700'
+      Inter: '300..700'
     }
   }
 })

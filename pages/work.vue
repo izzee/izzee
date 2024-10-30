@@ -3,11 +3,11 @@
     <Nav/>
     <div class="work-nav">
       <p>web dev</p>
-        <img src=/static/icons/dot.svg/>
+      <Dot/>
       <p>design</p>
-      <img src=/static/icons/dot.svg/>
+      <Dot/>
       <p>painting</p>
-      <img src=/static/icons/dot.svg/>
+      <Dot/>
       <p>video</p>
     </div>
     <div class="main-content">
@@ -18,10 +18,14 @@
   </main>
 </template>
 
+<script setup>
+  import Dot from '~/static/icons/dot.svg'
+</script>
+
 <style lang="scss" scoped>
   .main-content {
     border-color: $blue;
-    background: $lightblue;
+    background-color: $lightblue;
     position: relative;
     text-align: center;
   }
@@ -34,7 +38,7 @@
     align-items: center; 
     justify-content: center;
     flex-wrap: wrap;
-    color: $lightblue;
+    color: $lightestblue;
     background-color: $blue;
 
     p { 
