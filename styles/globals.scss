@@ -30,8 +30,10 @@ main {
   padding: 24px;
   flex: 1;
   display: inherit;
+  gap: 16px;
   flex-direction: inherit;
   box-sizing: border-box;
+  border: 8px solid transparent;
 
   p {
     font-size: 16px;

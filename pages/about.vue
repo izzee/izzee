@@ -72,8 +72,13 @@
     line-height: 1;
     text-align: center;
     cursor: pointer;
+
     @include bp (sm){
       font-size: 24px;
+    }
+
+    @include bp(lg) {
+      line-height: 2;
     }
   }
 
@@ -81,10 +86,13 @@
     flex: 1;
     color: $lightpurple;
     background-color: $gray;
+    transition: box-shadow .25s;
 
     &:hover {
       color: $gray;
       background-color: $lightpurple;
+      box-shadow: 4px -4px 0  0 $purple, 3.5px -3.5px 0  0 $purple, 3px -3px 0  0 $purple, 2.5px -2.5px 0  0 $purple, 2px -2px 0  0 $purple,  1px -1px 0  0 $purple;
+
     }
   }
 

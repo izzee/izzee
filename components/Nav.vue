@@ -29,16 +29,29 @@ export default {
   nav {
     display: flex;
   }
-  
+
   nav a {
+    text-align: center;
+  }
+  
+  .nav-primary {
+    height: 48px;
+    @include bp(sm) {
+      height: 56px;
+    }
+    @include bp(md) {
+      height: 80px;
+    }
+  }
+
+  .nav-primary a {
     flex: 1;
     font-size: 16px;
-    line-height: 3;
     font-weight: 500;
-    text-align: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include bp(sm) {
-      line-height: 2;
       font-size: 24px;
     }
 
@@ -46,14 +59,15 @@ export default {
       font-size: 40px;
     }
   }
+  
   .nav-alt {
     margin: auto;
     flex-direction: column;
     width: calc(100vw - 16px);
 
     a {
-      line-height: 2;
       font-size: 40px;
+      line-height: 2;
     }
 
     @include bp(sm) {
@@ -62,7 +76,6 @@ export default {
 
     @include bp(md) {
       width: 640px;
-
       a {
         font-size: 80px;
       }
