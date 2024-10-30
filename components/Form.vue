@@ -27,7 +27,7 @@
 <style lang="scss" scoped>
   .contact-form-modal {
     transition: transform .25s;
-    transform-origin: 32px 32px;
+    transform-origin: 32px calc(100% - 32px);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -102,11 +102,12 @@
   .close-button {
     width: 64px;
     height: 64px;
-    background-color: $darkgray;
     margin-left: auto;
+    fill: $lightpurple;
+    background-color: $darkgray;
 
     svg {
-      fill: $lightpurple;
+      fill: inherit;
       width: 100%;
       height: 100%;
     }
@@ -114,6 +115,11 @@
     @include bp(md) {
       width: 80px;
       height: 80px;
+    }
+    &:hover {
+      color: $darkgray;
+      fill: $darkgray;
+      background-color: $lightpurple;
     }
   }
 
@@ -127,13 +133,20 @@
     padding: 16px;
     width: 160px;
     margin-right: auto;
+    gap: 16px;
+    display: flex;
+    align-items: center;
     font-size: inherit;
+    font-weight: 500;
     line-height: inherit;
     color: $lightpurple;
     background-color: $darkgray;
-    display: flex;
-    align-items: center;
-    gap: 16px;
     fill: $lightpurple;
+
+    &:hover {
+      color: $darkgray;
+      background-color: $lightpurple;
+      fill: $darkgray;
+    }
   }
 </style>

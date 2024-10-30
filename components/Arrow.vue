@@ -1,7 +1,7 @@
 <template>
   <span :class="`arrow ${variant || ''}`">
     <Arrow class="arrowhead"/>
-    <Line class="line" />
+    <Line class="line"/>
   </span>        
 </template>
 
@@ -24,11 +24,11 @@
     height: 2px;
     flex: 1;
     fill: inherit;
+    margin-left: -1px;
     @include bp(sm) {
       height: 4px;
     }
   }
-
 }
 .flipped {
   transform: rotate(180deg);

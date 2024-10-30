@@ -91,6 +91,7 @@
   .link {
     padding: 16px;
     display: inline-block;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1;
     text-align: center;
