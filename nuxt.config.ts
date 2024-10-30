@@ -1,8 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   modules: ['@nuxtjs/google-fonts', '@nuxt/image', 'nuxt-svgo-loader'],
+  
+  routeRules: {
+    '/': { prerender: true },
+    '/contact': { prerender: true }
+  },
 
   css: [
     '@/styles/globals.scss'
@@ -22,5 +27,6 @@ export default defineNuxtConfig({
     families: {
       Inter: '300..700'
     }
-  }
+  },
+
 })

@@ -9,7 +9,7 @@
       </div>
 
       <div class="links">
-        <button class="link" @click="() => toggleForm = true">
+        <button class="link" @click="toggleForm">
           <span>
             get in touch
           </span>
@@ -20,37 +20,30 @@
           <span class="link webring">
             <a class="webring-link" href="">
               <Arrow/>
-              <span class="line"/>
             </a>
-            recurse webring
+            <span>
+              recurse webring
+            </span>
             <a class="webring-link" href="">
-              <span class="line"/>
-              <Arrow/>
+              <Arrow variant="flipped"/>
             </a>
           </span>
         </div>
       </div>
-
-      <div class="contact-form-modal" :style="`transform: scale(${toggleForm ? 1 : 0})`">
-        <div class="contact-form-wrapper">
-          <button class="close-button" @click="() => toggleForm = false">x</button>
-          <form action="">
-
-
-          </form>
-        </div>
-
-      </div>
+      <Form :toggled="isFormToggled" :toggleForm="toggleForm"/>
     </div>
   </main>
 </template>
 
 <script setup>
   import { ref } from 'vue';
-  import Arrow from '~/static/icons/arrow.svg'
 
-  const toggleForm = ref(false)
-
+  const isFormToggled = ref(false);
+  
+  const toggleForm = () => {
+    isFormToggled.value = !isFormToggled.value
+    console.log(isFormToggled.value)
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -122,80 +115,20 @@
   }
 
   .webring {
-    flex-basis: 100%;
+    width: 300px;
     display: flex;
     justify-content: space-between;
     gap: 16px;
 
-    @include bp(md) {
-      flex-basis: auto;
-    }
-
-    &:hover .line {
-      background-color: $gray;
-    }
-  }
-
-  .webring-link {
-    display: flex;
-    align-items: center;
-    color: inherit;
-    flex: 1;
     
-    .line {
-      height: 1px;
+    a {
+      display: flex;
+      align-items: center;
+      color: inherit;
       flex: 1;
-      width: 100%;
-      background-color: $lightpurple;
-    }
-
-    svg {
-      fill: inherit;
-    }
-
-    &:last-child svg {
-      transform: rotate(180deg)
-    }
-
-    &:hover{
-      svg{ fill: $yellow; }
-      .line { background-color: $yellow}
-    }
-  }
-
-  .contact-form-modal {
-    transform: scale(1);
-
-    transition: transform .25s ;
-    transform-origin: 64px calc(100% - 64px);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: $darkgray;
-    display: flex;
-    flex-direction: column;
-
-  }
-
-  .contact-form-wrapper {
-    margin: 64px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    .close-button {
-      width: 80px;
-      height: 80px;
-      flex-shrink: 0;
-      background-color: $yellow;
-      margin-left: auto;
-    }
-
-    form {
-      height: 100%;
-      border: 1px solid black;
+      &:hover{
+        fill: $yellow;
+      }
     }
   }
 </style>

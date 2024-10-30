@@ -7,24 +7,26 @@
     <NuxtLink to="/feed" class="feed-link">feed</NuxtLink>
   </nav>
 </template>
+
 <script>
-export default {
-  props: {
-    variant: {
-      type: String,
-      default: 'primary', // 'primary', 'alt', etc.
+  export default {
+    props: {
+      variant: {
+        type: String,
+        default: 'primary', // 'primary', 'alt', etc.
+      },
     },
-  },
-  computed: {
-    navClass() {
-      return {
-        'nav-primary': this.variant === 'primary',
-        'nav-alt': this.variant === 'alt',
+    computed: {
+      navClass() {
+        return {
+          'nav-primary': this.variant === 'primary',
+          'nav-alt': this.variant === 'alt',
+        }
       }
-    }
-  },
-}
+    },
+  }
 </script>
+
 <style lang="scss" scoped>  
 
   nav a {

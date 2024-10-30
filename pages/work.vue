@@ -11,8 +11,6 @@
       <a href="">video</a>
     </div>
     <div class="main-content">
-
-
     </div>
 
   </main>
