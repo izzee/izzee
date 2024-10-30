@@ -41,6 +41,11 @@
     color: $lightestblue;
     background-color: $blue;
 
+    svg {
+      fill: $lightblue;
+      transform: scale(.5);
+    }
+
     p { 
       font-size: 16px;
       line-height: 2;
@@ -53,10 +58,14 @@
     @include bp(sm) {
       padding-top: 16px;
     }
+
     @include bp(md) {
       gap: 16px;
       p {
         font-size: 24px;
+      }
+      svg {
+        transform: scale(1);
       }
     }
   }
