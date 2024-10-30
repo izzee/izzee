@@ -90,7 +90,10 @@
       &:focus {
         outline: 0;
         color: $lightpurple;
-        box-shadow: 0 0 0 4px $lightpurple inset;
+        box-shadow: 0 0 0 2px $lightpurple inset;
+        @include bp(sm) {
+          box-shadow: 0 0 0 4px $lightpurple inset;
+        }
       }
     }
   }
