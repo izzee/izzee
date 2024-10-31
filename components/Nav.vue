@@ -103,6 +103,7 @@
     color: $orange;
     background-color: $gray;
     &:hover,
+
     &.router-link-exact-active {
       background-color: $darkgray;
     }
@@ -112,6 +113,7 @@
     color: $blue;
     background-color: $lightpurple;
     &:hover,
+
     &.router-link-exact-active {
       background-color: $lightestpurple;
     }

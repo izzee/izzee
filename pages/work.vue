@@ -2,25 +2,10 @@
   <main>
     <Nav/>
     <div class="main-content">
-      <div class="work-example">
-        <NuxtImg src="/images/placeholder.jpg" />
+      <div class="work-examples">
+x
       </div>
 
-      <div class="work-example">
-        <NuxtImg src="/images/placeholder.jpg" />
-      </div>
-
-      <div class="work-example">
-        <NuxtImg src="/images/placeholder.jpg" />
-      </div>
-
-      <div class="work-example">
-        <NuxtImg src="/images/placeholder.jpg" />
-      </div>
-
-      <div class="work-example">
-        <NuxtImg src="/images/placeholder.jpg" />
-      </div>
   </div>
   <div class="work-nav">
     <a href="">web development</a>
@@ -31,23 +16,25 @@
     <span class="dot"/>
     <a href="">video</a>
   </div>
+
   </main>
 </template>
 
 <style lang="scss" scoped>
+
   .main-content {
     text-align: center;
-    // border-color: $blue;
-    background: $blue;
-    align-items: stretch;
+    border-color: $blue;
+    background-color: $lightblue;
+    align-items: center;
     border-bottom: 0;
     overflow: scroll;
   }
 
   .work-nav {
     display: flex;
-    width: 100%;
-    padding: 8px 0;
+    // width: 100%;
+    padding: 8px 24px;
     gap: 8px;
     align-items: center; 
     justify-content: center;
@@ -66,7 +53,7 @@
     }
 
     @include bp(sm) {
-      padding: 16px 0;
+      padding: 16px 24px;
     }
 
     @include bp(md) {
@@ -86,6 +73,12 @@
       width: 8px;
       height: 8px;
     }
+  }
+
+  .work-examples {
+    flex: 1;
+    width: 100%;
+    background-color: $lightblue;
   }
 
   .work-example {

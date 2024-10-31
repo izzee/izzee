@@ -32,13 +32,17 @@
 
 <style lang="scss" scoped>
   .main-content {
-    background-color: $lightestpurple;
+    background-color: $lightpurple;
+    border-color: $lightestpurple;
     overflow: scroll;
   }
 
   .feed {
     flex-shrink: 0;
     height: 240px;
-    background-color: $lightpurple;
+    position:sticky;
+    top: 0;
+    background-color: $lightestpurple;
+
   }
 </style>

@@ -19,7 +19,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  background-color: $purple;
+  background: url('~/public/icons/grid.svg');
+  background-size: 16px;
+  background-position: top center;
   font-family: 'Inter', Helvetica, sans-serif;
 }
 
@@ -39,7 +41,7 @@ main {
   @include bp(sm) {
     padding: 32px;
     gap: 32px;
-    // border: 16px solid transparent;
+    border: 16px solid transparent;
 
     p {
       font-size: 24px;
