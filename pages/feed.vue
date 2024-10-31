@@ -31,6 +31,9 @@
 </template>
 
 <style lang="scss" scoped>
+  main {
+    background-color: $lightestpurple;
+  }
   .main-content {
     background-color: $lightpurple;
     border-color: $lightestpurple;

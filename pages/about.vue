@@ -47,6 +47,11 @@
 </script>
 
 <style lang="scss" scoped>
+
+  main {
+    background-color: $gray;;
+  }
+  
   .main-content {
     background-color: $darkgray;
     // border-color: $gray;

@@ -22,6 +22,10 @@ x
 
 <style lang="scss" scoped>
 
+  main {
+    background-color: $blue;
+  }
+
   .main-content {
     text-align: center;
     border-color: $blue;
