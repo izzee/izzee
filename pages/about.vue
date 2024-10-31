@@ -49,7 +49,7 @@
 <style lang="scss" scoped>
   .main-content {
     background-color: $darkgray;
-    border-color: $gray;
+    // border-color: $gray;
     justify-content: space-between;
     position: relative;
   }

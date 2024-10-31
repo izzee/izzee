@@ -39,8 +39,8 @@ main {
   @include bp(sm) {
     padding: 32px;
     gap: 32px;
-    border: 16px solid transparent;
-    
+    // border: 16px solid transparent;
+
     p {
       font-size: 24px;
       line-height: calc(32 / 24);

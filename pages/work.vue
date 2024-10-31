@@ -1,9 +1,7 @@
 <template>
   <main>
     <Nav/>
-
     <div class="main-content">
-      <h2>web development</h2>
       <div class="work-example">
         <NuxtImg src="/images/placeholder.jpg" />
       </div>
@@ -39,8 +37,8 @@
 <style lang="scss" scoped>
   .main-content {
     text-align: center;
-    border-color: $blue;
-    background-color: $lightblue;
+    // border-color: $blue;
+    background: $blue;
     align-items: stretch;
     border-bottom: 0;
     overflow: scroll;

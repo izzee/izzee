@@ -19,6 +19,11 @@
   fill: inherit;
   .arrowhead {
     fill: inherit;
+    height: 16px;
+    width: 16px;
+    @include bp(sm) {
+      height: 24px;
+    }
   }
   .line {
     height: 2px;

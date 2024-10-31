@@ -56,7 +56,7 @@
       gap: 16px;
     }
     @include bp(md) {
-      margin: 40px;
+      margin: 48px;
     }
     @include bp(lg) {
       margin: 64px;
@@ -83,7 +83,7 @@
     input,
     textarea {
       flex: 1;
-      padding: 16px;
+      padding: 12px 16px;
       background-color: $gray;
       color: $lightpurple;
       border: 0;
@@ -91,6 +91,11 @@
       font-size: inherit;
       line-height: inherit;
       font-family: 'Inter';
+
+      @include bp(sm) {
+        padding: 16px;
+
+      }
 
       @include bp(md) {
         padding: 24px;
@@ -142,7 +147,7 @@
   }
 
   .submit-button {
-    padding: 16px 24px;
+    padding: 12px 24px;
     width: 50%;
     margin-left: auto;
     gap: 16px;
@@ -162,6 +167,8 @@
     }
 
     @include bp (sm) {
+      padding: 16px 24px;
+
       width: 176px;
     }
     @include bp(md) {

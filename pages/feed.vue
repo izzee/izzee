@@ -3,42 +3,28 @@
     <Nav/>
     <div class="main-content">
       <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
-      </div>
-
-      <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
-      </div>
-
-      <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
       </div>
       <div class="feed">
-        feed
+      </div>
+      <div class="feed">
+      </div>
+      <div class="feed">
       </div>
     </div>
   </main>
@@ -47,7 +33,6 @@
 <style lang="scss" scoped>
   .main-content {
     background-color: $lightestpurple;
-    border-color: $lightpurple;
     overflow: scroll;
   }
 
