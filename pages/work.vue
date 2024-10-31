@@ -34,7 +34,7 @@ x
   .work-nav {
     display: flex;
     // width: 100%;
-    padding: 8px 24px;
+    padding: 8px 0;
     gap: 8px;
     align-items: center; 
     justify-content: center;
@@ -53,7 +53,7 @@ x
     }
 
     @include bp(sm) {
-      padding: 16px 24px;
+      padding: 16px 0;
     }
 
     @include bp(md) {
