@@ -35,10 +35,12 @@
   .nav-primary {
     height: 48px;
     display: flex;
+    z-index: 10;
 
     @include bp(sm) {
-      height: 56px;
+      height: 64px;
     }
+    
     @include bp(md) {
       height: 80px;
     }
@@ -46,12 +48,13 @@
 
   .nav-primary a {
     flex: 1;
-    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 16px;
     font-weight: 500;
+
     @include bp(sm) {
       font-size: 24px;
     }
@@ -69,9 +72,9 @@
 
     a {
       text-align: center;
-      font-weight: 500;
       font-size: 40px;
       line-height: 2;
+      font-weight: 500;
     }
 
     @include bp(sm) {
@@ -94,26 +97,19 @@
   .work-link {
     color: $darkorange;
     background-color: $blue;
+
   }
 
   .about-link {
     color: $orange;
     background-color: $gray;
-    
     &:hover,
     &.router-link-exact-active {
-      background-color: $darkgray;
     }
   }
 
   .feed-link {
     color: $blue;
     background-color: $lightpurple;
-
-    &:hover,
-    &.router-link-exact-active {
-      color: $lightyellow;
-      background-color: $red;
-    }
   }
 </style>

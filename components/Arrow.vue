@@ -6,8 +6,8 @@
 </template>
 
 <script setup>
-  import Arrow from '~/static/icons/arrow.svg?skipsvgo'
-  import Line from '~/static/icons/dot.svg?skipsvgo'
+  import Arrow from '~/public/icons/arrow.svg?skipsvgo'
+  import Line from '~/public/icons/dot.svg?skipsvgo'
   const props = defineProps(['variant'])
 </script>
 

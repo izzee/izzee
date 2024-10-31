@@ -4,7 +4,7 @@
     <div class="main-content">
       <div class="bio">
         <p>
-          I am a freelance web developer, designer, and digital media artist based in Brooklyn, NY. As a developer at <a href="#">Thesis</a>, I built websites for industry-leading clients such as Casper, Roman, Ritual, Talkspace, and Baboon to the Moon. In 2024, I participated in the <a href="#">Recurse Center</a>, where I researched creative coding, human-computer interaction, and rendering 3D content in the browser. I also make art with <a href="#">infinity8rocks</a>.
+          I am a freelance web developer, designer, and digital media artist based in Brooklyn, NY. As a developer at <a href="#">Thesis</a> I built websites for industry-leading clients such as Casper, Roman, Ritual, Talkspace, and Baboon to the Moon. In 2024, I participated in the <a href="#">Recurse Center</a> where I researched creative coding, human-computer interaction, and rendering 3D content in the browser. I also make art with <a href="#">infinity8rocks</a>.
         </p>
       </div>
 
@@ -49,6 +49,7 @@
 <style lang="scss" scoped>
   .main-content {
     background-color: $darkgray;
+    border-color: $gray;
     justify-content: space-between;
     position: relative;
   }
@@ -60,7 +61,13 @@
 
     a {
       color: $yellow;
+      white-space: nowrap;
       animation: hue-rotate 5s linear infinite;
+
+      &:hover {
+        color: $darkgray;
+        background-color: $yellow;
+      }
     }
   }
 
@@ -89,7 +96,7 @@
   }
 
   .link {
-    padding: 16px;
+    padding: 16px 24px;
     display: inline-block;
     font-weight: 500;
     font-size: 16px;
@@ -102,10 +109,11 @@
 
     @include bp (sm){
       font-size: 24px;
+      line-height: calc(32 / 24);
     }
 
-    @include bp(lg) {
-      line-height: 2;
+    @include bp(md) {
+      padding: 24px;
     }
 
     &:hover {
@@ -116,12 +124,10 @@
   }
 
   .webring {
-    width: 300px;
+    width: 296px;
     display: flex;
     justify-content: space-between;
     gap: 16px;
-
-    
     a {
       display: flex;
       align-items: center;
@@ -129,6 +135,7 @@
       flex: 1;
       &:hover{
         fill: $yellow;
+        animation: hue-rotate 5s linear infinite;
       }
     }
   }

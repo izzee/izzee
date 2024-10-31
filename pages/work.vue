@@ -1,58 +1,74 @@
 <template>
   <main>
     <Nav/>
-    <div class="work-nav">
-      <a href="">web development</a>
-      <span class="dot"/>
-      <a href="">design</a>
-      <span class="dot"/>
-      <a href="">painting</a>
-      <span class="dot"/>
-      <a href="">video</a>
-    </div>
-    <div class="main-content">
-    </div>
 
+    <div class="main-content">
+      <h2>web development</h2>
+      <div class="work-example">
+        <NuxtImg src="/images/placeholder.jpg" />
+      </div>
+
+      <div class="work-example">
+        <NuxtImg src="/images/placeholder.jpg" />
+      </div>
+
+      <div class="work-example">
+        <NuxtImg src="/images/placeholder.jpg" />
+      </div>
+
+      <div class="work-example">
+        <NuxtImg src="/images/placeholder.jpg" />
+      </div>
+
+      <div class="work-example">
+        <NuxtImg src="/images/placeholder.jpg" />
+      </div>
+  </div>
+  <div class="work-nav">
+    <a href="">web development</a>
+    <span class="dot"/>
+    <a href="">design</a>
+    <span class="dot"/>
+    <a href="">painting</a>
+    <span class="dot"/>
+    <a href="">video</a>
+  </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
   .main-content {
+    text-align: center;
     border-color: $blue;
     background-color: $lightblue;
-    position: relative;
-    text-align: center;
+    align-items: stretch;
+    border-bottom: 0;
+    overflow: scroll;
   }
 
   .work-nav {
     display: flex;
     width: 100%;
-    padding-top: 8px;
+    padding: 8px 0;
     gap: 8px;
     align-items: center; 
     justify-content: center;
     flex-wrap: wrap;
     background-color: $blue;
 
-    .dot {
-      width: 4px;
-      height: 4px;
-      background-color: $lightblue;
-    }
-
     a { 
       font-size: 16px;
       line-height: 2;
       color: $lightestblue;
-
       cursor: pointer;
+
       &:hover {
         color: $yellow;
       }
     }
 
     @include bp(sm) {
-      padding-top: 16px;
+      padding: 16px 0;
     }
 
     @include bp(md) {
@@ -60,10 +76,25 @@
       a {
         font-size: 24px;
       }
-      .dot {
-        width: 8px;
-        height: 8px;
-      }
+    }
+  }
+  
+  .dot {
+    width: 4px;
+    height: 4px;
+    background-color: $lightblue;
+
+    @include bp(md) {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .work-example {
+    width: 50%;
+    margin: auto;
+    img {
+      width: 100%;
     }
   }
 </style>

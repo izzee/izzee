@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-  import X from '~/static/icons/x.svg?skipsvgo'
+  import X from '~/public/icons/x.svg?skipsvgo'
   const props = defineProps(['toggled', 'toggleForm'])
 </script>
 
@@ -37,19 +37,21 @@
     flex-direction: column;
 
     @include bp(md) {
-      transform-origin: 56px calc(100% - 56px);
+      transform-origin: 40px calc(100% - 40px);
+    }
+
+    @include bp(lg) {
+      transform-origin: 64px calc(100% - 64px);
     }
   }
   .contact-form-wrapper {
-    padding: 8px;
-    margin: 24px;
+    margin: 16px;
     gap: 8px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: $gray;
+    background-color: $darkgray;
     @include bp(sm) {
-      padding: 16px;
       margin: 32px;
       gap: 16px;
     }
@@ -57,7 +59,7 @@
       margin: 40px;
     }
     @include bp(lg) {
-      margin: 56px;
+      margin: 64px;
     }
   }
 
@@ -67,23 +69,32 @@
     flex-direction: column;
     gap: inherit;
     font-size: 16px;
-    line-height: 2;
+    line-height: 1.5;
 
     @include bp(sm) {
       font-size: 24px;
+      line-height: calc(32 / 24);
+
+    }
+
+    @include bp(lg) {
     }
 
     input,
     textarea {
-      padding: 16px;
       flex: 1;
-      background-color: $darkgray;
+      padding: 16px;
+      background-color: $gray;
       color: $lightpurple;
       border: 0;
       display: flex;
       font-size: inherit;
       line-height: inherit;
       font-family: 'Inter';
+
+      @include bp(md) {
+        padding: 24px;
+      }
 
       &::placeholder {
         color: inherit;
@@ -92,19 +103,16 @@
         outline: 0;
         color: $lightpurple;
         box-shadow: 0 0 0 2px $lightpurple inset;
-        @include bp(sm) {
-          box-shadow: 0 0 0 4px $lightpurple inset;
-        }
       }
     }
   }
 
   .close-button {
-    width: 64px;
-    height: 64px;
-    margin-left: auto;
+    width: 48px;
+    height: 48px;
+    margin-right: auto;
     fill: $lightpurple;
-    background-color: $darkgray;
+    background-color: $gray;
 
     svg {
       fill: inherit;
@@ -112,13 +120,17 @@
       height: 100%;
     }
 
+    @include bp(sm) {
+      width: 64px;
+      height: 64px;
+    }
+
     @include bp(md) {
       width: 80px;
       height: 80px;
     }
     &:hover {
-      color: $darkgray;
-      fill: $darkgray;
+      fill: $gray;
       background-color: $lightpurple;
     }
   }
@@ -130,23 +142,30 @@
   }
 
   .submit-button {
-    padding: 16px;
-    width: 160px;
-    margin-right: auto;
+    padding: 16px 24px;
+    width: 50%;
+    margin-left: auto;
     gap: 16px;
     display: flex;
     align-items: center;
     font-size: inherit;
     font-weight: 500;
     line-height: inherit;
-    color: $lightpurple;
-    background-color: $darkgray;
     fill: $lightpurple;
+    color: $lightpurple;
+    background-color: $gray;
 
     &:hover {
-      color: $darkgray;
+      fill: $gray;
+      color: $gray;
       background-color: $lightpurple;
-      fill: $darkgray;
+    }
+
+    @include bp (sm) {
+      width: 176px;
+    }
+    @include bp(md) {
+      padding: 24px;
     }
   }
 </style>
