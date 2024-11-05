@@ -4,7 +4,7 @@
     <div class="main-content">
       <div class="bio">
         <p>
-          I am a freelance web developer, designer, and digital media artist based in Brooklyn, NY. As a developer at <a href="#">Thesis</a> I built websites for industry-leading clients such as Casper, Roman, Ritual, Talkspace, and Baboon to the Moon. In 2024, I participated in the <a href="#">Recurse Center</a> where I researched creative coding, human-computer interaction, and rendering 3D content in the browser. I also make art with <a href="#">infinity8rocks</a>.
+          I am a freelance web developer, designer, and digital media artist based in Brooklyn, NY. As a developer at <a href="#">Thesis</a> I built websites for industry-leading clients such as Casper, Roman, Ritual, Talkspace, and Baboon to the Moon. In 2024, I participated in the <a href="#">Recurse Center</a> where I focused on creative coding, human-computer interaction, and 3D web design. I also make art with <a href="#">infinity8rocks</a>.
         </p>
       </div>
 
@@ -54,7 +54,7 @@
   
   .main-content {
     background-color: $darkgray;
-    // border-color: $gray;
+    border-color: $gray;
     justify-content: space-between;
     position: relative;
   }
@@ -72,6 +72,7 @@
       &:hover {
         color: $darkgray;
         background-color: $yellow;
+        animation: hue-rotate 5s linear reverse infinite;
       }
     }
   }

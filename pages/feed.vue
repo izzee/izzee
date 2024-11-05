@@ -32,20 +32,24 @@
 
 <style lang="scss" scoped>
   main {
-    background-color: $lightestpurple;
+    background-color: $lightpurple;
   }
   .main-content {
-    background-color: $lightpurple;
-    border-color: $lightestpurple;
+    background-color: $lightestpurple;
+    border-color: $lightpurple;
+    padding: 0;
+    gap: 0;
     overflow: scroll;
   }
 
   .feed {
     flex-shrink: 0;
-    height: 240px;
+    height: 160px;
     position:sticky;
     top: 0;
-    background-color: $lightestpurple;
-
+    background-color: $lightpurple;
+    &:nth-child(odd) {
+      background-color: $lightestpurple;
+    }
   }
 </style>

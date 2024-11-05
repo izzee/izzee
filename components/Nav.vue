@@ -102,20 +102,10 @@
   .about-link {
     color: $orange;
     background-color: $gray;
-    &:hover,
-
-    &.router-link-exact-active {
-      background-color: $darkgray;
-    }
   }
 
   .feed-link {
     color: $blue;
     background-color: $lightpurple;
-    &:hover,
-
-    &.router-link-exact-active {
-      background-color: $lightestpurple;
-    }
   }
 </style>

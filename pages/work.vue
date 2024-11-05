@@ -1,20 +1,21 @@
 <template>
   <main>
     <Nav/>
+    <div class="work-nav">
+      <a href="">web development</a>
+      <span class="dot"/>
+      <a href="">design</a>
+      <span class="dot"/>
+      <a href="">painting</a>
+      <span class="dot"/>
+      <a href="">video</a>
+    </div>
+  
     <div class="main-content">
       <div class="work-examples">
 x
       </div>
 
-  </div>
-  <div class="work-nav">
-    <a href="">web development</a>
-    <span class="dot"/>
-    <a href="">design</a>
-    <span class="dot"/>
-    <a href="">painting</a>
-    <span class="dot"/>
-    <a href="">video</a>
   </div>
 
   </main>
@@ -31,7 +32,7 @@ x
     border-color: $blue;
     background-color: $lightblue;
     align-items: center;
-    border-bottom: 0;
+    border-top: 0;
     overflow: scroll;
   }
 
@@ -69,13 +70,13 @@ x
   }
   
   .dot {
-    width: 4px;
-    height: 4px;
+    width: 2px;
+    height: 2px;
     background-color: $lightblue;
 
     @include bp(md) {
-      width: 8px;
-      height: 8px;
+      width: 4px;
+      height: 4px;
     }
   }
 

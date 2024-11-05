@@ -27,7 +27,7 @@
 <style lang="scss" scoped>
   .contact-form-modal {
     transition: transform .25s;
-    transform-origin: 32px calc(100% - 32px);
+    transform-origin: 32px 32px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -37,7 +37,7 @@
     flex-direction: column;
 
     @include bp(md) {
-      transform-origin: 40px calc(100% - 40px);
+      transform-origin: 40px 40px;
     }
 
     @include bp(lg) {
@@ -94,7 +94,6 @@
 
       @include bp(sm) {
         padding: 16px;
-
       }
 
       @include bp(md) {
@@ -108,6 +107,10 @@
         outline: 0;
         color: $lightpurple;
         box-shadow: 0 0 0 2px $lightpurple inset;
+
+        @include bp(md) {
+          box-shadow: 0 0 0 4px $lightpurple inset;
+        }
       }
     }
   }
