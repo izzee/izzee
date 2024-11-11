@@ -43,7 +43,11 @@
 <style lang="scss" scoped>
 
   main {
-    background-color: $lightblue;
+    background: linear-gradient($lightblue, $blue);
+
+    @include bp(sm) {
+      background: linear-gradient($lightblue, $lightestblue);
+    }
   }
 
   .main-content {
