@@ -50,14 +50,13 @@
 <style lang="scss" scoped>
 
   main {
-    background-color: $gray;;
+    background-color: $darkgray;
   }
   
   .main-content {
-    background-color: $darkgray;
-    border-color: $gray;
     justify-content: space-between;
     position: relative;
+    border-color: $gray;
   }
 
   .bio-text {

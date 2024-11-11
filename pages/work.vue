@@ -43,21 +43,17 @@
 <style lang="scss" scoped>
 
   main {
-    background-color: $blue;
+    background-color: $lightblue;
   }
 
   .main-content {
     text-align: center;
-    border-color: $blue;
-    background-color: $blue;
     align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
     gap: 16px;
     border-bottom: 0;
-    @include bp(sm) {
-      background: linear-gradient($lightblue, $lightestblue);
-    }
+    border-color: $blue;
   }
 
   .work-nav {
@@ -95,13 +91,13 @@
   }
   
   .dot {
-    width: 2px;
-    height: 2px;
+    width: 4px;
+    height: 4px;
     background-color: $lightblue;
 
     @include bp(sm) {
-      width: 4px;
-      height: 4px;
+      width: 8px;
+      height: 8px;
     }
   } 
 

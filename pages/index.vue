@@ -8,9 +8,5 @@
   main {
     background: $purple;
   }
-  nav {
-    background: url('~/public/icons/grid.svg');
-    background-size: 40px;
-  }
 </style>
 

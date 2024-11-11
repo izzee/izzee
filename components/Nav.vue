@@ -33,11 +33,15 @@
     transition: background-color .25s, color .25s;
   }
   .nav-primary {
-    height: 48px;
+    height: 96px;
     display: flex;
+    flex-wrap: wrap;
     z-index: 10;
+    padding: 16px;
+    padding-bottom: 0;
 
     @include bp(sm) {
+      padding: 0;
       height: 64px;
     }
     
@@ -47,15 +51,16 @@
   }
 
   .nav-primary a {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-size: 16px;
     font-weight: 500;
+    width: 50%;
 
     @include bp(sm) {
+      flex: 1;
       font-size: 24px;
     }
 

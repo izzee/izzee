@@ -12,18 +12,6 @@
           <div class="date">11.31.24</div>
           <div class="title">welcome to my new site!</div>
         </div>
-        <div class="post">
-          <div class="date">11.31.24</div>
-          <div class="title">welcome to my new site!</div>
-        </div>
-        <div class="post">
-          <div class="date">11.31.24</div>
-          <div class="title">welcome to my new site!</div>
-        </div>
-        <div class="post">
-          <div class="date">11.31.24</div>
-          <div class="title">welcome to my new site!</div>
-        </div>
       </div>
 
       <div class="links">
@@ -38,8 +26,12 @@
 </template>
 
 <style lang="scss" scoped>
+
+  main {
+    background-color: $lightestpurple;
+
+  }
   .main-content {
-    background-color: $lightpurple;
     border-color: $lightpurple;
     padding: 0;
     gap: 16px;
@@ -62,7 +54,6 @@
     justify-content: space-between;
     padding: 64px;
     &:nth-child(even) {
-      padding: 48px 64px;
       background-color: $lightpurple;
     }
     font-size:32px;
@@ -75,12 +66,12 @@
 
   .links {
     flex: 1;
-    background-color: $lightpurple;
     display: flex;
     align-items: flex-end;
     justify-content: end;
     font-size: 24px;
     gap: 16px;
+    padding: 64px;
 
     form {
       flex-grow: 0;
@@ -89,13 +80,19 @@
     a,
     input {
       flex-grow: 0;
-      background-color: $lightestpurple;
       font-size: 24px;
       line-height: 2;
       padding: 8px 32px;
       font-weight: 500;
       color: $blue;
       border: 0;
+    }
+
+    &:nth-child(even) {
+      a,
+      input {
+        background-color: $lightpurple;
+      }
     }
   }
 </style>

@@ -39,7 +39,7 @@
   position: relative;
   width: 100%;
   background-color: white;
-  @include bp(md) {
+  @include bp(lg) {
     width: 50vw;
 
   }
@@ -49,7 +49,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  color: $gray;
+  color: $darkgray;
   font-size: 16px;
   line-height: 48px;
   font-weight: 400;
@@ -116,10 +116,10 @@
 .website-link,
 .website-description {
   font-size: 16px;
-  line-height: 1.5;
-  @include bp(sm) {
+  line-height: 24px;
+  @include bp(lg) {
     font-size: 24px;
-    line-height: calc(32 / 24);
+    line-height: 32px;
   }
 }
 
@@ -130,7 +130,17 @@
 }
 
 .website-link {
-  background-color: $yellow;
+  padding: 8px;
+  background-color: $blue;
+  color: $yellow;
+  &:hover {
+    background-color: $yellow;
+    color: $blue;
+
+  }
+  @include bp(md) {
+    padding: 16px;
+  }
 }
 
 
@@ -164,7 +174,7 @@
     transform-origin: right;
 
   }
-  @include bp(md) {
+  @include bp(lg) {
     left: calc(50% + 80px);
     width: calc(100% - 160px);
     transform: translateX(-50%);
@@ -187,7 +197,7 @@
   .right-panel .content{
     transform: scaleX(1);
   }
-  @include bp(md) {
+  @include bp(lg) {
     .left-panel {
       transform: translateX(80px);
 
