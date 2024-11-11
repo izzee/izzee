@@ -50,26 +50,33 @@
   width: 100%;
   color: $gray;
   font-size: 24px;
-  line-height: 64px;
+  line-height: 48px;
   font-weight: 400;
   text-align: center;
   pointer-events: none;
   z-index: 1;
+  @include bp (md) {
+    font-size: 24px;
+    line-height: 64px;
+  }
 }
 
 .topbar {
   position: relative;
+  height: 48px;
   width: 100%;
-  height: 64px;
   background: linear-gradient(white, lightgray);
+  @include bp(md) {
+    height: 64px;
+  }
 }
 
 .toggle-button {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -83,20 +90,34 @@
     transition: transform .25s;
     background: radial-gradient(#fff, transparent 10%);
   }
+
+  @include bp(md) {
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .content {
+  padding: 16px;
   flex: 1;
   flex-direction: column;
   display: flex;
-  padding: 16px;
   background-color: #fff;
   transition: transform .25s;
 
-
   p {
-    font-size: 24px;
+    font-size: 16px;
+    line-height: 1.5;
     text-align: left;
+  }
+
+  @include bp(md) {
+    p {
+      font-size: 24px;
+      line-height: calc(32 / 24);
+    }
   }
 }
 
@@ -119,7 +140,6 @@
 
   .content {
     transform-origin: left;
-
   }
 }
 
@@ -139,6 +159,7 @@
     transform-origin: center right;
 
     .content{
+      padding-left: 0;
       & > * {
         opacity: 0;
         transition: opacity .25s;
