@@ -49,13 +49,13 @@
   top: 0;
   width: 100%;
   color: $gray;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 48px;
   font-weight: 400;
   text-align: center;
   pointer-events: none;
   z-index: 1;
-  @include bp (md) {
+  @include bp (sm) {
     font-size: 24px;
     line-height: 64px;
   }
@@ -66,7 +66,7 @@
   height: 48px;
   width: 100%;
   background: linear-gradient(white, lightgray);
-  @include bp(md) {
+  @include bp(sm) {
     height: 64px;
   }
 }
@@ -91,7 +91,7 @@
     background: radial-gradient(#fff, transparent 10%);
   }
 
-  @include bp(md) {
+  @include bp(sm) {
     top: 16px;
     right: 16px;
     width: 32px;
@@ -100,7 +100,7 @@
 }
 
 .content {
-  padding: 16px;
+  padding: 8px;
   flex: 1;
   flex-direction: column;
   display: flex;
@@ -113,7 +113,9 @@
     text-align: left;
   }
 
-  @include bp(md) {
+  @include bp(sm) {
+    padding: 16px;
+
     p {
       font-size: 24px;
       line-height: calc(32 / 24);
@@ -195,10 +197,9 @@
     }
   }
   .toggle-button {
-  
     svg {
       fill: $darkgray;
-    transform: rotate(45deg);
+      transform: rotate(45deg);
     }
   }
 }
