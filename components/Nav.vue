@@ -73,17 +73,13 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 16px);
+    width: calc(100vw - 32px);
 
     a {
       text-align: center;
       font-size: 40px;
       line-height: 2;
       font-weight: 500;
-    }
-
-    @include bp(sm) {
-      width: calc(100vw - 32px);
     }
 
     @include bp(md) {
