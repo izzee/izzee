@@ -68,7 +68,7 @@
     align-items: center; 
     justify-content: center;
     flex-wrap: wrap;
-    background-color: $blue;
+    background-color: transparent;
 
     a { 
       font-size: 16px;
@@ -83,6 +83,8 @@
     @include bp(sm) {
       padding: 8px 0;
       gap: 16px;
+      background-color: $blue;
+
 
       a {
         font-size: 24px;
