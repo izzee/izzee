@@ -49,12 +49,15 @@
   .main-content {
     text-align: center;
     border-color: $blue;
-    background: linear-gradient($lightblue, $lightestblue);
+    background-color: $blue;
     align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
     gap: 16px;
     border-bottom: 0;
+    @include bp(sm) {
+      background: linear-gradient($lightblue, $lightestblue);
+    }
   }
 
   .work-nav {
@@ -72,21 +75,22 @@
       line-height: 2;
       color: $lightblue;
       cursor: pointer;
-
       &:hover {
         color: white;
       }
     }
 
     @include bp(sm) {
-      padding: 16px 0;
-    }
-
-    @include bp(md) {
+      padding: 8px 0;
       gap: 16px;
+
       a {
         font-size: 24px;
       }
+    }
+
+    @include bp(md) {
+     
     }
   }
   
@@ -95,7 +99,7 @@
     height: 2px;
     background-color: $lightblue;
 
-    @include bp(md) {
+    @include bp(sm) {
       width: 4px;
       height: 4px;
     }

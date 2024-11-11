@@ -1,10 +1,10 @@
 <template>
   <div :class="`${isToggled ? 'website-example toggled' : 'website-example'}`">
-    <h3 class="example-title" v-html="title"/>
+    <h3 class="website-title" v-html="title"/>
     <div class="left-panel">
       <div class="topbar"/>
       <div class="content">
-        <NuxtImg class="example-image" :src="src" alt=""/>
+        <NuxtImg class="website-image" :src="src" alt=""/>
       </div>
     </div>
     <div class="right-panel">
@@ -14,7 +14,8 @@
         </div>
       </div>
       <div class="content">
-        <p v-html="description" />
+        <p class="website-description" v-html="description" />
+        <a class="website-link" href="">Link</a>
       </div>
     </div>
   </div>
@@ -44,7 +45,7 @@
   }
 }
 
-.example-title {
+.website-title {
   position: absolute;
   top: 0;
   width: 100%;
@@ -107,20 +108,29 @@
   background-color: #fff;
   transition: transform .25s;
 
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: left;
-  }
-
   @include bp(sm) {
     padding: 16px;
-
-    p {
-      font-size: 24px;
-      line-height: calc(32 / 24);
-    }
   }
+}
+
+.website-link,
+.website-description {
+  font-size: 16px;
+  line-height: 1.5;
+  @include bp(sm) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+}
+
+.website-description {
+  flex: 1;
+  text-align: left;
+
+}
+
+.website-link {
+  background-color: $yellow;
 }
 
 
