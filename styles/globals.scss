@@ -29,7 +29,6 @@ main {
   padding: 16px;
   flex: 1;
   display: inherit;
-  gap: 16px;
   flex-direction: inherit;
   box-sizing: border-box;
 
@@ -40,7 +39,6 @@ main {
 
   @include bp(sm) {
     padding: 32px;
-    gap: 32px;
     border: 16px solid transparent;
 
     p {
@@ -51,16 +49,26 @@ main {
 
   @include bp(md) {
     padding: 48px;
-    gap: 48px;
   }
   
   @include bp(lg) {
     padding: 64px;
-    gap: 64px;
     p {
       font-size: 32px;
       line-height: 1.5;
     }
+  }
+}
+
+.bio-link {
+  color: $yellow;
+  white-space: nowrap;
+  animation: hue-rotate 5s linear infinite;
+
+  &:hover {
+    color: $darkgray;
+    background-color: $yellow;
+    animation: hue-rotate 5s linear reverse infinite;
   }
 }
 

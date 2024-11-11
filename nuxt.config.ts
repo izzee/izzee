@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/google-fonts', '@nuxt/image', 'nuxt-svgo-loader'],
+  modules: [
+    '@nuxtjs/google-fonts',
+    '@nuxt/image',
+    'nuxt-svgo-loader',
+    '@nuxt/content',
+  ],
   
   routeRules: {
     '/': { prerender: true },

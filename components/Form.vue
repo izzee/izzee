@@ -77,9 +77,6 @@
 
     }
 
-    @include bp(lg) {
-    }
-
     input,
     textarea {
       flex: 1;
@@ -94,10 +91,6 @@
 
       @include bp(sm) {
         padding: 16px;
-      }
-
-      @include bp(md) {
-        padding: 24px;
       }
 
       &::placeholder {
@@ -133,10 +126,6 @@
       height: 64px;
     }
 
-    @include bp(md) {
-      width: 80px;
-      height: 80px;
-    }
     &:hover {
       fill: $gray;
       background-color: $lightpurple;
@@ -170,12 +159,8 @@
     }
 
     @include bp (sm) {
-      padding: 16px 24px;
-
       width: 176px;
-    }
-    @include bp(md) {
-      padding: 24px;
+      padding: 16px 24px;
     }
   }
 </style>

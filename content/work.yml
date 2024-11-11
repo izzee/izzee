@@ -1,0 +1,26 @@
+websites:
+  - title: 'code sketches'
+    src: 'images/codesketches.jpg'
+    description: 'A collection of creative coding sketches I created while attending the Recurse Center.'
+  - title: 'infinity8rocks.com'
+    src: 'images/infinity8rocks.jpg'
+    description: 'The homepage of the Infinity8Rocks art collective. Built using Nuxt.js and integrated with Shopify '
+  - title: 'baggy industries'
+    src: 'images/baggy.jpg'
+    description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
+  - title: 'baggy industries 2'
+    src: 'images/baggy.jpg'
+    description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
+
+design:
+  - title: 'test'
+    src: 'images/codesketches.jpg'
+
+painting:
+  - title: 'test'
+    src: 'images/codesketches.jpg'
+
+video:
+  - title:
+
+

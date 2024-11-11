@@ -1,25 +1,44 @@
 <template>
-  <main>
-    <Nav/>
-    <div class="work-nav">
-      <a href="">web development</a>
-      <span class="dot"/>
-      <a href="">design</a>
-      <span class="dot"/>
-      <a href="">painting</a>
-      <span class="dot"/>
-      <a href="">video</a>
-    </div>
-  
-    <div class="main-content">
-      <div class="work-examples">
-x
-      </div>
+  <NuxtLayout>
+    <ContentDoc v-slot="{ doc }">
+      <main>
+        <Nav/>
 
-  </div>
+        <div class="main-content">
+          <WebsiteExample 
+            v-for="(website, index) in doc.websites"
+            :isToggled="toggledIndex === index"
+            :title="website.title"
+            :src="website.src"
+            :description="website.description"
+            @toggle="setToggled(index)"
+          />
+        </div>
 
-  </main>
+        <div class="work-nav">
+          <a href="">websites</a>
+          <span class="dot"/>
+          <a href="">design</a>
+          <span class="dot"/>
+          <a href="">painting</a>
+          <span class="dot"/>
+          <a href="">video</a>
+        </div>
+
+      </main>
+    </ContentDoc>
+  </NuxtLayout>
 </template>
+
+<script setup>
+  import { ref } from 'vue';
+  
+  const toggledIndex = ref(null);
+
+  function setToggled(index) {
+    toggledIndex.value = toggledIndex.value === index ? null : index;
+  }
+</script>
 
 <style lang="scss" scoped>
 
@@ -30,10 +49,12 @@ x
   .main-content {
     text-align: center;
     border-color: $blue;
-    background-color: $lightblue;
+    background: linear-gradient($lightblue, $lightestblue);
     align-items: center;
-    border-top: 0;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 16px;
+    border-bottom: 0;
   }
 
   .work-nav {
@@ -49,11 +70,11 @@ x
     a { 
       font-size: 16px;
       line-height: 2;
-      color: $lightestblue;
+      color: $lightblue;
       cursor: pointer;
 
       &:hover {
-        color: $yellow;
+        color: white;
       }
     }
 
@@ -78,19 +99,15 @@ x
       width: 4px;
       height: 4px;
     }
-  }
+  } 
 
-  .work-examples {
-    flex: 1;
+  .work-heading {
+    z-index: 2;
     width: 100%;
     background-color: $lightblue;
-  }
-
-  .work-example {
-    width: 50%;
-    margin: auto;
-    img {
-      width: 100%;
-    }
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: $lightestblue;
   }
 </style>
