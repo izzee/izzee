@@ -15,43 +15,37 @@
 
 <style lang="scss" scoped>
   main {
-    background-color: $red;
+    background-color: $purple;
     fill: $yellow;
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    animation: colorshift 10s linear infinite alternate;
   }
 
   .link {
-    padding: 8px;
     flex: 1;
     display: flex;
-    gap: 8px;
     flex-direction: row;
     align-items: stretch;
     justify-content: stretch;
     cursor: pointer;
   }
 
-
   svg {
     fill: inherit;
     flex: 1;
     width: 100%;
     height: 100%;
-    filter: blur(24px);
-  }
 
-  @keyframes colorshift {
-    0% {
-      background-color: $red;
-      fill: $orange;
+    &:nth-child(1) {
+      fill: $green;
     }
-
-    100% {
-      background-color: $purple;
+    &:nth-child(2) {
       fill: $blue;
     }
+    &:nth-child(3) {
+      fill: $gray;
+    }
   }
+
 </style>

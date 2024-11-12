@@ -2,7 +2,7 @@
   <main>
     <ContentDoc>
        <template #not-found>
-        <NotFoundPage/>
+        <NotFound/>
       </template>
     </ContentDoc>
   </main>
