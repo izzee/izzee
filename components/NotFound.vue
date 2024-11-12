@@ -15,11 +15,12 @@
 
 <style lang="scss" scoped>
   main {
-    background-color: $purple;
     fill: $yellow;
+    background-color: $yellow;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    animation: colorfade 20s linear alternate infinite;
   }
 
   .link {
@@ -36,15 +37,20 @@
     flex: 1;
     width: 100%;
     height: 100%;
+    filter: blur(16px);
 
-    &:nth-child(1) {
-      fill: $green;
+  
+  }
+
+  @keyframes colorfade {
+    0% {
+      fill: $yellow;
+      background-color: $orange;
     }
-    &:nth-child(2) {
-      fill: $blue;
-    }
-    &:nth-child(3) {
-      fill: $gray;
+
+    25%{ 
+      fill: $orange;
+      background-color: $yellow;
     }
   }
 

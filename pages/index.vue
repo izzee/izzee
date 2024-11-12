@@ -9,4 +9,3 @@
     background: $purple;
   }
 </style>
-
