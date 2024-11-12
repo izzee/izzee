@@ -14,6 +14,7 @@ button {
 }
 
 main {
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +22,6 @@ main {
   font-family: 'Inter', Helvetica, sans-serif;
   @include bp(md) {
     height: 100dvh;
-
   }
 }
 

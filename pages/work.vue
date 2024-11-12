@@ -48,28 +48,18 @@
   main {
     background: linear-gradient($lightblue, $blue);
     background-attachment: fixed;
-    &:before,
-    &:after {
+    &:before {
       content: '';
       position: fixed;
       width: 100%;
       height: 96px;
-    }
-    &:before {
       top: 0;
       background: linear-gradient($lightblue 48px, transparent);
       z-index: 2;
     }
-    &:after {
-      bottom: 48px;
-      background: linear-gradient(transparent, $blue);
-      z-index: 0;
-    }
-
     @include bp(sm) {
       background: linear-gradient($lightblue, $lightestblue);
-      &:before,
-      &:after {
+      &:before {
         display: none;
       }
     }
