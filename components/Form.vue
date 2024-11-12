@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-form-modal" :style="`transform: scale(${toggled ? 1 : 0})`">
+  <div class="contact-form-modal" :style="`transform: scaleX(${toggled ? 1 : 0})`">
 
     <div class="contact-form-wrapper">
       <button class="close-button" @click="toggleForm"><X/></button>
@@ -26,8 +26,9 @@
 
 <style lang="scss" scoped>
   .contact-form-modal {
+    transform-origin: 16px;
     transition: transform .25s;
-    transform-origin: 32px 32px;
+    
     position: absolute;
     width: 100%;
     height: 100%;
@@ -41,6 +42,7 @@
     }
 
     @include bp(lg) {
+
       transform-origin: 64px calc(100% - 64px);
     }
   }

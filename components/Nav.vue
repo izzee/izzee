@@ -33,6 +33,8 @@
     transition: background-color .25s, color .25s;
   }
   .nav-primary {
+    position: sticky;
+    top: 0;
     height: 96px;
     display: flex;
     flex-wrap: wrap;

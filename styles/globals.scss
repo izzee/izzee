@@ -14,12 +14,15 @@ button {
 }
 
 main {
-  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   font-family: 'Inter', Helvetica, sans-serif;
+  @include bp(md) {
+    height: 100dvh;
+
+  }
 }
 
 .main-content {

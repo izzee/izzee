@@ -1,14 +1,11 @@
 websites:
   - title: 'code sketches'
     src: 'images/codesketches.jpg'
-    description: 'A collection of creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
+    description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
   - title: 'infinity8rocks.com'
     src: 'images/infinity8rocks.jpg'
-    description: 'A homepage and store for the Infinity8Rocks art collective. Designed to  Built using Nuxt.js and integrated with Shopify '
+    description: 'An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify '
   - title: 'baggy industries'
-    src: 'images/baggy.jpg'
-    description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
-  - title: 'baggy industries 2'
     src: 'images/baggy.jpg'
     description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
 

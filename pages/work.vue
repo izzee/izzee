@@ -5,6 +5,7 @@
         <Nav/>
 
         <div class="main-content">
+
           <WebsiteExample 
             v-for="(website, index) in doc.websites"
             :isToggled="toggledIndex === index"
@@ -13,6 +14,8 @@
             :description="website.description"
             @toggle="setToggled(index)"
           />
+          <WorkExamples/>
+
         </div>
 
         <div class="work-nav">
@@ -22,7 +25,7 @@
           <span class="dot"/>
           <a href="">painting</a>
           <span class="dot"/>
-          <a href="">video</a>
+          <a href="">video art</a>
         </div>
 
       </main>
@@ -44,10 +47,34 @@
 
   main {
     background: linear-gradient($lightblue, $blue);
+    background-attachment: fixed;
+    &:before,
+    &:after {
+      content: '';
+      position: fixed;
+      width: 100%;
+      height: 96px;
+    }
+    &:before {
+      top: 0;
+      background: linear-gradient($lightblue 48px, transparent);
+      z-index: 2;
+    }
+    &:after {
+      bottom: 48px;
+      background: linear-gradient(transparent, $blue);
+      z-index: 0;
+    }
 
     @include bp(sm) {
       background: linear-gradient($lightblue, $lightestblue);
+      &:before,
+      &:after {
+        display: none;
+      }
     }
+
+
   }
 
   .main-content {
@@ -58,18 +85,22 @@
     gap: 16px;
     border-bottom: 0;
     border-color: $blue;
+
+
   }
 
   .work-nav {
+    position: sticky;
+    bottom: 0;
     display: flex;
-    // width: 100%;
     padding: 8px 0;
     gap: 8px;
     align-items: center; 
     justify-content: center;
     flex-wrap: wrap;
-    background-color: transparent;
+    background-color: $blue;
 
+    z-index: 2;
     a { 
       font-size: 16px;
       line-height: 2;
@@ -83,16 +114,9 @@
     @include bp(sm) {
       padding: 8px 0;
       gap: 16px;
-      background-color: $blue;
-
-
       a {
         font-size: 24px;
       }
-    }
-
-    @include bp(md) {
-     
     }
   }
   
@@ -100,11 +124,6 @@
     width: 4px;
     height: 4px;
     background-color: $lightblue;
-
-    @include bp(sm) {
-      width: 8px;
-      height: 8px;
-    }
   } 
 
   .work-heading {

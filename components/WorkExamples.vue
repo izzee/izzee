@@ -1,28 +1,15 @@
 <template>
-  <div :class="`${isToggled ? 'website-example toggled' : 'website-example'}`">
-    <h3 class="website-title" v-html="title"/>
-    <div class="left-panel">
-      <div class="topbar"/>
-      <div class="content">
-        <NuxtImg class="website-image" :src="src" alt=""/>
-      </div>
-    </div>
-    <div class="right-panel">
-      <div class="topbar">
-        <div class="toggle-button" @click="toggle">
-          <Plus/>
-        </div>
-      </div>
-      <div class="content">
-        <p class="website-description" v-html="description" />
-        <a class="website-link" href="">Link</a>
-      </div>
+  <div class="work-example">
+    <div class="topbar">
+      <h3 class="website-title" v-html="'paintings'"/>
+    </div>   
+    <div class="content">
+      <NuxtImg class="website-image" :src="src" alt=""/>
     </div>
   </div>
 </template>
 
 <script setup>
-  import Plus from '~/public/icons/plus.svg?skipsvgo'
   import { defineProps, defineEmits } from 'vue';
 
   const props = defineProps(['isToggled', 'title', 'src', 'description'])
@@ -35,7 +22,7 @@
 </script>
 
 <style lang="scss" scoped>
-.website-example {
+.work-example {
   position: relative;
   width: 100%;
   background-color: white;
@@ -45,7 +32,6 @@
 }
 
 .website-title {
-  position: absolute;
   top: 0;
   width: 100%;
   color: $darkgray;
