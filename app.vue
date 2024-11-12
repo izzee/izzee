@@ -1,15 +1,11 @@
 <template>
-  <Loader/>
   <NuxtPage />
 </template>
 
-
 <script setup>
-
-useHead({
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `izzee | ${titleChunk.toLowerCase()}` : 'izzee';
-  }
-})
-
+  useHead({
+    titleTemplate: (titleChunk) => {
+      return titleChunk ? `izzee | ${titleChunk.toLowerCase()}` : 'izzee';
+    }
+  })
 </script>
