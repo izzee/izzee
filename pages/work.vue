@@ -47,6 +47,7 @@
 
   main {
     background: linear-gradient($lightblue, $blue);
+    background-size: 100vh;
     background-attachment: fixed;
     &:before {
       content: '';
@@ -63,8 +64,6 @@
         display: none;
       }
     }
-
-
   }
 
   .main-content {
@@ -75,8 +74,6 @@
     gap: 16px;
     border-bottom: 0;
     border-color: $blue;
-
-
   }
 
   .work-nav {
@@ -102,7 +99,7 @@
     }
 
     @include bp(sm) {
-      padding: 8px 0;
+      padding: 16px 0;
       gap: 16px;
       a {
         font-size: 24px;
