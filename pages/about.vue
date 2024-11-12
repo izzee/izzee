@@ -15,7 +15,8 @@
               </span>
             </button>
             <div class="external-links">
-              <a class="link" href="#">instagram</a>
+
+              <a class="link" href="#">github</a>
               <a class="link" href="#">are.na</a>
               <span class="link webring">
                 <a class="webring-link" href="">
