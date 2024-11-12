@@ -1,5 +1,5 @@
 <template>
-  <NuxtLoadingIndicator/>
+  <NuxtLoadingIndicator color="linear-gradient(to right, red, orange, yellow, lime, blue, indigo, violet)"/>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
