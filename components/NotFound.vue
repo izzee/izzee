@@ -44,12 +44,12 @@
 
   @keyframes colorfade {
     0% {
-      fill: $yellow;
+      fill: $lightyellow;
       background-color: $orange;
     }
 
-    25%{ 
-      fill: $orange;
+    100%{ 
+      fill: $green;
       background-color: $yellow;
     }
   }
