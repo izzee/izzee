@@ -1,16 +1,15 @@
 <template>
-  <NuxtLoadingIndicator color="linear-gradient(to right, red, orange, yellow, lime, blue, indigo, violet)"/>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <Loader/>
+  <NuxtPage />
 </template>
 
 
-<script setup lang="ts">
+<script setup>
 
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk ? `izzee | ${titleChunk.toLowerCase()}` : 'izzee';
   }
 })
+
 </script>
