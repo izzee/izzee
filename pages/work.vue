@@ -36,11 +36,15 @@
 <script setup>
   import { ref } from 'vue';
   
+  
   const toggledIndex = ref(null);
 
   function setToggled(index) {
     toggledIndex.value = toggledIndex.value === index ? null : index;
   }
+  definePageMeta({
+    title: 'Some Page'
+  })
 </script>
 
 <style lang="scss" scoped>

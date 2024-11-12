@@ -13,7 +13,7 @@
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 
   main {
     background-color: $lightestpurple;
