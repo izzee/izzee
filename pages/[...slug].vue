@@ -1,5 +1,9 @@
 <template>
   <main>
-    <ContentDoc />
+    <ContentDoc>
+       <template #not-found>
+        <NotFoundPage/>
+      </template>
+    </ContentDoc>
   </main>
 </template>

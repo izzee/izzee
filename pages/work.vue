@@ -88,7 +88,6 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: $blue;
-
     z-index: 2;
     a { 
       font-size: 16px;

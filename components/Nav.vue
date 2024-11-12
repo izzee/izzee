@@ -1,7 +1,7 @@
 
 <template>
   <nav :class="navClass">
-    <NuxtLink to="/" class="home-link">izzee</NuxtLink>
+    <NuxtLink to="/index" class="home-link">izzee</NuxtLink>
     <NuxtLink to="/work" class="work-link">work</NuxtLink>
     <NuxtLink to="/about" class="about-link">about</NuxtLink>
     <NuxtLink to="/feed" class="feed-link">feed</NuxtLink>

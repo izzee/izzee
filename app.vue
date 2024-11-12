@@ -6,7 +6,7 @@
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `izzee | ${titleChunk.toLowerCase()}` : 'izzee | home';
+    return titleChunk ? `izzee ⟡ ${titleChunk.toLowerCase()}` : 'izzee';
   }
 })
 </script>
