@@ -42,9 +42,7 @@
   function setToggled(index) {
     toggledIndex.value = toggledIndex.value === index ? null : index;
   }
-  definePageMeta({
-    title: 'Some Page'
-  })
+
 </script>
 
 <style lang="scss" scoped>

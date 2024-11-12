@@ -13,11 +13,10 @@
   </main>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 
   main {
     background-color: $lightestpurple;
-
   }
   .main-content {
     border-color: $lightpurple;

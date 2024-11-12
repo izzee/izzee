@@ -11,7 +11,6 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'izzee',
       htmlAttrs: {
         lang: 'en',
       },

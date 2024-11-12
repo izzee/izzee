@@ -87,7 +87,7 @@
     fill: $gray;
     width: 80px;
     height: 48px;
-    transition: transform .125s .125s;
+    transition: transform .25s;
     background: radial-gradient(#fff, transparent 10%);
   }
 
