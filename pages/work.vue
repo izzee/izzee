@@ -5,16 +5,17 @@
         <Nav/>
 
         <div class="main-content">
-
-          <WebsiteExample 
-            v-for="(website, index) in doc.websites"
-            :isToggled="toggledIndex === index"
-            :title="website.title"
-            :src="website.src"
-            :description="website.description"
-            @toggle="setToggled(index)"
-          />
-          <WorkExamples/>
+            <LazyWebsiteExample 
+              v-for="(website, index) in doc.websites"
+              :isToggled="toggledIndex === index"
+              :title="website.title"
+              :src="website.src"
+              :description="website.description"
+              @toggle="setToggled(index)"
+            />
+            <WorkExamples
+              :content="doc.design"
+            />
 
         </div>
 
