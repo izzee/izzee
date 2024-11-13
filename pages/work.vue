@@ -3,48 +3,25 @@
     <ContentDoc v-slot="{ doc }">
       <main>
         <Nav/>
-
         <div class="main-content">
-            <LazyWebsiteExample 
-              v-for="(website, index) in doc.websites"
-              :isToggled="toggledIndex === index"
-              :title="website.title"
-              :src="website.src"
-              :description="website.description"
-              @toggle="setToggled(index)"
-            />
-            <WorkExamples
-              :content="doc.design"
-            />
-
+          <WorkCategory 
+            v-for="category in doc.categories" 
+            :title="category.title"
+            :component="category.component"
+            :examples="category.examples"
+          />
         </div>
 
         <div class="work-nav">
-          <a href="">websites</a>
-          <span class="dot"/>
-          <a href="">design</a>
-          <span class="dot"/>
-          <a href="">painting</a>
-          <span class="dot"/>
-          <a href="">video art</a>
+          <template v-for="(category, index) in doc.categories">
+            <span v-if="index !== 0" class="dot"/>
+            <a href="" v-html="category.title"/>
+          </template>
         </div>
-
       </main>
     </ContentDoc>
   </NuxtLayout>
 </template>
-
-<script setup>
-  import { ref } from 'vue';
-  
-  
-  const toggledIndex = ref(null);
-
-  function setToggled(index) {
-    toggledIndex.value = toggledIndex.value === index ? null : index;
-  }
-
-</script>
 
 <style lang="scss" scoped>
 
@@ -74,7 +51,7 @@
     align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
-    gap: 16px;
+    gap: 80px;
     border-bottom: 0;
     border-color: $blue;
   }

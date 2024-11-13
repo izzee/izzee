@@ -1,3 +1,47 @@
+categories:
+  - title: websites
+    component: 'ToggleWindows'
+    examples: 
+    - title: 'code sketches'
+      src: 'images/codesketches.jpg'
+      description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
+    - title: 'infinity8rocks.com'
+      src: 'images/infinity8rocks.jpg'
+      description: 'An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify '
+    - title: 'baggy industries'
+      src: 'images/baggy.jpg'
+      description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
+
+  - title: 'design'
+    component: 'ImageGrid'
+    examples: 
+    - title: 'test'
+      src: 'images/placeholder.png'
+    - title: 'test'
+      src: 'images/placeholder.png'
+    - title: 'test'
+      src: 'images/placeholder.png'
+  
+  - title: 'painting'
+    component: 'ImageGrid'
+    examples: 
+    - title: 'test'
+      src: 'images/placeholder.png'
+    - title: 'test'
+      src: 'images/placeholder.png'
+    - title: 'test'
+      src: 'images/placeholder.png'
+  
+  - title: 'videos'
+    component: 'ImageGrid'
+    examples: 
+    - title: 'test'
+      src: 'images/placeholder.png'
+    - title: 'test'
+      src: 'images/placeholder.png'
+    - title: 'test'
+      src: 'images/placeholder.png'
+
 websites:
   - title: 'code sketches'
     src: 'images/codesketches.jpg'
@@ -9,15 +53,5 @@ websites:
     src: 'images/baggy.jpg'
     description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
 
-design:
-  - title: 'test'
-    src: 'images/codesketches.jpg'
-
-painting:
-  - title: 'test'
-    src: 'images/codesketches.jpg'
-
-video:
-  - title:
 
 

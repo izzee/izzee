@@ -1,0 +1,48 @@
+.window {
+  position: relative;
+  width: 100%;
+  background-color: white;
+
+  @include bp(lg) {
+    width: 50vw;
+  }
+}
+
+.topbar {
+  height: 48px;
+  width: 100%;
+  background: linear-gradient(white, lightgray);
+
+  @include bp(sm) {
+    height: 64px;
+  }
+}
+
+.title {
+  width: 100%;
+  color: $darkgray;
+  font-size: 16px;
+  line-height: 48px;
+  font-weight: 400;
+  text-align: center;
+
+  @include bp (sm) {
+    font-size: 24px;
+    line-height: 64px;
+  }
+}
+
+.content {
+  padding: 8px;
+  gap: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  transition: transform .25s;
+
+  @include bp(sm) {
+    padding: 16px;
+    gap: 16px;
+  }
+}

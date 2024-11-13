@@ -1,6 +1,6 @@
 <template>
-  <div :class="`${isToggled ? 'website-example toggled' : 'website-example'}`">
-    <h3 class="website-title" v-html="title"/>
+  <div :class="`${toggled ? 'window toggled' : 'window'}`">
+    <h3 class="title" v-html="title" />
     <div class="left-panel">
       <div class="topbar"/>
       <div class="content">
@@ -14,61 +14,37 @@
         </div>
       </div>
       <div class="content">
-        <p class="website-description" v-html="description" />
-        <a class="website-link" href="">Link</a>
+        <p class="description" v-html="description" />
+        <a class="link" href="">Link</a>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+  import '~/styles/window.scss'
   import Plus from '~/public/icons/plus.svg?skipsvgo'
-  import { defineProps, defineEmits } from 'vue';
+  import { ref, defineProps, defineEmits } from 'vue';
 
-  const props = defineProps(['isToggled', 'title', 'src', 'description'])
+  const hasBeenToggled = ref(false);
+
+  const props = defineProps(['toggled', 'title', 'src', 'description'])
 
   const emit = defineEmits(['toggle']);
 
   function toggle() {
+    hasBeenToggled.value = true
     emit('toggle');
   }
 </script>
 
 <style lang="scss" scoped>
-.website-example {
-  position: relative;
-  width: 100%;
-  background-color: white;
-  @include bp(lg) {
-    width: 50vw;
-  }
-}
 
-.website-title {
-  position: absolute;
+.title {
   top: 0;
-  width: 100%;
-  color: $darkgray;
-  font-size: 16px;
-  line-height: 48px;
-  font-weight: 400;
-  text-align: center;
+  position: absolute;
   pointer-events: none;
   z-index: 1;
-  @include bp (sm) {
-    font-size: 24px;
-    line-height: 64px;
-  }
-}
-
-.topbar {
-  position: relative;
-  height: 48px;
-  width: 100%;
-  background: linear-gradient(white, lightgray);
-  @include bp(sm) {
-    height: 64px;
-  }
 }
 
 .toggle-button {
@@ -99,49 +75,36 @@
   }
 }
 
-.content {
-  padding: 8px;
-  flex: 1;
-  flex-direction: column;
-  display: flex;
-  background-color: #fff;
-  transition: transform .25s;
-
-  @include bp(sm) {
-    padding: 16px;
-  }
-}
-
-.website-link,
-.website-description {
+.link,
+.description {
   font-size: 16px;
   line-height: 24px;
+
   @include bp(md) {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-.website-description {
+.description {
   flex: 1;
   text-align: left;
-
 }
 
-.website-link {
+.link {
   padding: 8px;
   background-color: $blue;
   color: $yellow;
+
   &:hover {
     background-color: $yellow;
     color: $blue;
-
   }
+
   @include bp(md) {
     padding: 16px;
   }
 }
-
 
 .left-panel,
 .right-panel {
@@ -171,8 +134,8 @@
   .content {
     transform: scaleX(0);
     transform-origin: right;
-
   }
+
   @include bp(lg) {
     left: calc(50% + 80px);
     width: calc(100% - 160px);
@@ -222,7 +185,4 @@
     }
   }
 }
-
-
-
 </style>
