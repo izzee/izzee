@@ -25,12 +25,6 @@ export default defineNuxtConfig({
     },
   },
 
-  loading: {
-    color: '#D4FF00',
-    height: '4px',
-    continuous: true
-  },
-
   routeRules: {
     '/': { prerender: true },
     '/about': { prerender: true }

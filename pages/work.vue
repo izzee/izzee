@@ -51,7 +51,7 @@
     align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
-    gap: 80px;
+    gap: 160px;
     border-bottom: 0;
     border-color: $blue;
   }

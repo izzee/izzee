@@ -12,11 +12,11 @@
 </template>
 
 <script setup>
-  import '~/styles/window.scss'
   const props = defineProps(['title', 'examples'])
 </script>
 
 <style lang="scss" scoped>
+  @import url('~/styles/_window.scss');
   .media-grid {
     display: inherit;
     flex-direction: inherit;

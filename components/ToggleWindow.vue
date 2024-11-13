@@ -22,7 +22,6 @@
 </template>
 
 <script setup>
-  import '~/styles/window.scss'
   import Plus from '~/public/icons/plus.svg?skipsvgo'
   import { ref, defineProps, defineEmits } from 'vue';
 
@@ -39,150 +38,150 @@
 </script>
 
 <style lang="scss" scoped>
-
-.title {
-  top: 0;
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.toggle-button {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  svg {
-    fill: $gray;
-    width: 80px;
-    height: 48px;
-    transition: transform .25s;
-    background: radial-gradient(#fff, transparent 10%);
+  @import url('~/styles/_window.scss');
+  .title {
+    top: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
   }
 
-  @include bp(sm) {
-    top: 16px;
-    right: 16px;
-    width: 32px;
-    height: 32px;
-  }
-}
+  .toggle-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 
-.link,
-.description {
-  font-size: 16px;
-  line-height: 24px;
+    svg {
+      fill: $gray;
+      width: 80px;
+      height: 48px;
+      transition: transform .25s;
+      background: radial-gradient(#fff, transparent 10%);
+    }
 
-  @include bp(md) {
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-
-.description {
-  flex: 1;
-  text-align: left;
-}
-
-.link {
-  padding: 8px;
-  background-color: $blue;
-  color: $yellow;
-
-  &:hover {
-    background-color: $yellow;
-    color: $blue;
-  }
-
-  @include bp(md) {
-    padding: 16px;
-  }
-}
-
-.left-panel,
-.right-panel {
-  height:100%;
-  transition:transform .25s;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.left-panel {
-  position: relative;
-  right: 50%;
-  width: 100%;
-  transform: translateX(50%);
-
-  .content {
-    transform-origin: left;
-  }
-}
-
-.right-panel {
-  position: absolute;
-  top: 0;
-
-  .content {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-
-  @include bp(lg) {
-    left: calc(50% + 80px);
-    width: calc(100% - 160px);
-    transform: translateX(-50%);
-    transform-origin: center right;
-
-    .content{
-      padding-left: 0;
-      & > * {
-        opacity: 0;
-        transition: opacity .25s;
-      }
+    @include bp(sm) {
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
     }
   }
-}
 
-.toggled {
-  .left-panel .content{
-    transform: scaleX(0);
-  }
-  .right-panel .content{
-    transform: scaleX(1);
-  }
-  @include bp(lg) {
-    .left-panel {
-      transform: translateX(80px);
+  .link,
+  .description {
+    font-size: 16px;
+    line-height: 24px;
 
-      .content {
-        transform: none;
-      }
+    @include bp(md) {
+      font-size: 24px;
+      line-height: 32px;
     }
-    
-    .right-panel {
-      transform: translateX(0);
-      .content {
-        transform: scaleX(1);
+  }
+
+  .description {
+    flex: 1;
+    text-align: left;
+  }
+
+  .link {
+    padding: 8px;
+    background-color: $blue;
+    color: $yellow;
+
+    &:hover {
+      background-color: $yellow;
+      color: $blue;
+    }
+
+    @include bp(md) {
+      padding: 16px;
+    }
+  }
+
+  .left-panel,
+  .right-panel {
+    height:100%;
+    transition:transform .25s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .left-panel {
+    position: relative;
+    right: 50%;
+    width: 100%;
+    transform: translateX(50%);
+
+    .content {
+      transform-origin: left;
+    }
+  }
+
+  .right-panel {
+    position: absolute;
+    top: 0;
+
+    .content {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+
+    @include bp(lg) {
+      left: calc(50% + 80px);
+      width: calc(100% - 160px);
+      transform: translateX(-50%);
+      transform-origin: center right;
+
+      .content{
+        padding-left: 0;
         & > * {
-          opacity: 1;
+          opacity: 0;
+          transition: opacity .25s;
         }
       }
     }
   }
-  .toggle-button {
-    svg {
-      fill: $darkgray;
-      transform: rotate(45deg);
+
+  .toggled {
+    .left-panel .content{
+      transform: scaleX(0);
+    }
+    .right-panel .content{
+      transform: scaleX(1);
+    }
+    @include bp(lg) {
+      .left-panel {
+        transform: translateX(80px);
+
+        .content {
+          transform: none;
+        }
+      }
+      
+      .right-panel {
+        transform: translateX(0);
+        .content {
+          transform: scaleX(1);
+          & > * {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .toggle-button {
+      svg {
+        fill: $darkgray;
+        transform: rotate(45deg);
+      }
     }
   }
-}
 </style>
