@@ -9,10 +9,6 @@
             :title="category.title"
             :component="category.component"
             :examples="category.examples"
-            v-motion
-            :initial="{ opacity: 0}"
-            :visible="{ opacity: 1}"
-            :duration="500"
           />
         </div>
 

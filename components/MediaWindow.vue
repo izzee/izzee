@@ -29,8 +29,10 @@
   }
 
   .topbar {
-    border-top: 64px solid $lightblue;
-    position: sticky;
-    top: 0;
+    @include bp(md) {
+      border-top: 64px solid $lightblue;
+      position: sticky;
+      top: 0;
+    }
   }
 </style>
