@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-svgo-loader',
     '@nuxt/content',
+    '@vueuse/motion/nuxt',
   ],
 
   app: {

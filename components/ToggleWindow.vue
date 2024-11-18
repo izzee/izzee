@@ -15,7 +15,11 @@
       </div>
       <div class="content">
         <p class="description" v-html="description" />
-        <a class="link" href="">Link</a>
+        <div class="links">
+          <a class="link" href="">Github</a>
+          <a class="link" href="">Link</a>
+        </div>
+
       </div>
     </div>
   </div>
@@ -74,6 +78,11 @@
     }
   }
 
+  .links {
+    display: flex;
+    gap: inherit;
+  }
+
   .link,
   .description {
     font-size: 16px;
@@ -91,6 +100,7 @@
   }
 
   .link {
+    flex: 1;
     padding: 8px;
     background-color: $blue;
     color: $yellow;

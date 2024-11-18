@@ -1,12 +1,13 @@
 <template>
-  <MediaWindow 
-    v-if="component === 'ImageGrid'"
-    :id="title"
-    :title="title"
-    :examples="examples"
-  />
-  <div v-if="component === 'ToggleWindows'" class="toggle-windows" :id="title">
+
+  <div  class="window-wrapper" :id="title">
+    <MediaWindow 
+      v-if="component === 'ImageGrid'"
+      :title="title"
+      :examples="examples"
+    />
     <ToggleWindow
+      v-if="component === 'ToggleWindows'"
       v-for="(example, index) in examples"
       :toggled="toggledIndex === index"
       :title="example.title"
@@ -29,12 +30,16 @@
   }
 </script>
 
-<style scoped>
-  .toggle-windows {
+<style scoped lang="scss">
+  .window-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    margin-top: 64px;
+    @include bp(md) {
+      width: 50vw;
+    }
   }
 </style>

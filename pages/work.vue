@@ -9,6 +9,10 @@
             :title="category.title"
             :component="category.component"
             :examples="category.examples"
+            v-motion
+            :initial="{ opacity: 0}"
+            :visible="{ opacity: 1}"
+            :duration="500"
           />
         </div>
 
@@ -39,7 +43,7 @@
       z-index: 2;
     }
     @include bp(sm) {
-      background: linear-gradient($lightblue, $lightestblue);
+      background: $lightblue;
       &:before {
         display: none;
       }
@@ -51,8 +55,8 @@
     align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
-    gap: 160px;
     border-bottom: 0;
+    padding-top: 0;
     border-color: $blue;
   }
 

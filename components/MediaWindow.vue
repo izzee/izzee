@@ -22,4 +22,15 @@
     flex-direction: inherit;
     gap: inherit;
   }
+
+
+  .window {
+    width: 100%;
+  }
+
+  .topbar {
+    border-top: 64px solid $lightblue;
+    position: sticky;
+    top: 0;
+  }
 </style>
