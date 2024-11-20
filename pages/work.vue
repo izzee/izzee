@@ -70,6 +70,7 @@
     border-bottom: 0;
     padding-top: 0;
     border-color: $blue;
+    scroll-behavior: smooth;
   }
 
   .work-nav {
