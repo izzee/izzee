@@ -12,7 +12,7 @@
       type: Object,
       default: () => ({
         root: null,
-        rootMargin: '-160px',
+        rootMargin: '-120px',
         threshold: 0.0,
       }),
     },

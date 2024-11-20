@@ -12,7 +12,6 @@
       v-for="(example, index) in examples"
       :toggled="toggledIndex === index"
       :title="example.title"
-      :format="example.format"
       :src="example.src"
       :description="example.description"
       :onIntersect="() => onIntersect(title)"

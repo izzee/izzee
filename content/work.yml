@@ -4,23 +4,19 @@ categories:
     examples: 
     - title: 'disco'
       description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
-      src: 'images/disco.mov'
-      format: 'video'
+      src: 'images/disco.jpg'
     
     - title: 'code sketches'
       description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
-      src: 'images/code-sketches.mov'
-      format: 'video'
+      src: 'images/codesketches.jpg'
     
     - title: 'infinity8rocks.com'
       description: 'An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify '
       src: 'images/infinity8rocks.jpg'
-      format: 'image'
     
     - title: 'baggy industries'
       description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
       src: 'images/baggy.jpg'
-      format: 'image'
 
   - title: 'design'
     component: 'ImageGrid'
