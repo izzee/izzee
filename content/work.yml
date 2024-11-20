@@ -27,13 +27,115 @@ categories:
   
   - title: 'painting'
     component: 'ImageGrid'
-    examples: 
-    - title: 'test'
-      src: 'images/placeholder.png'
-    - title: 'test'
-      src: 'images/placeholder.png'
-    - title: 'test'
-      src: 'images/placeholder.png'
+    examples:
+    - title: ''
+      size: full
+      src: images/cowboy.jpg
+    - title: ''
+      size: half
+      src: images/xetamorph1.jpg
+    - title: ''
+      size: half
+      src: images/eye.jpg
+    - title: ''
+      size: half
+      src: images/click-demon.jpg
+    - title: ''
+      size: half
+      src: images/puppet.jpg
+    - title: ''
+      size: half
+      src: images/portrait.jpg
+    - title: ''
+      size: half
+      src: images/flower-foot.jpg
+    - title: ''
+      size: full
+      src: images/usbkiller.jpg
+    - title: ''
+      size: half
+      src: images/ancient.jpg
+    - title: ''
+      size: half
+      src: images/catch.jpg
+    - title: ''
+      size: half
+      src: images/isalina.jpg
+    - title: ''
+      size: half
+      src: images/agent.jpg
+    - title: ''
+      size: half
+      src: images/bait.jpg
+    - title: ''
+      size: half
+      src: images/birdkiller.jpg
+    - title: ''
+      size: full
+      src: images/doodle5.jpg
+    - title: ''
+      size: half
+      src: images/melting.jpg
+    - title: ''
+      size: half
+      src: images/skeleton-grin.jpg
+    - title: ''
+      size: half
+      src: images/slanky.jpg
+    - title: ''
+      size: half
+      src: images/throneroom.jpg
+    - title: ''
+      size: half
+      src: images/visitor.jpg
+    - title: ''
+      size: half
+      src: images/zetamorph.jpg
+    - title: ''
+      size: full
+      src: images/inverted.jpg
+    - title: ''
+      size: half
+      src: images/horizon-zapper.jpg
+    - title: ''
+      size: half
+      src: images/helmet.jpg
+    - title: ''
+      size: half
+      src: images/dispersion.jpg
+    - title: ''
+      size: half
+      src: images/husky.jpg
+    - title: ''
+      size: half
+      src: images/entity.jpg
+    - title: ''
+      size: half
+      src: images/snakehand.jpg
+    - title: ''
+      size: full
+      src: images/running-soaked.jpg
+    - title: ''
+      size: half
+      src: images/dude1.jpg
+    - title: ''
+      size: half
+      src: images/lasereyes.jpg
+    - title: ''
+      size: half
+      src: images/dude2.jpg
+    - title: ''
+      size: half
+      src: images/pikachu.jpg
+    - title: ''
+      size: half
+      src: images/yugi.jpg
+    - title: ''
+      size: half
+      src: images/pikachu2.jpg
+    - title: ''
+      size: half
+      src: images/projections.jpg
   
   - title: 'videos'
     component: 'ImageGrid'
@@ -44,3 +146,7 @@ categories:
       src: 'images/placeholder.png'
     - title: 'test'
       src: 'images/placeholder.png'
+
+
+
+

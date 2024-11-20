@@ -3,12 +3,13 @@
     <ContentDoc v-slot="{ doc }">
       <main>
         <Nav/>
-        <div class="main-content">
+        <div class="main-content" ref="rootElement">
           <WorkCategory 
             v-for="category in doc.categories" 
             :title="category.title"
             :component="category.component"
             :examples="category.examples"
+            :rootElement="rootElement"
             @intersect="onIntersect"
           />
         </div>
@@ -19,7 +20,6 @@
               :class="focusedCategory === category.title && 'focused'"
               :href="`#${category.title}`" 
               v-html="category.title"
-              @click="() => setActiveCategory(category.title)"
             />
           </template>
         </div>
@@ -30,12 +30,10 @@
 
 <script setup>
   const focusedCategory = ref(null);
+  const rootElement = ref(null);
 
-  const setActiveCategory = (category) => {
-    focusedCategory.value = category
-  }
   const onIntersect = (category) => {
-    setActiveCategory(category)
+    focusedCategory.value = category
   }
 </script>
 

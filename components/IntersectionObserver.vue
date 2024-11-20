@@ -12,8 +12,8 @@
       type: Object,
       default: () => ({
         root: null,
-        rootMargin: '0px',
-        threshold: 0.1,
+        rootMargin: '-160px',
+        threshold: 0.0,
       }),
     },
   });

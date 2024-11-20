@@ -9,7 +9,11 @@
     </div>
     <div class="content">
       <div class="media-grid">
-        <LazyNuxtImg v-for="example in examples" :src="example.src"/>    
+        <LazyNuxtImg 
+          v-for="example in examples" 
+          :class="example.size"
+          :src="example.src"
+        />    
       </div>
     </div>
   </IntersectionObserver>
@@ -23,9 +27,25 @@
 <style lang="scss" scoped>
   @import url('~/styles/_window.scss');
   .media-grid {
-    display: inherit;
+    display: grid;
     flex-direction: inherit;
+    grid-template-columns: 1fr;
+
     gap: inherit;
+    @include bp(sm) {
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &.full {
+        grid-column: span 2;
+      }
+    }
   }
 
   .window {

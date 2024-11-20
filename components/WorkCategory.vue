@@ -21,9 +21,9 @@
 </template>
 
 <script setup>
-  const emit = defineEmits(['intersect', 'leave']);
+const emit = defineEmits(['intersect', 'leave']);
 
-  const props = defineProps(["title", "component", "examples", "onIntersect", "onLeave"])
+const props = defineProps(["title", "component", "examples", "onIntersect", "onLeave", "rootElement"])
 
   const toggledIndex = ref(null);
 
@@ -42,9 +42,12 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    margin-top: 16px;
+  
 
     @include bp(md) {
       width: 50vw;
+      margin-top: 0;
 
       &:first-child {
         padding-top: 64px;
