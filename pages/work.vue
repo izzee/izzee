@@ -76,7 +76,6 @@
     border-color: $blue;
     scroll-behavior: smooth;
     background: inherit;
-    background-size: 100dvh;
 
   }
 
