@@ -48,7 +48,6 @@
   main {
     background: linear-gradient($lightblue, $blue calc(100% - 48px));
     background-attachment: fixed;
-    scroll-padding-top: 128px;
     &:before {
       content: '';
       position: fixed;
@@ -74,9 +73,18 @@
     border-bottom: 0;
     padding-top: 0;
     border-color: $blue;
-    scroll-behavior: smooth;
     background: inherit;
+    scroll-behavior: smooth;
+    scroll-padding-top: 16px;
 
+    @include bp(sm) {
+      scroll-padding-top: 24px;
+    }
+
+    @include bp(md) {
+      scroll-padding-top: 0;
+    }
+    
   }
 
   .work-nav {
