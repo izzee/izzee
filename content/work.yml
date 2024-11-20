@@ -3,17 +3,24 @@ categories:
     component: 'ToggleWindows'
     examples: 
     - title: 'disco'
-      src: 'images/disco.jpg'
       description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
+      src: 'images/disco.mov'
+      format: 'video'
+    
     - title: 'code sketches'
-      src: 'images/codesketches.jpg'
       description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
+      src: 'images/code-sketches-3.mov'
+      format: 'video'
+    
     - title: 'infinity8rocks.com'
-      src: 'images/infinity8rocks.jpg'
       description: 'An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify '
+      src: 'images/infinity8rocks.jpg'
+      format: 'image'
+    
     - title: 'baggy industries'
-      src: 'images/baggy.jpg'
       description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
+      src: 'images/baggy.jpg'
+      format: 'image'
 
   - title: 'design'
     component: 'ImageGrid'

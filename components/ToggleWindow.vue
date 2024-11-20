@@ -8,7 +8,18 @@
     <div class="left-panel">
       <div class="topbar"/>
       <div class="content">
-        <NuxtImg class="website-image" :src="src" alt=""/>
+        <NuxtImg 
+          v-if="format === 'image'"
+          class="website-image" 
+          :src="src"
+        />
+        <video
+          v-if="format === 'video'"
+          muted
+          autoplay="true"
+          loop="true"
+          :src="src"
+        />
       </div>
     </div>
     <div class="right-panel">
@@ -34,7 +45,7 @@
 
   const hasBeenToggled = ref(false);
 
-  const props = defineProps(["title", "src", "description", "toggled", "onLeave", "onIntersect"])
+  const props = defineProps(["title", "format", "src", "description", "toggled", "onLeave", "onIntersect"])
 
   const emit = defineEmits(["toggle"]);
 
