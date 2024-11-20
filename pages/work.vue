@@ -19,6 +19,7 @@
             <a 
               :class="focusedCategory === category.title && 'focused'"
               :href="`#${category.title}`" 
+              @click="() => setFocusedCategory(category.title)"
               v-html="category.title"
             />
           </template>
@@ -32,9 +33,14 @@
   const focusedCategory = ref(null);
   const rootElement = ref(null);
 
-  const onIntersect = (category) => {
+  const setFocusedCategory = (category) => {
     focusedCategory.value = category
   }
+
+  const onIntersect = (category) => {
+    setFocusedCategory(category)
+  }
+  
 </script>
 
 <style lang="scss" scoped>
