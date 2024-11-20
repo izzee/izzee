@@ -41,7 +41,7 @@
 
   main {
     background: linear-gradient($lightblue, $blue);
-    background-size: 100dvh;
+    background-size: 100vh;
     background-attachment: fixed;
     &:before {
       content: '';
