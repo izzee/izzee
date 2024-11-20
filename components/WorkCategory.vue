@@ -5,6 +5,7 @@
       :title="title"
       :examples="examples"
       :onIntersect="() => onIntersect(title)"
+      :options="intersectOptions"
     />
     <ToggleWindow
       ref="window"
@@ -15,6 +16,7 @@
       :src="example.src"
       :description="example.description"
       :onIntersect="() => onIntersect(title)"
+      :options="intersectOptions"
       @toggle="setToggled(index)"
     />
   </div>
@@ -33,6 +35,13 @@ const props = defineProps(["title", "component", "examples", "onIntersect", "onL
   const onIntersect = (entry) => {
     emit('intersect', entry);
   };
+
+
+  const intersectOptions = {
+    root: props.rootElement,
+    rootMargin: '-120px',
+    threshold: 0.0,
+  }
 </script>
 
 <style scoped lang="scss">

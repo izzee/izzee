@@ -12,11 +12,12 @@
       type: Object,
       default: () => ({
         root: null,
-        rootMargin: '-120px',
+        rootMargin: '0px',
         threshold: 0.0,
       }),
     },
-  });
+  },
+);
 
   const emit = defineEmits(['intersect', 'leave']);
 

@@ -22,10 +22,22 @@ categories:
     component: 'ImageGrid'
     examples: 
     - title: 'test'
+      size: full
       src: 'images/placeholder.png'
     - title: 'test'
+      size: full
       src: 'images/placeholder.png'
     - title: 'test'
+      size: full
+      src: 'images/placeholder.png'
+    - title: 'test'
+      size: full
+      src: 'images/placeholder.png'
+    - title: 'test'
+      size: full
+      src: 'images/placeholder.png'
+    - title: 'test'
+      size: full
       src: 'images/placeholder.png'
   
   - title: 'painting'
@@ -144,10 +156,13 @@ categories:
     component: 'ImageGrid'
     examples: 
     - title: 'test'
+      size: full
       src: 'images/placeholder.png'
     - title: 'test'
+      size: full
       src: 'images/placeholder.png'
     - title: 'test'
+      size: full
       src: 'images/placeholder.png'
 
 
