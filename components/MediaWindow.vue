@@ -28,20 +28,13 @@
   @import url('~/styles/_window.scss');
   .media-grid {
     display: grid;
-    flex-direction: inherit;
-    grid-template-columns: 1fr;
-
     gap: inherit;
-    @include bp(sm) {
-      grid-template-columns: 1fr 1fr;
-
-    }
+    grid-template-columns: 1fr 1fr;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-
       &.full {
         grid-column: span 2;
       }
