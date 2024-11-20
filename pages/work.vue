@@ -88,9 +88,8 @@
       line-height: 2;
       color: $lightblue;
       cursor: pointer;
-      &.focused,
-      &:hover {
-        color: white;
+      &.focused{
+        color: $yellow;
       }
     }
 
@@ -99,6 +98,10 @@
       gap: 16px;
       a {
         font-size: 24px;
+
+        &:hover {
+          color: $yellow;
+        }
       }
     }
   }
