@@ -9,19 +9,35 @@
             :title="category.title"
             :component="category.component"
             :examples="category.examples"
+            @intersect="onIntersect"
           />
         </div>
-
         <div class="work-nav">
           <template v-for="(category, index) in doc.categories">
             <span v-if="index !== 0" class="dot"/>
-            <a href="" v-html="category.title"/>
+            <a 
+              :class="focusedCategory === category.title && 'focused'"
+              :href="`#${category.title}`" 
+              v-html="category.title"
+              @click="() => setActiveCategory(category.title)"
+            />
           </template>
         </div>
       </main>
     </ContentDoc>
   </NuxtLayout>
 </template>
+
+<script setup>
+  const focusedCategory = ref(null);
+
+  const setActiveCategory = (category) => {
+    focusedCategory.value = category
+  }
+  const onIntersect = (category) => {
+    setActiveCategory(category)
+  }
+</script>
 
 <style lang="scss" scoped>
 
@@ -67,11 +83,13 @@
     flex-wrap: wrap;
     background-color: $blue;
     z-index: 2;
+    
     a { 
       font-size: 16px;
       line-height: 2;
       color: $lightblue;
       cursor: pointer;
+      &.focused,
       &:hover {
         color: white;
       }

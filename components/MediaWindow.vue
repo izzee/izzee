@@ -1,5 +1,9 @@
 <template>
-  <div class="window">
+  <IntersectionObserver 
+    class="window"
+    @intersect="onIntersect"
+    @leave="onLeave"
+  >
     <div class="topbar">
       <h3 class="title" v-html="title"/>
     </div>
@@ -8,11 +12,12 @@
         <LazyNuxtImg v-for="example in examples" :src="example.src"/>    
       </div>
     </div>
-  </div>
+  </IntersectionObserver>
 </template>
 
 <script setup>
-  const props = defineProps(['title', 'examples'])
+  const props = defineProps(["toggled", "title", "examples", "onLeave", "onIntersect"])
+
 </script>
 
 <style lang="scss" scoped>
@@ -22,7 +27,6 @@
     flex-direction: inherit;
     gap: inherit;
   }
-
 
   .window {
     width: 100%;

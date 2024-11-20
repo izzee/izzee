@@ -1,5 +1,9 @@
 <template>
-  <div :class="`${toggled ? 'window toggled' : 'window'}`">
+  <IntersectionObserver 
+    :class="`${toggled ? 'window toggled' : 'window'}`"
+    @intersect="onIntersect"
+    @leave="onLeave"
+  >
     <h3 class="title" v-html="title" />
     <div class="left-panel">
       <div class="topbar"/>
@@ -19,30 +23,31 @@
           <a class="link" href="">Github</a>
           <a class="link" href="">Link</a>
         </div>
-
       </div>
     </div>
-  </div>
+  </IntersectionObserver>
 </template>
 
 <script setup>
-  import Plus from '~/public/icons/plus.svg?skipsvgo'
-  import { ref, defineProps, defineEmits } from 'vue';
+  import Plus from "~/public/icons/plus.svg?skipsvgo"
+  import { ref, defineProps, defineEmits } from "vue";
 
   const hasBeenToggled = ref(false);
 
-  const props = defineProps(['toggled', 'title', 'src', 'description'])
+  const props = defineProps(["title", "src", "description", "toggled", "onLeave", "onIntersect"])
 
-  const emit = defineEmits(['toggle']);
+  const emit = defineEmits(["toggle"]);
 
   function toggle() {
     hasBeenToggled.value = true
-    emit('toggle');
+    emit("toggle");
   }
+
+
 </script>
 
 <style lang="scss" scoped>
-  @import url('~/styles/_window.scss');
+  @import url("~/styles/_window.scss");
   .title {
     top: 0;
     position: absolute;

@@ -2,6 +2,9 @@ categories:
   - title: websites
     component: 'ToggleWindows'
     examples: 
+    - title: 'disco'
+      src: 'images/disco.jpg'
+      description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
     - title: 'code sketches'
       src: 'images/codesketches.jpg'
       description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
