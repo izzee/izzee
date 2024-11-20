@@ -46,7 +46,7 @@
 <style lang="scss" scoped>
 
   main {
-    background: linear-gradient($lightblue, $blue);
+    background: linear-gradient($lightblue, $blue calc(100% - 48px));
     background-attachment: fixed;
     scroll-padding-top: 128px;
     &:before {
