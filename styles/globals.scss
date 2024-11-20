@@ -20,9 +20,7 @@ main {
   justify-content: center;
   align-items: stretch;
   font-family: 'Inter', Helvetica, sans-serif;
-  @include bp(md) {
-    height: 100dvh;
-  }
+  height: 100dvh;
 }
 
 .main-content {

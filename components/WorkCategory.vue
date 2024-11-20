@@ -53,7 +53,9 @@ const props = defineProps(["title", "component", "examples", "onIntersect", "onL
     gap: 16px;
     margin-top: 16px;
   
-
+    @include bp(sm) {
+      margin-top: 32px;
+    }
     @include bp(md) {
       width: 50vw;
       margin-top: 0;

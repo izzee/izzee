@@ -40,15 +40,15 @@
   const onIntersect = (category) => {
     setFocusedCategory(category)
   }
-  
+
 </script>
 
 <style lang="scss" scoped>
 
   main {
     background: linear-gradient($lightblue, $blue);
-    background-size: 100vh;
     background-attachment: fixed;
+    scroll-padding-top: 128px;
     &:before {
       content: '';
       position: fixed;
@@ -75,6 +75,9 @@
     padding-top: 0;
     border-color: $blue;
     scroll-behavior: smooth;
+    background: inherit;
+    background-size: 100dvh;
+
   }
 
   .work-nav {
