@@ -226,37 +226,38 @@ categories:
       size: half
       src: images/pikachu2.jpg
     
-    - title: ''
-      type: image
-      size: half
-      src: images/projections.jpg
+
   
   - title: 'videos'
     component: 'MediaGrid'
-    examples: 
+    examples:
+    - title: ''
+      type: image
+      size: full
+      src: images/projections.jpg
     - title: 'Open Sores'
-      type: vimeo
+      type: embed
       src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459918047?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Open Sores"></iframe></div>'
     - title: 'abstraction 2'
-      type: vimeo
+      type: embed
       src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459908396?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="abstraction 2"></iframe></div>'
     - title: 'abstraction 1'
-      type: vimeo
+      type: embed
       src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459908715?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="abstraction 1"></iframe></div>'
     - title: 'torture ii'
-      type: vimeo
+      type: embed
       src: '<div style="padding:61.86% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459919441?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="torture ii"></iframe></div>'
     - title: 'torture dab'
-      type: vimeo
+      type: embed
       src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459913293?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="torture dab"></iframe></div>'
     - title: 'Face Loop"'
-      type: vimeo
+      type: embed
       src: '<div style="padding:66.67% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/462138180?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Face Loop"></iframe></div>'
     - title: 'emanation 1'
-      type: vimeo
+      type: embed
       src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459909520?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="emanation 1"></iframe></div>'
     - title: 'emanation 2'
-      type: vimeo
+      type: embed
       src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459912893?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="emanation 2"></iframe></div>'
 
 

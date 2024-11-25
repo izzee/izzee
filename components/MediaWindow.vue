@@ -18,8 +18,8 @@
           :src="example.src"
         />   
         <div
-          class="vimeo-wrapper"
-          v-if="example.type === 'vimeo'" 
+          class="embed-wrapper"
+          v-if="example.type === 'embed'" 
           v-html="example.src"
         />
         </div>
@@ -44,15 +44,6 @@
     .media{
       &.full {
         grid-column: span 2;
-      }
-
-      
-    }
-
-    .vimeo-wrapper {
-      > * {
-        max-width: 100% !important;
-        min-width: 100%;
       }
     }
 
