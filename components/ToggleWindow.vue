@@ -23,8 +23,8 @@
       <div class="content">
         <p class="description" v-html="description" />
         <div class="links">
-          <a class="link" href="">Github</a>
-          <a class="link" href="">Link</a>
+          <a class="link" :href="link">Github</a>
+          <a class="link" :href="link">Link</a>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
 
   const hasBeenToggled = ref(false);
 
-  const props = defineProps(["title", "src", "description", "toggled", "onLeave", "onIntersect"])
+  const props = defineProps(["title", "src", "description", "link", "toggled", "onLeave", "onIntersect"])
 
   const emit = defineEmits(["toggle"]);
 

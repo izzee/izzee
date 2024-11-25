@@ -19,6 +19,7 @@
   background: linear-gradient(white, lightgray);
   display: flex;
   align-items: center;
+  z-index: 1;
   @include bp(sm) {
     height: 64px;
   }

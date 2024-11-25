@@ -9,11 +9,20 @@
     </div>
     <div class="content">
       <div class="media-grid">
+        <div
+          v-for="example in examples"
+          :class="`media ${example.size || 'full'}`"
+        >
         <LazyNuxtImg 
-          v-for="example in examples" 
-          :class="example.size"
+          v-if="example.type === 'image'" 
           :src="example.src"
-        />    
+        />   
+        <div
+          class="vimeo-wrapper"
+          v-if="example.type === 'vimeo'" 
+          v-html="example.src"
+        />
+        </div>
       </div>
     </div>
   </IntersectionObserver>
@@ -26,18 +35,31 @@
 
 <style lang="scss" scoped>
   @import url('~/styles/_window.scss');
+
   .media-grid {
     display: grid;
     gap: inherit;
     grid-template-columns: 1fr 1fr;
 
+    .media{
+      &.full {
+        grid-column: span 2;
+      }
+
+      
+    }
+
+    .vimeo-wrapper {
+      > * {
+        max-width: 100% !important;
+        min-width: 100%;
+      }
+    }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      &.full {
-        grid-column: span 2;
-      }
     }
   }
 

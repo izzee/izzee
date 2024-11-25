@@ -1,7 +1,7 @@
 <template>
   <div class="window-wrapper" :id="title">
     <MediaWindow 
-      v-if="component === 'ImageGrid'"
+      v-if="component === 'MediaGrid'"
       :title="title"
       :examples="examples"
       :onIntersect="() => onIntersect(title)"
@@ -15,6 +15,7 @@
       :title="example.title"
       :src="example.src"
       :description="example.description"
+      :link="example.link"
       :onIntersect="() => onIntersect(title)"
       :options="intersectOptions"
       @toggle="setToggled(index)"
@@ -39,7 +40,7 @@ const props = defineProps(["title", "component", "examples", "onIntersect", "onL
 
   const intersectOptions = {
     root: props.rootElement,
-    rootMargin: '-120px',
+    rootMargin: '-140px',
     threshold: 0.0,
   }
 </script>

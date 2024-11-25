@@ -2,169 +2,261 @@ categories:
   - title: websites
     component: 'ToggleWindows'
     examples: 
-    - title: 'disco'
-      description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
-      src: 'images/disco.jpg'
+    - title: disco
+      description: A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js
+      src: images/disco.jpg
+      type: image
+      link: https://disco.cloud
     
-    - title: 'code sketches'
-      description: 'A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js'
-      src: 'images/codesketches.jpg'
+    - title: code sketches
+      description: A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js
+      src: images/codesketches.jpg
+      type: image
+      link: https://codesketches.netlify.app
     
-    - title: 'infinity8rocks.com'
-      description: 'An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify '
-      src: 'images/infinity8rocks.jpg'
+    - title: infinity8rocks.com
+      description: An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify 
+      src: images/infinity8rocks.jpg
+      type: image
+      link: https://infinity8rocks.com
     
-    - title: 'baggy industries'
-      description: 'A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections'
-      src: 'images/baggy.jpg'
-
-  - title: 'design'
-    component: 'ImageGrid'
+    - title: baggy industries
+      description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections
+      src: images/baggy.jpg
+      type: image
+      link: https://baggy.industries
+      
+  - title: design
+    component: MediaGrid
     examples: 
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
+    - title: test
+      type: image
+      src: images/placeholder.png
+    
+    - title: test
+      type: image
+      src: images/placeholder.png
+    
+    - title: test
+      type: image
+      src: images/placeholder.png
+    
+    - title: test
+      type: image
+      src: images/placeholder.png
+    
+    - title: test
+      type: image
+      src: images/placeholder.png
+    
+    - title: test
+      type: image
+      src: images/placeholder.png
   
-  - title: 'painting'
-    component: 'ImageGrid'
+  - title: painting
+    component: MediaGrid
     examples:
     - title: ''
-      size: full
+      type: image
       src: images/cowboy.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/xetamorph1.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/eye.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/click-demon.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/puppet.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/portrait.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/flower-foot.jpg
+    
     - title: ''
-      size: full
+      type: image
       src: images/usbkiller.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/ancient.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/catch.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/isalina.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/agent.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/bait.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/birdkiller.jpg
+    
     - title: ''
-      size: full
+      type: image
       src: images/doodle5.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/melting.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/skeleton-grin.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/slanky.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/throneroom.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/visitor.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/zetamorph.jpg
+    
     - title: ''
-      size: full
+      type: image
       src: images/inverted.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/horizon-zapper.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/helmet.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/dispersion.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/husky.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/entity.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/snakehand.jpg
+    
     - title: ''
-      size: full
+      type: image
       src: images/running-soaked.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/dude1.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/lasereyes.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/dude2.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/pikachu.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/yugi.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/pikachu2.jpg
+    
     - title: ''
+      type: image
       size: half
       src: images/projections.jpg
   
   - title: 'videos'
-    component: 'ImageGrid'
+    component: 'MediaGrid'
     examples: 
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
-    - title: 'test'
-      size: full
-      src: 'images/placeholder.png'
-
-
+    - title: 'Open Sores'
+      type: vimeo
+      src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459918047?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Open Sores"></iframe></div>'
+    - title: 'abstraction 2'
+      type: vimeo
+      src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459908396?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="abstraction 2"></iframe></div>'
+    - title: 'abstraction 1'
+      type: vimeo
+      src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459908715?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="abstraction 1"></iframe></div>'
+    - title: 'torture ii'
+      type: vimeo
+      src: '<div style="padding:61.86% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459919441?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="torture ii"></iframe></div>'
+    - title: 'torture dab'
+      type: vimeo
+      src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459913293?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="torture dab"></iframe></div>'
+    - title: 'Face Loop"'
+      type: vimeo
+      src: '<div style="padding:66.67% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/462138180?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Face Loop"></iframe></div>'
+    - title: 'emanation 1'
+      type: vimeo
+      src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459909520?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="emanation 1"></iframe></div>'
+    - title: 'emanation 2'
+      type: vimeo
+      src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459912893?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="emanation 2"></iframe></div>'
 
 
