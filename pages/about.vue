@@ -96,8 +96,8 @@
     line-height: 1;
     text-align: center;
     background-color: $gray;
-    color: $lightpurple;
-    fill: $lightpurple;
+    color: $lavendar;
+    fill: $lavendar;
     cursor: pointer;
 
     @include bp (sm){
@@ -108,7 +108,7 @@
     &:hover {
       color: $gray;
       fill: $gray;
-      background-color: $lightpurple;
+      background-color: $lavendar;
     }
   }
 

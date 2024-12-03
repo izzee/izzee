@@ -58,7 +58,7 @@
       z-index: 2;
     }
     @include bp(sm) {
-      background: $lightblue;
+      background: $mediumblue;
       &:before {
         display: none;
       }
@@ -126,15 +126,5 @@
     width: 4px;
     height: 4px;
     background-color: $lightblue;
-  } 
-
-  .work-heading {
-    z-index: 2;
-    width: 100%;
-    background-color: $lightblue;
-    font-size: 32px;
-    line-height: 1.5;
-    font-weight: 400;
-    color: $lightestblue;
   }
 </style>

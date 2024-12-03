@@ -2,37 +2,37 @@ categories:
   - title: websites
     component: 'ToggleWindows'
     examples: 
-    - title: disco
-      description: A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js
+    - title: www.disco.cloud
+      description: A landing page for 
       src: images/disco.jpg
       type: image
       link: https://disco.cloud
+    
+    - title: www.infinity8rocks.com
+      description: An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify 
+      src: images/infinity8rocks.jpg
+      type: image
+      link: https://infinity8rocks.com
+    
+    - title: www.baggy.industries
+      description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections
+      src: images/baggy.jpg
+      type: image
+      link: https://baggy.industries
     
     - title: code sketches
       description: A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js
       src: images/codesketches.jpg
       type: image
       link: https://codesketches.netlify.app
-    
-    - title: infinity8rocks.com
-      description: An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify 
-      src: images/infinity8rocks.jpg
-      type: image
-      link: https://infinity8rocks.com
-    
-    - title: baggy industries
-      description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections
-      src: images/baggy.jpg
-      type: image
-      link: https://baggy.industries
-      
+         
   - title: design
     component: MediaGrid
     examples: 
     - title: test
       type: image
       src: images/placeholder.png
-    
+
     - title: test
       type: image
       src: images/placeholder.png
@@ -225,8 +225,6 @@ categories:
       type: image
       size: half
       src: images/pikachu2.jpg
-    
-
   
   - title: 'videos'
     component: 'MediaGrid'

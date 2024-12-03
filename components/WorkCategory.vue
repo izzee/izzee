@@ -46,6 +46,15 @@ const props = defineProps(["title", "component", "examples", "onIntersect", "onL
 </script>
 
 <style scoped lang="scss">
+
+  h2 {
+    height: 32px;
+    font-weight: normal;
+    color: $lightblue;
+    width: 100%;
+    border-bottom: 4px dotted $lightblue;
+
+  }
   .window-wrapper {
     width: 100%;
     display: flex;

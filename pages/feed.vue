@@ -16,10 +16,10 @@
 <style lang="scss" scoped>
 
   main {
-    background-color: $lightestpurple;
+    background-color: $lightlavendar;
   }
   .main-content {
-    border-color: $lightpurple;
+    border-color: $lavendar;
     padding: 0;
     gap: 16px;
     display: flex;
@@ -29,14 +29,14 @@
   }
 
   .feed {
-    border-bottom: 16px solid $lightpurple;
+    border-bottom: 16px solid $lavendar;
   }
 
   .post {
     flex-shrink: 0;
     height: 32px;
     top: 0;
-    background-color: $lightestpurple;
+    background-color: $lightlavendar;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -46,7 +46,7 @@
     color: $blue;
     cursor: pointer;
     &:nth-child(even) {
-      background-color: $lightpurple;
+      background-color: $lavendar;
     }
     &:hover {
       background-color: $lightyellow;

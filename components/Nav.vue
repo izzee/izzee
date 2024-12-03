@@ -109,6 +109,6 @@
 
   .feed-link {
     color: $blue;
-    background-color: $lightpurple;
+    background-color: $lavendar;
   }
 </style>

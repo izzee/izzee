@@ -60,7 +60,7 @@
 
   .topbar {
     @include bp(md) {
-      border-top: 64px solid $lightblue;
+      border-top: 64px solid $mediumblue;
       position: sticky;
       top: 0;
     }

@@ -84,7 +84,7 @@
       flex: 1;
       padding: 12px 16px;
       background-color: $gray;
-      color: $lightpurple;
+      color: $lavendar;
       border: 0;
       display: flex;
       font-size: inherit;
@@ -100,11 +100,11 @@
       }
       &:focus {
         outline: 0;
-        color: $lightpurple;
-        box-shadow: 0 0 0 2px $lightpurple inset;
+        color: $lavendar;
+        box-shadow: 0 0 0 2px $lavendar inset;
 
         @include bp(md) {
-          box-shadow: 0 0 0 4px $lightpurple inset;
+          box-shadow: 0 0 0 4px $lavendar inset;
         }
       }
     }
@@ -114,7 +114,7 @@
     width: 48px;
     height: 48px;
     margin-right: auto;
-    fill: $lightpurple;
+    fill: $lavendar;
     background-color: $gray;
 
     svg {
@@ -130,7 +130,7 @@
 
     &:hover {
       fill: $gray;
-      background-color: $lightpurple;
+      background-color: $lavendar;
     }
   }
 
@@ -150,14 +150,14 @@
     font-size: inherit;
     font-weight: 500;
     line-height: inherit;
-    fill: $lightpurple;
-    color: $lightpurple;
+    fill: $lavendar;
+    color: $lavendar;
     background-color: $gray;
 
     &:hover {
       fill: $gray;
       color: $gray;
-      background-color: $lightpurple;
+      background-color: $lavendar;
     }
 
     @include bp (sm) {
