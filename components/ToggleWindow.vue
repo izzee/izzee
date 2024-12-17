@@ -34,7 +34,6 @@
 
 <script setup>
   import Plus from "~/public/images/plus.svg?skipsvgo"
-  import Eye from "~/public/images/eye.svg?skipsvgo"
 
   import { ref, defineProps, defineEmits } from "vue";
 

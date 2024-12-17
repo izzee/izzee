@@ -1,12 +1,14 @@
 <template>
   <NuxtLayout>
     <ContentDoc v-slot="{ doc }">
-      <div className="loading" v-if="doc.categories.length !== categoryLoadedCount">
-        Loading
-      </div>
+      
       <main>
         <Nav/>
+          <div className="loading" v-if="doc.categories.length !== categoryLoadedCount">
+            <Loading/>
+          </div>
         <div class="main-content" ref="rootElement">
+
           <WorkCategory 
             v-for="category in doc.categories" 
             :title="category.title"
@@ -18,7 +20,7 @@
           />
         </div>
         <div class="work-nav">
-        <template v-for="(category, index) in doc.categories">
+          <template v-for="(category, index) in doc.categories">
             <span v-if="index !== 0" class="dot"/>
             <a 
               :class="focusedCategory === category.title && 'focused'"
@@ -36,8 +38,10 @@
 <script setup>
   const focusedCategory = ref(null);
   const rootElement = ref(null);
-  const loaded = ref(false)
-  const categoryLoadedCount = ref(0)
+  const loaded = ref(false);
+  const categoryLoadedCount = ref(0);
+  import Loading from "~/public/images/loading.svg?skipsvgo"
+
 
   const setFocusedCategory = (category) => {
     focusedCategory.value = category
@@ -89,14 +93,7 @@
     }
   }
 
-  .loading {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: $mediumblue;
-    z-index: 10;
-  }
-
+ 
   .main-content {
     text-align: center;
     align-items: center;
@@ -108,6 +105,7 @@
     background: inherit;
     scroll-behavior: smooth;
     scroll-padding-top: 16px;
+    position: relative;
 
     @include bp(sm) {
       scroll-padding-top: 24px;
@@ -118,6 +116,22 @@
     }
     
   }
+
+  .loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $mediumblue;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      animation: spin 1s linear infinite;
+    }
+  }
+
 
   .work-nav {
     position: sticky;
@@ -168,6 +182,15 @@
     @include bp(md) {
       width: 8px;
       height: 8px;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 </style>
