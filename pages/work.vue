@@ -30,24 +30,36 @@
 </template>
 
 <script setup>
-  const focusedCategory = ref(null);
+  const focusedCategory = ref('websites');
   const rootElement = ref(null);
+  const loaded = ref(false)
 
   const setFocusedCategory = (category) => {
     focusedCategory.value = category
   }
-
+  
   const debounce = (fn, delay) => {
-    let timeoutId;
+    let timeout;
     return (...args) => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => fn(...args), delay);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => fn(...args), delay);
     };
   };
 
   const onIntersect = debounce((category) => {
-    setFocusedCategory(category)
-  }, 200)
+    if (loaded.value) {
+      setFocusedCategory(category)
+    }
+  }, 250)
+
+  onMounted(() => {
+    let timeout
+    timeout = setTimeout(() => {
+      loaded.value = true
+      clearTimeout(timeout)
+    }, 300)
+  })
+
 
 </script>
 

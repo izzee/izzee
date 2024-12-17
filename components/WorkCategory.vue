@@ -34,6 +34,7 @@ const props = defineProps(["title", "component", "examples", "onIntersect", "onL
     toggledIndex.value = toggledIndex.value === index ? null : index;
   }
   const onIntersect = (entry) => {
+    toggledIndex.value = null
     emit('intersect', entry);
   };
 

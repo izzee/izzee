@@ -5,7 +5,7 @@
       izzee
       <Arrow/>
     </NuxtLink>
-    <NuxtLink to="/work" class="work-link">work</NuxtLink>
+    <NuxtLink to="/work#websites" class="work-link" prefetch >work</NuxtLink>
     <NuxtLink to="/about" class="about-link">about</NuxtLink>
     <NuxtLink to="/feed" class="feed-link">feed</NuxtLink>
   </nav>
@@ -132,7 +132,7 @@
       fill: $yellow;
       opacity: 0;
       transform: translateX(100%);
-      transition: transform .5s;
+      transition: transform .5s, opacity .25s;
     }
     .home-link:hover {
       color: $green;
