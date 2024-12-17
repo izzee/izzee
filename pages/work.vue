@@ -1,6 +1,9 @@
 <template>
   <NuxtLayout>
     <ContentDoc v-slot="{ doc }">
+      <div className="loading" v-if="doc.categories.length !== categoryLoadedCount">
+        Loading
+      </div>
       <main>
         <Nav/>
         <div class="main-content" ref="rootElement">
@@ -10,11 +13,12 @@
             :component="category.component"
             :examples="category.examples"
             :rootElement="rootElement"
+            :onCategoryLoaded="() => onCategoryLoaded(category.title, doc.categories.length)"
             @intersect="onIntersect"
           />
         </div>
         <div class="work-nav">
-          <template v-for="(category, index) in doc.categories">
+        <template v-for="(category, index) in doc.categories">
             <span v-if="index !== 0" class="dot"/>
             <a 
               :class="focusedCategory === category.title && 'focused'"
@@ -33,9 +37,17 @@
   const focusedCategory = ref(null);
   const rootElement = ref(null);
   const loaded = ref(false)
+  const categoryLoadedCount = ref(0)
 
   const setFocusedCategory = (category) => {
     focusedCategory.value = category
+  }
+  
+  const onCategoryLoaded = (title, length) => {
+    categoryLoadedCount.value = categoryLoadedCount.value + 1
+    if (categoryLoadedCount.value === length) {
+      console.log('all loaded')
+    }
   }
   
   const debounce = (fn, delay) => {
@@ -75,6 +87,14 @@
         display: none;
       }
     }
+  }
+
+  .loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $mediumblue;
+    z-index: 10;
   }
 
   .main-content {

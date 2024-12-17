@@ -6,6 +6,7 @@
       :examples="examples"
       :onIntersect="() => onIntersect(title)"
       :options="intersectOptions"
+      :onCategoryLoaded="onCategoryLoaded"
     />
     <ToggleWindow
       ref="window"
@@ -16,19 +17,21 @@
       :src="example.src"
       :description="example.description"
       :link="example.link"
-      :onIntersect="() => onIntersect(title)"
       :options="intersectOptions"
+      :onIntersect="() => onIntersect(title)"
+      :onToggleWindowLoaded="() => onToggleWindowLoaded(examples.length)"
       @toggle="setToggled(index)"
     />
   </div>
 </template>
 
 <script setup>
-const emit = defineEmits(['intersect', 'leave']);
+  const emit = defineEmits(["intersect"]);
 
-const props = defineProps(["title", "component", "examples", "onIntersect", "onLeave", "rootElement"])
+  const props = defineProps(["title", "component", "examples", "rootElement", "onCategoryLoaded"])
 
   const toggledIndex = ref(null);
+  const toggleWindowLoadedCount = ref(0)
 
   function setToggled(index) {
     toggledIndex.value = toggledIndex.value === index ? null : index;
@@ -43,6 +46,14 @@ const props = defineProps(["title", "component", "examples", "onIntersect", "onL
     rootMargin: '-140px',
     threshold: 0.0,
   }
+
+  const onToggleWindowLoaded = (length) => {
+    toggleWindowLoadedCount.value = toggleWindowLoadedCount.value + 1
+    if (toggleWindowLoadedCount.value == length) {
+      props.onCategoryLoaded()
+    }
+  }
+
 </script>
 
 <style scoped lang="scss">

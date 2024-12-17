@@ -11,6 +11,7 @@
         <NuxtImg 
           class="website-image" 
           :src="src"
+          @load="onToggleWindowLoaded"
         />
       </div>
     </div>
@@ -39,7 +40,7 @@
 
   const hasBeenToggled = ref(false);
 
-  const props = defineProps(["title", "src", "description", "link", "toggled", "onLeave", "onIntersect"])
+  const props = defineProps(["title", "src", "description", "link", "toggled", "onLeave", "onIntersect", "onToggleWindowLoaded"])
 
   const emit = defineEmits(["toggle"]);
 
@@ -47,8 +48,6 @@
     hasBeenToggled.value = true
     emit("toggle");
   }
-
-
 </script>
 
 <style lang="scss" scoped>
