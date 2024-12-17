@@ -9,6 +9,7 @@
       <div class="topbar"/>
       <div class="content">
         <NuxtImg 
+          provider="uploadcare"
           class="website-image" 
           :src="src"
           @load="onToggleWindowLoaded"

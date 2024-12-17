@@ -6,9 +6,7 @@
         <Nav/>
 
         <div class="main-content" ref="rootElement">
-          <div className="loading" v-if="doc.categories.length !== categoryLoadedCount">
-            <Loading/>
-          </div>
+
           <WorkCategory 
             v-for="category in doc.categories" 
             :title="category.title"

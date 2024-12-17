@@ -1,6 +1,6 @@
 
 <template>
-  <nav :class="navClass">
+  <nav :class="`${navClass()} ${loaded ? 'nav-loaded' : '' }`">
     <NuxtLink to="/" class="home-link">
       izzee
       <Arrow/>
@@ -11,23 +11,24 @@
   </nav>
 </template>
 
-<script>
-  export default {
-    props: {
-      variant: {
-        type: String,
-        default: 'primary', // 'primary', 'alt', etc.
-      },
-    },
-    computed: {
-      navClass() {
-        return {
-          'nav-primary': this.variant === 'primary',
-          'nav-alt': this.variant === 'alt',
-        }
-      }
-    },
+<script setup>
+  const props = defineProps(['variant'])
+  const loaded = ref(false);
+
+  const navClass = () => {
+    console.log(props.variant)
+    switch(props.variant) {
+      case 'primary':
+        return 'nav-primary'
+      case 'alt':
+        return 'nav-alt'
+      default:
+        return 'nav-primary'
+    }
   }
+  onMounted(() => {
+    loaded.value = true
+  })
 </script>
 
 <style lang="scss" scoped>  
@@ -79,6 +80,7 @@
     display: flex;
     flex-direction: column;
     width: calc(100vw - 32px);
+    transition: transform 2s;
 
     a {
       text-align: center;
@@ -92,6 +94,10 @@
       a {
         font-size: 80px;
       }
+    }
+
+    &:not(.nav-loaded) {
+      transform: scaleX(0);
     }
   }
 

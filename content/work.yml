@@ -4,25 +4,25 @@ categories:
     examples: 
     - title: www.disco.cloud
       description: A landing page for 
-      src: images/disco.jpg
+      src: https://ucarecdn.com/a2a9c6db-d591-4055-8a81-5b0b07216591/
       type: image
       link: https://disco.cloud
     
     - title: www.infinity8rocks.com
       description: An archive and shop for the Infinity8Rocks art collective.  Built using Nuxt.js and integrated with Shopify for e-commerce functionality.
-      src: images/infinity8rocks.jpg
+      src: https://ucarecdn.com/a6ab8b67-5ce2-468c-ade0-f16cb6c7c202/
       type: image
       link: https://infinity8rocks.com
     
     - title: www.baggy.industries
       description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections
-      src: images/baggy.jpg
+      src: https://ucarecdn.com/338979e0-ef91-4304-9f31-7a9b57e57228/
       type: image
       link: https://baggy.industries
     
     - title: code sketches
       description: A collection of fun creative coding sketches I created while attending the Recurse Center. Built using Vite, Three.js, Motion One, and&nbsp;p5.js
-      src: images/codesketches.jpg
+      src: https://ucarecdn.com/04a23966-0544-42b2-8017-2053bf8953a3/
       type: image
       link: https://codesketches.netlify.app
          

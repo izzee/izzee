@@ -51,4 +51,10 @@ export default defineNuxtConfig({
     }
   },
 
+  image: {
+    uploadcare: {
+      cdnURL: '/',
+    }
+  },
+
 })
