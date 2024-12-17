@@ -17,6 +17,7 @@
           v-if="example.type === 'image'" 
           :src="example.src"
           @load="onMediaLoaded"
+          provider="uploadcare"
         />   
         <div
           class="embed-wrapper"
