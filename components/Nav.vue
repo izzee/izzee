@@ -1,7 +1,10 @@
 
 <template>
   <nav :class="navClass">
-    <NuxtLink to="/" class="home-link">izzee</NuxtLink>
+    <NuxtLink to="/" class="home-link">
+      izzee
+      <Arrow/>
+    </NuxtLink>
     <NuxtLink to="/work" class="work-link">work</NuxtLink>
     <NuxtLink to="/about" class="about-link">about</NuxtLink>
     <NuxtLink to="/feed" class="feed-link">feed</NuxtLink>
@@ -95,6 +98,9 @@
   .home-link {
     color: $yellow;
     background-color: $green;
+    .arrow {
+      display: none;
+    }
   }
 
   .work-link {
@@ -110,5 +116,33 @@
   .feed-link {
     color: $blue;
     background-color: $lavendar;
+  }
+
+  .nav-primary {
+
+    .home-link {
+      position: relative;
+      overflow: hidden;
+    }
+    .arrow {
+      left: 0;
+      display: flex;
+      position: absolute;
+      width: 100%;
+      fill: $yellow;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: transform .5s;
+    }
+    .home-link:hover {
+      color: $green;
+      background-image: url(./Arrow.vue);
+
+      .arrow {
+        opacity: 1;
+        transform: translateX(0)
+
+      }
+    }
   }
 </style>

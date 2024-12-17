@@ -37,7 +37,6 @@ const props = defineProps(["title", "component", "examples", "onIntersect", "onL
     emit('intersect', entry);
   };
 
-
   const intersectOptions = {
     root: props.rootElement,
     rootMargin: '-140px',
@@ -64,14 +63,14 @@ const props = defineProps(["title", "component", "examples", "onIntersect", "onL
     margin-top: 16px;
   
     @include bp(sm) {
-      margin-top: 32px;
+      margin-top: 40px;
     }
     @include bp(md) {
       width: 50vw;
       margin-top: 0;
 
       &:first-child {
-        padding-top: 64px;
+        padding-top: 80px;
       }
 
     }

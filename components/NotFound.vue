@@ -7,8 +7,8 @@
 </template>
 
 <script setup>
-  import Four from '~/public/icons/four.svg?skipsvgo'
-  import Zero from '~/public/icons/zero.svg?skipsvgo'
+  import Four from '~/public/images/four.svg?skipsvgo'
+  import Zero from '~/public/images/zero.svg?skipsvgo'
 
 
 </script>

@@ -37,26 +37,25 @@
     focusedCategory.value = category
   }
 
-  const onIntersect = (category) => {
+  const debounce = (fn, delay) => {
+    let timeoutId;
+    return (...args) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => fn(...args), delay);
+    };
+  };
+
+  const onIntersect = debounce((category) => {
     setFocusedCategory(category)
-  }
+  }, 200)
 
 </script>
 
 <style lang="scss" scoped>
 
   main {
-    background: linear-gradient($lightblue, $blue calc(100% - 48px));
+    background: $mediumblue;
     background-attachment: fixed;
-    &:before {
-      content: '';
-      position: fixed;
-      width: 100%;
-      height: 96px;
-      top: 0;
-      background: linear-gradient($lightblue 48px, transparent);
-      z-index: 2;
-    }
     @include bp(sm) {
       background: $mediumblue;
       &:before {
@@ -106,18 +105,24 @@
       cursor: pointer;
       &.focused{
         color: $yellow;
+        text-decoration: underline;
       }
     }
 
     @include bp(sm) {
-      padding: 16px 0;
       gap: 16px;
       a {
         font-size: 24px;
 
         &:hover {
           color: $yellow;
+          text-decoration: underline;
         }
+      }
+    }
+    @include bp(md) {
+      a {
+        font-size: 32px;
       }
     }
   }
@@ -126,5 +131,10 @@
     width: 4px;
     height: 4px;
     background-color: $lightblue;
+
+    @include bp(md) {
+      width: 8px;
+      height: 8px;
+    }
   }
 </style>

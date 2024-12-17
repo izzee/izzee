@@ -32,7 +32,9 @@
 </template>
 
 <script setup>
-  import Plus from "~/public/icons/plus.svg?skipsvgo"
+  import Plus from "~/public/images/plus.svg?skipsvgo"
+  import Eye from "~/public/images/eye.svg?skipsvgo"
+
   import { ref, defineProps, defineEmits } from "vue";
 
   const hasBeenToggled = ref(false);
@@ -69,13 +71,16 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: $green;
+    border-radius: 100%;
+    transition: background-color .5s;
+    // box-shadow: 0 -2px 4px $shadow inset;
+
 
     svg {
-      fill: $gray;
-      width: 80px;
-      height: 48px;
+      fill: $darkgray;
+      margin: 4px;
       transition: transform .25s;
-      background: radial-gradient(#fff, transparent 10%);
     }
 
     @include bp(sm) {
@@ -197,8 +202,9 @@
       }
     }
     .toggle-button {
+    background-color: $red;
+
       svg {
-        fill: $darkgray;
         transform: rotate(45deg);
       }
     }

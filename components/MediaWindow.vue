@@ -59,8 +59,14 @@
   }
 
   .topbar {
+    position: sticky;
+    top: 0;
+    border-top: 16px solid $mediumblue;
+    @include bp(sm) {
+      border-top: 32px solid $mediumblue;
+    }
     @include bp(md) {
-      border-top: 64px solid $mediumblue;
+      border-top: 80px solid $mediumblue;
       position: sticky;
       top: 0;
     }

@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-  import X from '~/public/icons/x.svg?skipsvgo'
+  import X from '~/public/images/x.svg?skipsvgo'
   const props = defineProps(['toggled', 'toggleForm'])
 </script>
 
@@ -48,7 +48,7 @@
   }
   .contact-form-wrapper {
     margin: 16px;
-    gap: 8px;
+    gap: 16px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -90,6 +90,7 @@
       font-size: inherit;
       line-height: inherit;
       font-family: 'Inter';
+      resize: none;
 
       @include bp(sm) {
         padding: 16px;

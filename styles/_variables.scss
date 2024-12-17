@@ -1,3 +1,4 @@
+$shadow:         #21252D99;
 $gray:           #313846;
 $darkgray:       #21252D;
 $green:          #239558;
@@ -10,8 +11,8 @@ $blue:           #2C49AC;
 $mediumblue:     #4466d5;
 $lightblue:      #ACBFFF;
 $purple:         #6664BC;
-$lavendar:    #BCABFF;
-$lightlavendar: #CBBEFF;
+$lavendar:       #BCABFF;
+$lightlavendar:  #CBBEFF;
 $red:            #C1463E;
 
 @mixin bp($class) {

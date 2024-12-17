@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-  import Izzee from '~/public/icons/izzee.svg?skipsvgo'
+  import Izzee from '~/public/images/izzee.svg?skipsvgo'
 
 </script>
 
