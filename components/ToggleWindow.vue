@@ -55,7 +55,7 @@
     top: 0;
     position: absolute;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
   }
 
   .toggle-button {
@@ -147,6 +147,7 @@
   .right-panel {
     position: absolute;
     top: 0;
+    width: 100%;
 
     .content {
       transform: scaleX(0);
