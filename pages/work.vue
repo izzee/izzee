@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-  const focusedCategory = ref('websites');
+  const focusedCategory = ref(null);
   const rootElement = ref(null);
   const loaded = ref(false)
 
@@ -56,6 +56,7 @@
     let timeout
     timeout = setTimeout(() => {
       loaded.value = true
+      setFocusedCategory(window.location.hash.replace(/^#/, '') || 'websites')
       clearTimeout(timeout)
     }, 300)
   })
