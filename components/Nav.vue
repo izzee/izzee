@@ -1,6 +1,6 @@
 
 <template>
-  <nav :class="`${navClass()} ${loaded ? 'nav-loaded' : '' }`">
+  <nav :class="navClass()">
     <NuxtLink to="/" class="home-link">
       izzee
       <Arrow/>
@@ -94,10 +94,6 @@
       a {
         font-size: 80px;
       }
-    }
-
-    &:not(.nav-loaded) {
-      transform: scaleX(0);
     }
   }
 
