@@ -26,32 +26,32 @@ categories:
       type: image
       link: https://codesketches.netlify.app
          
-  - title: design
-    component: MediaGrid
-    examples: 
-    - title: test
-      type: image
-      src: images/placeholder.png
+  # - title: design
+  #   component: MediaGrid
+  #   examples: 
+  #   - title: test
+  #     type: image
+  #     src: images/placeholder.png
 
-    - title: test
-      type: image
-      src: images/placeholder.png
+  #   - title: test
+  #     type: image
+  #     src: images/placeholder.png
     
-    - title: test
-      type: image
-      src: images/placeholder.png
+  #   - title: test
+  #     type: image
+  #     src: images/placeholder.png
     
-    - title: test
-      type: image
-      src: images/placeholder.png
+  #   - title: test
+  #     type: image
+  #     src: images/placeholder.png
     
-    - title: test
-      type: image
-      src: images/placeholder.png
+  #   - title: test
+  #     type: image
+  #     src: images/placeholder.png
     
-    - title: test
-      type: image
-      src: images/placeholder.png
+  #   - title: test
+  #     type: image
+  #     src: images/placeholder.png
   
   - title: painting
     component: MediaGrid
@@ -232,7 +232,7 @@ categories:
     - title: ''
       type: image
       size: full
-      src: https://ucarecdn.com/a4ac5db1-d63e-47b1-ab36-e430e618f408/
+      src: https://ucarecdn.com/0d9b6a81-98ad-40a5-beaa-fb9350b879f0/
     - title: 'Open Sores'
       type: embed
       src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459918047?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Open Sores"></iframe></div>'

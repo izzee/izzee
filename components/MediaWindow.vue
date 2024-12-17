@@ -16,8 +16,8 @@
         <NuxtImg 
           v-if="example.type === 'image'" 
           :src="example.src"
-          @load="onMediaLoaded"
           provider="uploadcare"
+          @load="onMediaLoaded"
         />   
         <div
           class="embed-wrapper"
