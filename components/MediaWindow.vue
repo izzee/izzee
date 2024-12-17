@@ -13,7 +13,7 @@
           v-for="example in examples"
           :class="`media ${example.size || 'full'}`"
         >
-        <LazyNuxtImg 
+        <NuxtImg 
           v-if="example.type === 'image'" 
           :src="example.src"
           @load="onMediaLoaded"
