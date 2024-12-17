@@ -148,9 +148,9 @@
       line-height: 2;
       color: $lightblue;
       cursor: pointer;
+      transition: color .25s;
       &.focused{
         color: $yellow;
-        text-decoration: underline;
       }
     }
 
@@ -161,7 +161,6 @@
 
         &:hover {
           color: $yellow;
-          text-decoration: underline;
         }
       }
     }
