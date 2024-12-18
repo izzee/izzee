@@ -1,41 +1,43 @@
 <template>
-  <NuxtLayout>
-    <ContentDoc v-slot="{ doc }">
-      <main>
-        <Nav/>
-        <div class="main-content">
-          <div class="bio">
-            <p class="bio-text" v-html="doc.bio"/>
-          </div>
-
-          <div class="links">
-            <button class="link" @click="toggleForm">
-              <span>
-                get in touch
-              </span>
-            </button>
-            <div class="external-links">
-
-              <a class="link" href="#">github</a>
-              <a class="link" href="#">are.na</a>
-              <span class="link webring">
-                <a class="webring-link" href="">
-                  <Arrow/>
-                </a>
-                <span>
-                  recurse webring
-                </span>
-                <a class="webring-link" href="">
-                  <Arrow variant="flipped"/>
-                </a>
-              </span>
+  <div>
+    <NuxtLayout>
+      <ContentDoc v-slot="{ doc }">
+        <main>
+          <Nav/>
+          <div class="main-content">
+            <div class="bio">
+              <p class="bio-text" v-html="doc.bio"/>
             </div>
+
+            <div class="links">
+              <button class="link" @click="toggleForm">
+                <span>
+                  get in touch
+                </span>
+              </button>
+              <div class="external-links">
+
+                <a class="link" href="#">github</a>
+                <a class="link" href="#">are.na</a>
+                <span class="link webring">
+                  <a class="webring-link" href="">
+                    <Arrow/>
+                  </a>
+                  <span>
+                    recurse webring
+                  </span>
+                  <a class="webring-link" href="">
+                    <Arrow variant="flipped"/>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <Form :toggled="isFormToggled" :toggleForm="toggleForm"/>
           </div>
-          <Form :toggled="isFormToggled" :toggleForm="toggleForm"/>
-        </div>
-      </main>
-  </ContentDoc>
-</NuxtLayout>
+        </main>
+      </ContentDoc>
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup>

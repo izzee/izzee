@@ -1,7 +1,7 @@
 <template>
+  <div>
   <NuxtLayout>
     <ContentDoc v-slot="{ doc }">
-      
       <main>
         <Nav/>
         <div class="main-content" ref="rootElement">
@@ -28,6 +28,7 @@
       </main>
     </ContentDoc>
   </NuxtLayout>
+  </div>
 </template>
 
 <script setup>
