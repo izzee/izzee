@@ -2,9 +2,9 @@
 <template>
   <nav :class="navClass()">
     <NuxtLink to="/" class="home-link">
-      <Eye class="icon"/>
+      <div class="icon"/>
       <p>izzee</p>
-      <Eye class="icon"/>
+      <div class="icon"/>
       <Arrow/>
     </NuxtLink>
     <NuxtLink to="/work#websites" class="work-link" prefetch>
@@ -15,14 +15,16 @@
     </NuxtLink>
     <NuxtLink to="/feed" class="feed-link">
       <p>feed</p>
+      <div class="mouth">
+        <div class="top-teeth"></div>
+        <div class="bottom-teeth"></div>
+      </div>
     </NuxtLink>
   </nav>
 </template>
 
 <script setup>
   const props = defineProps(['variant'])
-  import Eye from '~/public/images/eye.svg?skipsvgo'
-
 
   const navClass = () => {
     switch(props.variant) {
@@ -38,10 +40,60 @@
 
 <style lang="scss" scoped>  
 
+  .mouth {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inerit;
+    border-radius: 100%;
+    transform: scaleY(0);
+    color: $darkgray;
+    background-color: $darkgray;
+    transition: transform .5s, border-radius .5s, color .5s, background-color .5s;
+    box-shadow: 0 0 0 8px $red inset;
+    overflow: hidden;
+    
+    &::after {
+      content: "feed";
+      text-align: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      line-height:2;
+    }
+  }
+  .top-teeth,
+  .bottom-teeth {
+    position: absolute;
+    width: calc(100% - 16px);
+    left: 8px;
+    height: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: background-color .25s, color .25s;
+    z-index: 0;
+    background-size: 24px auto;
+  }
+  .top-teeth {
+    top: 8px;
+    background-image: url('./images/tooth.svg');
+    background-position: center top;
+  }
+  .bottom-teeth {
+    bottom: 8px;
+    background-image: url('./images/bottom-tooth.svg');
+    background-position: center bottom;
+  }
+
   nav a {
     transition: background-color .25s, color .25s;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: stretch;
+    position: relative;
 
     p {
       display: inline;
@@ -51,13 +103,14 @@
 
     .icon {
       flex: 1;
-      padding: 16px;
+      margin: 0 8px;
       height: 100%;
-      max-width: 160px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
     }
-
-    
   }
+
   .nav-primary {
     position: sticky;
     top: 0;
@@ -67,33 +120,53 @@
     z-index: 10;
     padding: 16px;
     padding-bottom: 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+
+      .icon {
+        max-width: 64px;
+      }
+    }
+
+    .arrow {
+      left: 0;
+      display: flex;
+      position: absolute;
+      width: 100%;
+      fill: $yellow;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: transform .5s, opacity .25s;
+    }
+    
+    .top-teeth,
+    .bottom-teeth {
+      height: 8px;
+      background-size: 12px auto;
+    }
     
     @include bp(sm) {
       padding: 0;
       height: 64px;
+      a {
+        flex: 1;
+        font-size: 24px;
+      }
     }
     
     @include bp(md) {
       height: 80px;
-    }
-  }
-
-  .nav-primary a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    width: 50%;
-
-    @include bp(sm) {
-      flex: 1;
-      font-size: 24px;
-    }
-
-    @include bp(md) {
-      font-size: 40px;
+      a {
+        font-size: 40px;
+      }
     }
   }
   
@@ -109,15 +182,11 @@
       font-size: 40px;
       line-height: 2;
       font-weight: 500;
-      .icon {
-        padding: 16px;
 
-        @include bp(md) {
-          padding: 0 40px;
-        }
+      .icon {
+        max-width: 100px;
       }
     }
-      
 
     @include bp(md) {
       width: 640px;
@@ -138,6 +207,7 @@
     .icon {
       transform: scaleY(1);
       transition: transform .5s;
+      background-image: url('./images/eye.svg');
     }
 
     &:not(:hover) .icon {
@@ -153,48 +223,21 @@
   .about-link {
     color: $orange;
     background-color: $gray;
-
-    &:hover p{
-      background: linear-gradient(90deg, $red, $orange, $yellow, $lightgreen, $blue, $purple, $red);
-      background-size: 200% 100%;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: about 5s linear infinite;
-    }
   }
-
-
 
   .feed-link {
     color: $blue;
     background-color: $lavendar;
+    &:hover{ 
+      background-color: $red;
+      .mouth {
+        color: $lightlavendar;
+        border-radius: 0;
+        transform: scaleY(1);
+      }
+    }
   }
 
-  .nav-primary {
-    .home-link {
-      position: relative;
-      overflow: hidden;
-    }
-    .arrow {
-      left: 0;
-      display: flex;
-      position: absolute;
-      width: 100%;
-      fill: $yellow;
-      opacity: 0;
-      transform: translateX(100%);
-      transition: transform .5s, opacity .25s;
-    }
-    // .home-link:hover {
-    //   color: $green;
-    //   background-image: url(./Arrow.vue);
-
-    //   .arrow {
-    //     opacity: 1;
-    //     transform: translateX(0)
-    //   }
-    // }
-  }
 
   @keyframes about {
     0% {
