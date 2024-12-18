@@ -33,6 +33,13 @@ export default defineNuxtConfig({
   css: [
     '@/styles/globals.scss'
   ],
+  postcss: {
+    plugins: {
+      cssnano: {
+        preset: ['default', { normalizeUrl: false }], // Disable URL normalization
+      },
+    },
+  },
 
   vite: {
     css: { 
