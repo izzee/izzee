@@ -52,7 +52,7 @@ export default defineNuxtConfig({
 
   image: {
     uploadcare: {
-      cdnURL: '/',
+      cdnURL: 'https://ucarecdn.com/',
     }
   },
 
