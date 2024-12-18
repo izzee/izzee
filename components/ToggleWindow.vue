@@ -12,7 +12,6 @@
           provider="uploadcare"
           class="website-image" 
           :src="src"
-          @load="onToggleWindowLoaded"
         />
       </div>
     </div>
@@ -40,7 +39,7 @@
 
   const hasBeenToggled = ref(false);
 
-  const props = defineProps(["title", "src", "description", "link", "toggled", "onLeave", "onIntersect", "onToggleWindowLoaded"])
+  const props = defineProps(["title", "src", "description", "link", "toggled", "onLeave", "onIntersect"])
 
   const emit = defineEmits(["toggle"]);
 

@@ -13,11 +13,10 @@
           v-for="example in examples"
           :class="`media ${example.size || 'full'}`"
         >
-        <NuxtImg 
+        <LazyNuxtImg 
           v-if="example.type === 'image'" 
           :src="example.src"
           provider="uploadcare"
-          @load="onMediaLoaded"
         />   
         <div
           class="embed-wrapper"
@@ -31,21 +30,7 @@
 </template>
 
 <script setup>
-  const props = defineProps(["toggled", "title", "examples", "onLeave", "onIntersect", "onCategoryLoaded"])
-  const mediaLoadedCount = ref(0);
-
-  const onMediaLoaded = () => {
-    mediaLoadedCount.value = mediaLoadedCount.value + 1
-    if (mediaLoadedCount.value >= props.examples.length) {
-      props.onCategoryLoaded();
-    }
-  }
-  onMounted(() => {
-    if (props.title === 'videos') {
-      console.log('video')
-      props.onCategoryLoaded();
-    }
-  })
+  const props = defineProps(["toggled", "title", "examples", "onLeave", "onIntersect"])
     
 </script>
 

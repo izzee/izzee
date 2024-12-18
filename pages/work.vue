@@ -4,16 +4,13 @@
       
       <main>
         <Nav/>
-
         <div class="main-content" ref="rootElement">
-
           <WorkCategory 
             v-for="category in doc.categories" 
             :title="category.title"
             :component="category.component"
             :examples="category.examples"
             :rootElement="rootElement"
-            :onCategoryLoaded="() => onCategoryLoaded(category.title, doc.categories.length)"
             @intersect="onIntersect"
           />
         </div>
@@ -38,18 +35,10 @@
   const rootElement = ref(null);
   const loaded = ref(false);
   const categoryLoadedCount = ref(0);
-  import Loading from "~/public/images/loading.svg?skipsvgo"
 
 
   const setFocusedCategory = (category) => {
     focusedCategory.value = category
-  }
-  
-  const onCategoryLoaded = (title, length) => {
-    categoryLoadedCount.value = categoryLoadedCount.value + 1
-    if (categoryLoadedCount.value === length) {
-      console.log('all loaded')
-    }
   }
   
   const debounce = (fn, delay) => {
@@ -70,7 +59,7 @@
     let timeout
     timeout = setTimeout(() => {
       loaded.value = true
-      setFocusedCategory(window.location.hash.replace(/^#/, '') || 'websites')
+      // setFocusedCategory(window.location.hash.replace(/^#/, '') || 'websites')
       clearTimeout(timeout)
     }, 300)
   })

@@ -6,7 +6,6 @@
       :examples="examples"
       :onIntersect="() => onIntersect(title)"
       :options="intersectOptions"
-      :onCategoryLoaded="onCategoryLoaded"
     />
     <ToggleWindow
       ref="window"
@@ -19,7 +18,6 @@
       :link="example.link"
       :options="intersectOptions"
       :onIntersect="() => onIntersect(title)"
-      :onToggleWindowLoaded="() => onToggleWindowLoaded(examples.length)"
       @toggle="setToggled(index)"
     />
   </div>
@@ -28,7 +26,7 @@
 <script setup>
   const emit = defineEmits(["intersect"]);
 
-  const props = defineProps(["title", "component", "examples", "rootElement", "onCategoryLoaded"])
+  const props = defineProps(["title", "component", "examples", "rootElement"])
 
   const toggledIndex = ref(null);
   const toggleWindowLoadedCount = ref(0)
@@ -45,13 +43,6 @@
     root: props.rootElement,
     rootMargin: '-140px',
     threshold: 0.0,
-  }
-
-  const onToggleWindowLoaded = (length) => {
-    toggleWindowLoadedCount.value = toggleWindowLoadedCount.value + 1
-    if (toggleWindowLoadedCount.value == length) {
-      props.onCategoryLoaded()
-    }
   }
 
 </script>
