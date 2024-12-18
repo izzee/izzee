@@ -79,12 +79,12 @@
   }
   .top-teeth {
     top: 8px;
-    background-image: url('https://ucarecdn.com/4b601129-4b8b-4ce6-b7f6-98987e4d2edb/');
+    background-image: url("https://ucarecdn.com/4b601129-4b8b-4ce6-b7f6-98987e4d2edb/");
     background-position: center top;
   }
   .bottom-teeth {
     bottom: 8px;
-    background-image: url('https://ucarecdn.com/207c9340-993e-4a4e-b7d9-dae4f7dbe60c/');
+    background-image: url("https://ucarecdn.com/207c9340-993e-4a4e-b7d9-dae4f7dbe60c/");
     background-position: center bottom;
   }
 
@@ -207,7 +207,7 @@
     .icon {
       transform: scaleY(1);
       transition: transform .5s;
-      background-image: url('https://ucarecdn.com/9336f4e4-6c25-4fc2-b598-b1f60b4e7b61/');
+      background-image: url("https://ucarecdn.com/9336f4e4-6c25-4fc2-b598-b1f60b4e7b61/");
     }
 
     &:not(:hover) .icon {
