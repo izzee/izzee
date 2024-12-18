@@ -33,9 +33,6 @@
 <script setup>
   const focusedCategory = ref(null);
   const rootElement = ref(null);
-  const loaded = ref(false);
-  const categoryLoadedCount = ref(0);
-
 
   const setFocusedCategory = (category) => {
     focusedCategory.value = category
@@ -50,19 +47,8 @@
   };
 
   const onIntersect = debounce((category) => {
-    if (loaded.value) {
-      setFocusedCategory(category)
-    }
+    setFocusedCategory(category)
   }, 250)
-
-  onMounted(() => {
-    let timeout
-    timeout = setTimeout(() => {
-      loaded.value = true
-      // setFocusedCategory(window.location.hash.replace(/^#/, '') || 'websites')
-      clearTimeout(timeout)
-    }, 300)
-  })
 
 
 </script>

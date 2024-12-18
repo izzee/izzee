@@ -69,10 +69,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: $green;
+    background-color: $lightgreen;
     border-radius: 100%;
-    transition: background-color .5s;
-    // box-shadow: 0 -2px 4px $shadow inset;
+    transition: background-color .25s;
+    box-shadow: 0 -1px 4px $shadow inset;
 
 
     svg {
@@ -86,6 +86,10 @@
       right: 16px;
       width: 32px;
       height: 32px;
+
+      svg {
+        margin: 8px;
+      }
     }
   }
 
