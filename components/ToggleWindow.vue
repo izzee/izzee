@@ -17,9 +17,9 @@
     </div>
     <div class="right-panel">
       <div class="topbar">
-        <div class="toggle-button" @click="toggle">
+        <!-- <div class="toggle-button" @click="toggle">
           <Plus/>
-        </div>
+        </div> -->
       </div>
       <div class="content">
         <p class="description" v-html="description" />
