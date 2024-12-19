@@ -17,19 +17,11 @@
               </button>
               <div class="external-links">
 
-                <a class="link" href="#">github</a>
-                <a class="link" href="#">are.na</a>
-                <span class="link webring">
-                  <a class="webring-link" href="">
-                    <Arrow/>
-                  </a>
-                  <span>
-                    recurse webring
-                  </span>
-                  <a class="webring-link" href="">
-                    <Arrow variant="flipped"/>
-                  </a>
-                </span>
+                <a class="link" href="https://github.com/izzee">github</a>
+                <a class="link" href="https://are.na/isaac">are.na</a>
+                <a class="link" href="https://webring.recurse.com">recurse webring</a>
+
+                
               </div>
             </div>
             <Form :toggled="isFormToggled" :toggleForm="toggleForm"/>
