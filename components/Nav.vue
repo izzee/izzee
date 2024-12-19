@@ -9,9 +9,12 @@
     </NuxtLink>
     <NuxtLink to="/work#websites" class="work-link" prefetch>
       <p>work</p>
+      <video src="https://ucarecdn.com/9388c2b4-cbdb-4147-819d-cfebc2bf171a/" autoplay muted="true" loop/>
     </NuxtLink>
     <NuxtLink to="/about" class="about-link">
+      <div class="icon"/>
       <p>about</p>
+      <div class="icon"/>
     </NuxtLink>
     <NuxtLink to="/feed" class="feed-link">
       <p>feed</p>
@@ -101,14 +104,40 @@
       transition: background .5s;
     }
 
+
+    video {
+      display: none;
+    }
+
     .icon {
       flex: 1;
-      margin: 0 8px;
+      margin: 0 4px;
       height: 100%;
       background-size: 100%;
       background-repeat: no-repeat;
       background-position: center;
+      transition: transform .5s;
+
+      @include bp(md) {
+        margin: 0 8px;
+      }
     }
+  }
+  .home-link {
+    color: $yellow;
+    background-color: $green;
+  }
+  .work-link {
+    color: $darkorange;
+    background-color: $blue;
+  }
+  .about-link {
+    color: $orange;
+    background-color: $gray;
+  }
+  .feed-link {
+    color: $blue;
+    background-color: $lavendar;
   }
 
   .nav-primary {
@@ -130,7 +159,6 @@
       width: 50%;
       position: relative;
       overflow: hidden;
-
       .icon {
         max-width: 64px;
       }
@@ -188,65 +216,106 @@
       }
     }
 
+    .home-link .arrow {
+      display: none;
+    }
+
     @include bp(md) {
       width: 640px;
       a {
         font-size: 80px;
       }
-    }
-  }
-
-  .home-link {
-    color: $yellow;
-    background-color: $green;
-
-    .arrow {
-      display: none;
-    }
-
-    .icon {
-      transform: scaleY(1);
-      transition: transform .5s;
-      background-image: url("https://ucarecdn.com/9336f4e4-6c25-4fc2-b598-b1f60b4e7b61/");
-    }
-
-    &:not(:hover) .icon {
-      transform: scaleY(0);
-    }
-  }
-
-  .work-link {
-    color: $darkorange;
-    background-color: $blue;
-  }
-
-  .about-link {
-    color: $orange;
-    background-color: $gray;
-  }
-
-  .feed-link {
-    color: $blue;
-    background-color: $lavendar;
-    &:hover{ 
-      background-color: $red;
-      .mouth {
-        color: $lightlavendar;
-        border-radius: 0;
-        transform: scaleY(1);
+      .home-link {
+        .icon {
+          transform: scaleY(0);
+          background-image: url("https://ucarecdn.com/9336f4e4-6c25-4fc2-b598-b1f60b4e7b61/");
+        }
+        &:hover .icon {
+          transform: scaleY(1);
+        }
       }
+
+      .about-link {
+        .icon {
+          max-width: 100%;
+          background-size: auto 50%;
+          transition: transform .5s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transform: scaleX(0);
+          transition: opacity .5s;
+
+          &::after {
+            content: "?";
+          }      
+        }
+        &:hover {
+          .icon:first-child {
+            opacity: 1;
+            animation: questionmark 1s linear alternate infinite;
+          }
+          .icon:last-child {
+            opacity: 1;
+            animation: questionmark 1s linear alternate-reverse infinite;
+          }
+        }
+      }
+
+      .work-link {
+        position: relative;
+        p {
+          z-index: 1;
+        }
+        video {
+          display: block;
+          position: absolute;
+          z-index: 0;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          transition: opacity 2s;
+
+        }
+
+        &:hover video{
+          opacity: .7;
+        }
+      }
+
+      .feed-link {
+        &:hover{ 
+          background-color: $red;
+          .mouth {
+            color: $lightlavendar;
+            border-radius: 0;
+            transform: scaleY(1);
+          }
+        }
+      }    
     }
   }
-
 
   @keyframes about {
     0% {
-      // filter: hue-rotate(0deg);
       background-position: -100% 0;
     }
     100% {
       background-position: 100% 0;
-      // filter: hue-rotate(360deg);
     }
   }
+
+  @keyframes questionmark {
+    0% {
+      filter: hue-rotate(0deg);
+      transform: scale(-1.25, 1.25) translateY(-4px);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+      transform: scale(1.25, 1.25) translateY(4px);
+    }
+  }
+
+  
 </style>
