@@ -271,6 +271,8 @@
           transition: all 3s;
         }
         video {
+          pointer-events: none;
+          user-select: none;
           display: block;
           position: absolute;
           z-index: 0;
