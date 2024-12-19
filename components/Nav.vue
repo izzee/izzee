@@ -9,14 +9,14 @@
     </NuxtLink>
     <NuxtLink to="/work#websites" class="work-link" prefetch>
       <p>work</p>
-      <video src="https://ucarecdn.com/9388c2b4-cbdb-4147-819d-cfebc2bf171a/" autoplay muted="true" loop/>
+      <video src="https://ucarecdn.com/9388c2b4-cbdb-4147-819d-cfebc2bf171a/" autoplay muted="true" loop playsinline/>
     </NuxtLink>
     <NuxtLink to="/about" class="about-link">
       <div class="icon"/>
       <p>about</p>
       <div class="icon"/>
     </NuxtLink>
-    <NuxtLink to="/feed" class="feed-link">
+    <NuxtLink to="/" class="feed-link">
       <p>feed</p>
       <div class="mouth">
         <div class="top-teeth"></div>
@@ -59,12 +59,14 @@
     overflow: hidden;
     
     &::after {
-      content: "feed";
+      content: "under construction";
       text-align: center;
       position: absolute;
       height: 100%;
       width: 100%;
       line-height:2;
+      font-size: 40px;
+      line-height: 160px;
     }
   }
   .top-teeth,
@@ -174,11 +176,10 @@
       transform: translateX(100%);
       transition: transform .5s, opacity .25s;
     }
-    
-    .top-teeth,
-    .bottom-teeth {
-      height: 8px;
-      background-size: 12px auto;
+
+    .feed-link {
+      pointer-events: none;
+      cursor: not-allowed;
     }
     
     @include bp(sm) {
@@ -244,14 +245,20 @@
           align-items: center;
           justify-content: center;
           opacity: 0;
-          transform: scaleX(0);
-          transition: opacity .5s;
+          transition: all .5s;
+
+          p {
+            transition: all .5s;
+          }
 
           &::after {
             content: "?";
           }      
         }
         &:hover {
+           p {
+            animation: about 5s linear infinite;
+           }
           .icon:first-child {
             opacity: 1;
             animation: questionmark 1s linear alternate infinite;
@@ -313,10 +320,10 @@
 
   @keyframes about {
     0% {
-      background-position: -100% 0;
+      filter: hue-rotate(0deg);
     }
     100% {
-      background-position: 100% 0;
+      filter: hue-rotate(360deg);
     }
   }
 

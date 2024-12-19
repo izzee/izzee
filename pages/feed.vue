@@ -4,8 +4,7 @@
     <div class="main-content">
       <div class="feed">
       <div class="post">
-          <div class="date">11.31.24</div>
-          <div class="title">welcome to my new site!</div>
+          <div class="title">Coming soon</div>
         </div>
       </div>
     </div>
