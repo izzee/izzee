@@ -265,8 +265,10 @@
 
       .work-link {
         position: relative;
+        overflow: hidden;
         p {
           z-index: 1;
+          transition: all 3s;
         }
         video {
           display: block;
@@ -275,12 +277,22 @@
           opacity: 0;
           width: 100%;
           height: 100%;
-          transition: opacity 2s;
-
+          filter: blur(10px);
+          transform: scale(1.5);
+          transition: all 3s;
         }
 
-        &:hover video{
-          opacity: .7;
+        &:hover{
+          p {
+            filter: blur(4px);
+            transform: rotate(-5deg) scale(1.25);
+            text-shadow: 0 0 64px $darkorange, 0 0 64px $darkorange, 0 0 64px $darkorange, 0 0 64px $darkorange;
+          }
+          video {
+            filter: blur(0);
+            transform: scale(1);
+            opacity: .5;
+          }
         }
       }
 
