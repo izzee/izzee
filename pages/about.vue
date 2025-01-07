@@ -19,9 +19,19 @@
 
                 <a class="link" href="https://github.com/izzee">github</a>
                 <a class="link" href="https://are.na/isaac">are.na</a>
-                <a class="link" href="https://webring.recurse.com">recurse webring</a>
-
-                
+                <span class="link webring">
+                  <a class="webring-link" href="https://ring.recurse.com/prev?id=36">
+                    <Arrow/>
+                  </a>
+                  <span>
+                  <a data-rc-uuid="38b9e773-49b6-4735-b4d6-ef3329094db8" href="https://ring.recurse.com/">
+                    recurse webring
+                  </a>
+                  </span>
+                  <a class="webring-link" href="https://ring.recurse.com/next?id=36">
+                    <Arrow variant="flipped"/>
+                  </a>
+                </span>
               </div>
             </div>
             <Form :toggled="isFormToggled" :toggleForm="toggleForm"/>

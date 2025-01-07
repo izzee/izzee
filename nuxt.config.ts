@@ -23,6 +23,12 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
       ],
+      script: [
+        {
+          src: 'https://raw.githack.com/Qwuke/recurse-ring/main/static/ring.js',
+          async: true
+        }
+      ]
     }
   },
   routeRules: {
