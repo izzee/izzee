@@ -9,14 +9,14 @@
     </NuxtLink>
     <NuxtLink to="/work#websites" class="work-link" prefetch>
       <p>work</p>
-      <video src="https://ucarecdn.com/9388c2b4-cbdb-4147-819d-cfebc2bf171a/" autoplay muted="true" loop playsinline/>
+      <video src="/images/work.mp4" autoplay muted="true" loop playsinline/>
     </NuxtLink>
     <NuxtLink to="/about" class="about-link">
       <div class="icon"/>
       <p>about</p>
       <div class="icon"/>
     </NuxtLink>
-    <NuxtLink to="/" class="feed-link">
+    <NuxtLink to="/feed" class="feed-link">
       <p>feed</p>
       <div class="mouth">
         <div class="top-teeth"></div>
@@ -59,14 +59,14 @@
     overflow: hidden;
     
     &::after {
-      content: "under construction";
+      content: "feed";
       text-align: center;
       position: absolute;
       height: 100%;
       width: 100%;
-      line-height:2;
-      font-size: 40px;
-      line-height: 160px;
+      line-height: inherit;
+      font-size: inherit;
+      line-height: inherit;
     }
   }
   .top-teeth,
@@ -99,13 +99,6 @@
     justify-content: space-evenly;
     align-items: stretch;
     position: relative;
-
-    p {
-      display: inline;
-      background: linear-gradient(90deg, transparent);
-      transition: background .5s;
-    }
-
 
     video {
       display: none;
@@ -164,6 +157,16 @@
       .icon {
         max-width: 64px;
       }
+
+      p {
+        transition: opacity .5s;
+      }
+
+      &.router-link-exact-active {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+      }
     }
 
     .arrow {
@@ -177,17 +180,26 @@
       transition: transform .5s, opacity .25s;
     }
 
-    .feed-link {
-      pointer-events: none;
-      cursor: not-allowed;
-    }
-    
     @include bp(sm) {
       padding: 0;
       height: 64px;
       a {
         flex: 1;
         font-size: 24px;
+        &.router-link-exact-active {
+          text-decoration: none;
+        }
+
+      }
+
+      .home-link:hover {
+        .arrow {
+          transform: translate(0);
+          opacity: 1;
+        }
+        p {
+          opacity: 0;
+        }
       }
     }
     
@@ -217,16 +229,24 @@
       }
     }
 
-    .home-link .arrow {
-      display: none;
+    .home-link {
+      pointer-events: none;
+
+      .arrow {
+        display: none;
+      }
     }
 
     @include bp(md) {
       width: 640px;
+
       a {
         font-size: 80px;
       }
+
       .home-link {
+        pointer-events: auto;
+        cursor: default;
         .icon {
           transform: scaleY(0);
           background-image: url("https://ucarecdn.com/9336f4e4-6c25-4fc2-b598-b1f60b4e7b61/");
@@ -245,11 +265,7 @@
           align-items: center;
           justify-content: center;
           opacity: 0;
-          transition: all .5s;
-
-          p {
-            transition: all .5s;
-          }
+          transition: transform .5s, opacity .5s;
 
           &::after {
             content: "?";
@@ -257,7 +273,7 @@
         }
         &:hover {
            p {
-            animation: about 5s linear infinite;
+            animation: rainbow 2s linear infinite;
            }
           .icon:first-child {
             opacity: 1;
@@ -275,7 +291,7 @@
         overflow: hidden;
         p {
           z-index: 1;
-          transition: all 3s;
+          transition: transform 3s, opacity 3s, text-shadow 3s, filter 3s;
         }
         video {
           pointer-events: none;
@@ -288,7 +304,7 @@
           height: 100%;
           filter: blur(10px);
           transform: scale(1.5);
-          transition: all 3s;
+          transition: transform 3s, opacity 3s, filter 3s;
         }
 
         &:hover{
@@ -318,7 +334,7 @@
     }
   }
 
-  @keyframes about {
+  @keyframes rainbow {
     0% {
       filter: hue-rotate(0deg);
     }
@@ -336,7 +352,5 @@
       filter: hue-rotate(360deg);
       transform: scale(1.25, 1.25) translateY(4px);
     }
-  }
-
-  
+  }  
 </style>

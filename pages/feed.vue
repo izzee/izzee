@@ -4,7 +4,7 @@
     <div class="main-content">
       <div class="feed">
       <div class="post">
-          <div class="title">Coming soon</div>
+          <div class="title">Coming soon...</div>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
 <style lang="scss" scoped>
 
   main {
-    background-color: $lightlavendar;
+    background-color: $purple;
   }
   .main-content {
     border-color: $lavendar;
@@ -28,27 +28,40 @@
   }
 
   .feed {
-    border-bottom: 16px solid $lavendar;
+    @include bp(sm) {
+      border-bottom: 16px solid $lavendar;
+    }
   }
 
   .post {
     flex-shrink: 0;
     height: 32px;
+    padding: 16px;
     top: 0;
-    background-color: $lightlavendar;
+    background-color: $purple;
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 64px;
-    font-size:32px;
+    font-size:24px;
     font-weight: 500;
-    color: $blue;
+    color: $lavendar;
     cursor: pointer;
     &:nth-child(even) {
       background-color: $lavendar;
     }
-    &:hover {
-      background-color: $lightyellow;
+
+    .title {
+      margin: auto;
+    }
+
+    @include bp(sm) {
+      padding: 64px;
+      font-size:32px;
+      text-align: right;
+
+      .title {
+        margin: 0;
+      }
     }
   }
   

@@ -60,14 +60,12 @@
     background: $mediumblue;
     background-attachment: fixed;
     @include bp(sm) {
-      background: $mediumblue;
       &:before {
         display: none;
       }
     }
   }
 
- 
   .main-content {
     text-align: center;
     align-items: center;
@@ -125,7 +123,7 @@
       cursor: pointer;
       transition: color .25s;
       &.focused{
-        color: $yellow;
+        color: $darkorange;
       }
     }
 
@@ -135,7 +133,7 @@
         font-size: 24px;
 
         &:hover {
-          color: $yellow;
+          color: $darkorange;
         }
       }
     }

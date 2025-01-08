@@ -15,7 +15,6 @@
         <LazyNuxtImg 
           v-if="example.type === 'image'" 
           :src="example.src"
-          provider="uploadcare"
         />   
         <div
           class="embed-wrapper"
@@ -66,7 +65,10 @@
       border-top: 32px solid $mediumblue;
     }
     @include bp(md) {
-      border-top: 80px solid $mediumblue;
+      border-top: 48px solid $mediumblue;
+    }
+    @include bp(lg) {
+      border-top: 64px solid $mediumblue;
       position: sticky;
       top: 0;
     }

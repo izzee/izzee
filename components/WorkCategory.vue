@@ -65,14 +65,17 @@
     margin-top: 16px;
   
     @include bp(sm) {
-      margin-top: 40px;
+      margin-top: 32px;
+    }
+    @include bp(md) {
+      margin-top: 48px;
     }
     @include bp(lg) {
       width: 50vw;
       margin-top: 0;
 
       &:first-child {
-        padding-top: 80px;
+        padding-top: 64px;
       }
 
     }

@@ -1,5 +1,5 @@
 <template>
-  <div ref="observerRef" :class="`${isIntersecting ? 'visible' : 'hidden'}`">
+  <div ref="observerRef">
     <slot />
   </div>
 </template>

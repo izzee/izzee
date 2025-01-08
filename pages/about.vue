@@ -62,6 +62,8 @@
     justify-content: space-between;
     position: relative;
     border-color: $gray;
+    gap: 16px;
+    overflow: scroll;
   }
 
   .bio-text {

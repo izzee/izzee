@@ -2,11 +2,7 @@
   position: relative;
   width: 100%;
   background-color: white;  
-  transition: opacity .5s;
-  opacity: 0;
-  &.visible {
-    opacity: 1;
-  }
+  user-select: none;
 
   @include bp(lg) {
     width: 50vw;
