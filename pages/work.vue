@@ -57,7 +57,7 @@
 <style lang="scss" scoped>
 
   main {
-    background: $mediumblue;
+    background: linear-gradient($mediumblue, $blue);
     background-attachment: fixed;
     @include bp(sm) {
       background: $mediumblue;
@@ -67,7 +67,6 @@
     }
   }
 
- 
   .main-content {
     text-align: center;
     align-items: center;
@@ -125,7 +124,7 @@
       cursor: pointer;
       transition: color .25s;
       &.focused{
-        color: $yellow;
+        color: $darkorange;
       }
     }
 

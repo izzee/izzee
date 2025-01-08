@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'portfolio of isaac chabon' },
+        { hid: 'description', name: 'description', content: 'The homepage of web developer, designer, and artist Isaac Chabon' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },

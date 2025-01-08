@@ -86,6 +86,7 @@
       background-color: $gray;
       color: $lavendar;
       border: 0;
+      border-radius: 0;
       display: flex;
       font-size: inherit;
       line-height: inherit;

@@ -16,7 +16,7 @@
       <p>about</p>
       <div class="icon"/>
     </NuxtLink>
-    <NuxtLink to="/" class="feed-link">
+    <NuxtLink to="/feed" class="feed-link">
       <p>feed</p>
       <div class="mouth">
         <div class="top-teeth"></div>
@@ -59,14 +59,14 @@
     overflow: hidden;
     
     &::after {
-      content: "under construction";
+      content: "feed";
       text-align: center;
       position: absolute;
       height: 100%;
       width: 100%;
-      line-height:2;
-      font-size: 40px;
-      line-height: 160px;
+      line-height: inherit;
+      font-size: inherit;
+      line-height: inherit;
     }
   }
   .top-teeth,
@@ -99,13 +99,6 @@
     justify-content: space-evenly;
     align-items: stretch;
     position: relative;
-
-    p {
-      display: inline;
-      background: linear-gradient(90deg, transparent);
-      transition: background .5s;
-    }
-
 
     video {
       display: none;
@@ -164,6 +157,12 @@
       .icon {
         max-width: 64px;
       }
+
+      &.router-link-exact-active {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+      }
     }
 
     .arrow {
@@ -177,17 +176,16 @@
       transition: transform .5s, opacity .25s;
     }
 
-    .feed-link {
-      pointer-events: none;
-      cursor: not-allowed;
-    }
-    
     @include bp(sm) {
       padding: 0;
       height: 64px;
       a {
         flex: 1;
         font-size: 24px;
+        &.router-link-exact-active {
+          text-decoration: none;
+        }
+
       }
     }
     
@@ -257,7 +255,7 @@
         }
         &:hover {
            p {
-            animation: about 5s linear infinite;
+            animation: rainbow 5s linear infinite;
            }
           .icon:first-child {
             opacity: 1;
@@ -318,7 +316,7 @@
     }
   }
 
-  @keyframes about {
+  @keyframes rainbow {
     0% {
       filter: hue-rotate(0deg);
     }

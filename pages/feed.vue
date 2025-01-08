@@ -4,7 +4,7 @@
     <div class="main-content">
       <div class="feed">
       <div class="post">
-          <div class="title">Coming soon</div>
+          <div class="title">Coming soon...</div>
         </div>
       </div>
     </div>

@@ -8,7 +8,6 @@
       <div class="topbar"/>
       <div class="content">
         <NuxtImg 
-          provider="uploadcare"
           class="website-image" 
           :src="src"
         />
@@ -26,6 +25,7 @@
           <a class="link" :href="link">Link</a>
           <a v-if="github" class="link" :href="github">Github</a>
         </div>
+
       </div>
     </div>
   </IntersectionObserver>
@@ -33,6 +33,8 @@
 
 <script setup>
   import Plus from "~/public/images/plus.svg?skipsvgo"
+  import Info from "~/public/images/info.svg?skipsvgo"
+
 
   import { ref, defineProps, defineEmits } from "vue";
 
@@ -68,14 +70,16 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: $lightgreen;
     border-radius: 100%;
     transition: background-color .25s;
-    box-shadow: 0 -1px 4px $shadow inset;
+    box-sizing: content-box;
+    font-size: 24px;;
+
+    background-color: $green;
 
 
     svg {
-      fill: $darkgray;
+      fill: white;
       margin: 4px;
       transition: transform .25s;
     }
@@ -90,6 +94,7 @@
         margin: 8px;
       }
     }
+    
   }
 
   .links {
@@ -207,11 +212,18 @@
       }
     }
     .toggle-button {
-    background-color: $red;
+      background-color: $red;
 
       svg {
         transform: rotate(45deg);
+        fill: white;
+
       }
+    }
+
+    .website-image {
+      user-select: none;
+      pointer-events: none;
     }
   }
 </style>
