@@ -61,12 +61,6 @@ export default defineNuxtConfig({
     families: {
       Inter: '300..700'
     }
-  },
-
-  image: {
-    uploadcare: {
-      cdnURL: 'https://ucarecdn.com/',
-    }
-  },
+  }
 
 })

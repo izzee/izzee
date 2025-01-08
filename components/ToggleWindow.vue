@@ -33,8 +33,6 @@
 
 <script setup>
   import Plus from "~/public/images/plus.svg?skipsvgo"
-  import Info from "~/public/images/info.svg?skipsvgo"
-
 
   import { ref, defineProps, defineEmits } from "vue";
 
