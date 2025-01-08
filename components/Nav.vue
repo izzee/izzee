@@ -215,16 +215,22 @@
       }
     }
 
-    .home-link .arrow {
-      display: none;
+    .home-link {
+      pointer-events: none;
+
+      .arrow {
+        display: none;
+      }
     }
 
     @include bp(md) {
       width: 640px;
+
       a {
         font-size: 80px;
       }
       .home-link {
+        pointer-events: auto;
         cursor: default;
         .icon {
           transform: scaleY(0);
@@ -244,14 +250,11 @@
           align-items: center;
           justify-content: center;
           opacity: 0;
-          transition: all .5s;
-
-          p {
-            transition: all .5s;
-          }
+          transition: transform .5s, opacity .5s;
 
           &::after {
             content: "?";
+            text-shadow: 0 0 8px $yellow;
           }      
         }
         &:hover {
@@ -274,7 +277,7 @@
         overflow: hidden;
         p {
           z-index: 1;
-          transition: all 3s;
+          transition: transform 3s, opacity 3s, text-shadow 3s, filter 3s;
         }
         video {
           pointer-events: none;
@@ -287,7 +290,7 @@
           height: 100%;
           filter: blur(10px);
           transform: scale(1.5);
-          transition: all 3s;
+          transition: transform 3s, opacity 3s, filter 3s;
         }
 
         &:hover{
@@ -335,7 +338,5 @@
       filter: hue-rotate(360deg);
       transform: scale(1.25, 1.25) translateY(4px);
     }
-  }
-
-  
+  }  
 </style>

@@ -133,7 +133,7 @@
         font-size: 24px;
 
         &:hover {
-          color: $yellow;
+          color: $darkorange;
         }
       }
     }
