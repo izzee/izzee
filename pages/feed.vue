@@ -43,7 +43,6 @@
     align-items: center;
     justify-content: space-between;
     font-size:24px;
-
     font-weight: 500;
     color: $lavendar;
     cursor: pointer;
@@ -51,11 +50,18 @@
       background-color: $lavendar;
     }
 
+    .title {
+      margin: auto;
+    }
+
     @include bp(sm) {
       padding: 64px;
-    font-size:32px;
+      font-size:32px;
+      text-align: right;
 
-
+      .title {
+        margin: 0;
+      }
     }
   }
   
