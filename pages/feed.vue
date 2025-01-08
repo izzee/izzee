@@ -27,12 +27,6 @@
     overflow: scroll;
   }
 
-  .feed {
-    @include bp(sm) {
-      border-bottom: 16px solid $lavendar;
-    }
-  }
-
   .post {
     flex-shrink: 0;
     height: 32px;
@@ -59,9 +53,6 @@
       font-size:32px;
       text-align: right;
 
-      .title {
-        margin: 0;
-      }
     }
   }
   

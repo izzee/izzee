@@ -151,6 +151,7 @@
       align-items: center;
       text-align: center;
       font-size: 16px;
+      line-height: 1;
       font-weight: 500;
       width: 50%;
       position: relative;
@@ -193,10 +194,14 @@
       a {
         flex: 1;
         font-size: 24px;
+
         &.router-link-exact-active {
           text-decoration: none;
         }
 
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .home-link:hover {
