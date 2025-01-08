@@ -145,6 +145,7 @@
     padding: 16px;
     padding-bottom: 0;
 
+
     a {
       display: flex;
       align-items: center;
@@ -154,12 +155,16 @@
       width: 50%;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
+
       .icon {
         max-width: 64px;
+        pointer-events: none;
       }
 
       p {
         transition: opacity .5s;
+        pointer-events: none;
       }
 
       &.router-link-exact-active {
@@ -178,6 +183,8 @@
       opacity: 0;
       transform: translateX(100%);
       transition: transform .5s, opacity .25s;
+      pointer-events: none;
+
     }
 
     @include bp(sm) {
