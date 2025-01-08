@@ -158,6 +158,10 @@
         max-width: 64px;
       }
 
+      p {
+        transition: opacity .5s;
+      }
+
       &.router-link-exact-active {
         text-decoration: underline;
         text-underline-offset: 4px;
@@ -186,6 +190,16 @@
           text-decoration: none;
         }
 
+      }
+
+      .home-link:hover {
+        .arrow {
+          transform: translate(0);
+          opacity: 1;
+        }
+        p {
+          opacity: 0;
+        }
       }
     }
     
@@ -229,6 +243,7 @@
       a {
         font-size: 80px;
       }
+
       .home-link {
         pointer-events: auto;
         cursor: default;
@@ -254,12 +269,11 @@
 
           &::after {
             content: "?";
-            text-shadow: 0 0 8px $yellow;
           }      
         }
         &:hover {
            p {
-            animation: rainbow 5s linear infinite;
+            animation: rainbow 2s linear infinite;
            }
           .icon:first-child {
             opacity: 1;
