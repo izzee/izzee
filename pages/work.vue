@@ -57,10 +57,9 @@
 <style lang="scss" scoped>
 
   main {
-    background: linear-gradient($mediumblue, $blue);
+    background: $mediumblue;
     background-attachment: fixed;
     @include bp(sm) {
-      background: $mediumblue;
       &:before {
         display: none;
       }

@@ -225,6 +225,7 @@
         font-size: 80px;
       }
       .home-link {
+        cursor: default;
         .icon {
           transform: scaleY(0);
           background-image: url("https://ucarecdn.com/9336f4e4-6c25-4fc2-b598-b1f60b4e7b61/");
