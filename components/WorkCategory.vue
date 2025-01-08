@@ -16,6 +16,7 @@
       :src="example.src"
       :description="example.description"
       :link="example.link"
+      :github="example.github"
       :options="intersectOptions"
       :onIntersect="() => onIntersect(title)"
       @toggle="setToggled(index)"
@@ -29,13 +30,11 @@
   const props = defineProps(["title", "component", "examples", "rootElement"])
 
   const toggledIndex = ref(null);
-  const toggleWindowLoadedCount = ref(0)
 
   function setToggled(index) {
     toggledIndex.value = toggledIndex.value === index ? null : index;
   }
   const onIntersect = (entry) => {
-    toggledIndex.value = null
     emit('intersect', entry);
   };
 
@@ -68,7 +67,7 @@
     @include bp(sm) {
       margin-top: 40px;
     }
-    @include bp(md) {
+    @include bp(lg) {
       width: 50vw;
       margin-top: 0;
 

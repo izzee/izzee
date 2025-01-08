@@ -2,7 +2,6 @@
   <IntersectionObserver 
     class="window"
     @intersect="onIntersect"
-    @leave="onLeave"
   >
     <div class="topbar">
       <h3 class="title" v-html="title"/>
@@ -30,7 +29,7 @@
 </template>
 
 <script setup>
-  const props = defineProps(["toggled", "title", "examples", "onLeave", "onIntersect"])
+  const props = defineProps(["toggled", "title", "examples", "onIntersect"])
     
 </script>
 

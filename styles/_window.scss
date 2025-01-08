@@ -51,7 +51,7 @@
   flex-direction: column;
   background-color: #fff;
   transition: transform .25s;
-  @include bp(md) {
+  @include bp(sm) {
     padding: 16px;
     gap: 16px;
   }

@@ -87,8 +87,7 @@
 
     @include bp(md) {
       scroll-padding-top: 0;
-    }
-    
+    } 
   }
 
   .loading {

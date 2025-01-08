@@ -2,7 +2,6 @@
   <IntersectionObserver 
     :class="`${toggled ? 'window toggled' : 'window'}`"
     @intersect="onIntersect"
-    @leave="onLeave"
   >
     <h3 class="title" v-html="title" />
     <div class="left-panel">
@@ -17,15 +16,15 @@
     </div>
     <div class="right-panel">
       <div class="topbar">
-        <!-- <div class="toggle-button" @click="toggle">
+        <div class="toggle-button" @click="toggle">
           <Plus/>
-        </div> -->
+        </div>
       </div>
       <div class="content">
         <p class="description" v-html="description" />
         <div class="links">
-          <a class="link" :href="link">Github</a>
           <a class="link" :href="link">Link</a>
+          <a v-if="github" class="link" :href="github">Github</a>
         </div>
       </div>
     </div>
@@ -39,7 +38,7 @@
 
   const hasBeenToggled = ref(false);
 
-  const props = defineProps(["title", "src", "description", "link", "toggled", "onLeave", "onIntersect"])
+  const props = defineProps(["title", "src", "year", "description", "link", "github", "toggled", "onIntersect"])
 
   const emit = defineEmits(["toggle"]);
 
@@ -96,14 +95,16 @@
   .links {
     display: flex;
     gap: inherit;
+    @include bp(md) {
+      display: flex;
+    }
   }
-
   .link,
   .description {
     font-size: 16px;
     line-height: 24px;
 
-    @include bp(md) {
+    @include bp(sm) {
       font-size: 24px;
       line-height: 32px;
     }
@@ -159,6 +160,8 @@
     .content {
       transform: scaleX(0);
       transform-origin: right;
+      max-height: 100%;
+      overflow: scroll;
     }
 
     @include bp(lg) {
