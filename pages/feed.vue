@@ -1,15 +1,20 @@
 <template>
-  <main>
-    <Nav/>
-    <div class="main-content">
-      <div class="feed">
-      <div class="post">
-          <div class="title">Coming soon...</div>
+  <div>
+  <NuxtLayout>
+    <ContentDoc v-slot="{ doc }">
+    <main>
+      <Nav/>
+      <div class="main-content">
+        <div class="feed">
+        <div class="post">
+            <div class="title">{{doc.placeholder}}</div>
+          </div>
         </div>
       </div>
-    </div>
-
-  </main>
+    </main>
+    </ContentDoc>
+  </NuxtLayout>
+  </div>
 </template>
 
 <style lang="scss" scoped>

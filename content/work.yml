@@ -1,9 +1,10 @@
+title: work
 categories:
   - title: websites
     component: 'ToggleWindows'
     examples: 
     - title: www.infinity8rocks.com
-      description: An archive and shop I designed and built for the Infinity8Rocks collective. Created to showcase the group’s eclectic visual style while balancing hyper-saturated maximalist net art aesthetics with usability and clean design. Developed using Nuxt.js and seamlessly integrated with Shopify.
+      description: An archive and shop I designed and built for the Infinity8Rocks collective. Created to showcase the group’s eclectic visual style while balancing maximalist net art aesthetics with and clean, functional design. Built using Nuxt.js and Shopify.
       src: /images/infinity8rocks.webp
       type: image
       link: https://infinity8rocks.com
@@ -24,13 +25,13 @@ categories:
       github: https://github.com/izzee/sketchies
 
     - title: www.baggy.industries
-      description: A web3-enabled website for the Baggy Industries art collective. Used to launch 5 successful NFT collections and showcase the group's art. Built with Next.js and integrated with Wagmi and RainbowKit. Currently In the process of being <a href="https://baggy2.netlify.app">redesigned</a>.
+      description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections and showcase the group's art. Built with Next.js and integrated with Wagmi and RainbowKit. Currently In the process of being <a href="https://baggy2.netlify.app">redesigned</a>.
       src: /images/baggy.webp
       type: image
       link: https://baggy.industries
 
     - title: www.aca.nyc
-      description: The portfolio website of Arthur Chabon Architects. For this project, I created a tight, unobtrusive design, allowing for the firm's work to speak for itself. Developed using Nuxt.js and integrated with Decap CMS, enabling the client to update the site's content independently.
+      description: The portfolio website of Arthur Chabon Architects. For this project, I created a minimal, unobtrusive design, allowing the firm's work speak for itself. Developed using Nuxt.js and integrated with Decap CMS.
       src: /images/aca.webp
       type: image
       link: https://aca.nyc

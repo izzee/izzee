@@ -1,5 +1,4 @@
 <template>
-  <div>
   <NuxtLayout>
     <ContentDoc v-slot="{ doc }">
       <main>
@@ -28,7 +27,6 @@
       </main>
     </ContentDoc>
   </NuxtLayout>
-  </div>
 </template>
 
 <script setup>
