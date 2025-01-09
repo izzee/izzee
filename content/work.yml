@@ -4,7 +4,7 @@ categories:
     component: 'ToggleWindows'
     examples: 
     - title: www.infinity8rocks.com
-      description: An archive and shop I designed and built for the Infinity8Rocks art collective. Created to showcase the group’s eclectic visual style while balancing maximalist net art aesthetics with and clean, functional design. Built using Nuxt.js and Shopify.
+      description: An online store I designed and built for the Infinity8Rocks art collective. Created to showcase the group’s eclectic visual style while balancing maximalist net art aesthetics with and clean, functional design. Built using Nuxt.js and Shopify.
       src: /images/infinity8rocks.webp
       type: image
       link: https://infinity8rocks.com
