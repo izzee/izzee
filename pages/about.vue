@@ -11,7 +11,7 @@
           <div class="links">
             <button class="link" @click="toggleForm">
               <span>
-                get in touch
+                get in touch!
               </span>
             </button>
             <div class="external-links">
