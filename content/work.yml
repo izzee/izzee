@@ -25,7 +25,7 @@ categories:
       github: https://github.com/izzee/sketchies
 
     - title: www.baggy.industries
-      description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections and showcase the group's art. Built with Next.js and integrated with Wagmi and RainbowKit. Currently In the process of being <a href="https://baggy2.netlify.app">redesigned</a>.
+      description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections and showcase the group's art. Built with Next.js and integrated with Wagmi and RainbowKit. Currently in the process of being <a href="https://baggy2.netlify.app">redesigned</a>.
       src: /images/baggy.webp
       type: image
       link: https://baggy.industries
