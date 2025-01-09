@@ -3,61 +3,39 @@ categories:
     component: 'ToggleWindows'
     examples: 
     - title: www.infinity8rocks.com
-      description: An archive and shop I designed and built for the Infinity8Rocks collective. Created to showcase the group's art eclectic visual style and balance hypersaturated maximalist net art aesthetics with usability and clean design. Built using Nuxt.js and integrated with Shopify.
+      description: An archive and shop I designed and built for the Infinity8Rocks collective. Created to showcase the group’s eclectic visual style while balancing hyper-saturated maximalist net art aesthetics with usability and clean design. Developed using Nuxt.js and seamlessly integrated with Shopify.
       src: /images/infinity8rocks.webp
       type: image
       link: https://infinity8rocks.com
       github: https://github.com/izzee/infinityrocks
 
     - title: www.disco.cloud
-      description: A landing page I created for an open-source cloud hosting startup. The design is intended to emphasize friendliness and approachability while reflecting the product's technical sophistication. Built with Next.js and TypeScript.
+      description: A landing page I designed for an open-source cloud hosting startup. The design emphasizes friendliness and approachability while showcasing the product's technical sophistication. Developed using Next.js and TypeScript.
       src: /images/disco.webp
       type: image
       link: https://disco.cloud
       github: https://github.com/izzee/disco
 
     - title: code sketches
-      description: A website I built to showcase creative coding sketches from my time at the Recurse Center. Each of the sketches was primarily built within a three hour time frame based on a prompt. Built using Vite, Three.js, Motion One, and&nbsp;p5.js
+      description: A website I built to showcase creative coding sketches from my time at the Recurse Center. Each of the sketches was primarily built within a three hour time frame based on a prompt. Built using Vite, Three.js, Motion One, and&nbsp;p5.js.
       src: /images/code-sketches.webp
       type: image
       link: https://codesketches.netlify.app
       github: https://github.com/izzee/sketchies
 
     - title: www.baggy.industries
-      description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections and showcase the group's art. Built with Next.js and integrated with Wagmi and RainbowKit In the process of being <a href="https://baggy2.netlify.app">redesigned</a>.
-      src: /images/baggy.png
+      description: A web3-enabled website for the Baggy Industries art collective. Used to launch 5 successful NFT collections and showcase the group's art. Built with Next.js and integrated with Wagmi and RainbowKit. Currently In the process of being <a href="https://baggy2.netlify.app">redesigned</a>.
+      src: /images/baggy.webp
       type: image
       link: https://baggy.industries
-    
 
-         
-  # - title: design
-  #   component: MediaGrid
-  #   examples: 
-  #   - title: test
-  #     type: image
-  #     src: images/placeholder.png
-
-  #   - title: test
-  #     type: image
-  #     src: images/placeholder.png
-    
-  #   - title: test
-  #     type: image
-  #     src: images/placeholder.png
-    
-  #   - title: test
-  #     type: image
-  #     src: images/placeholder.png
-    
-  #   - title: test
-  #     type: image
-  #     src: images/placeholder.png
-    
-  #   - title: test
-  #     type: image
-  #     src: images/placeholder.png
-  
+    - title: www.aca.nyc
+      description: The portfolio website of Arthur Chabon Architects. For this project, I created a tight, unobtrusive design, allowing for the firm's work to speak for itself. Developed using Nuxt.js and integrated with Decap CMS, enabling the client to update the site's content independently.
+      src: /images/aca.webp
+      type: image
+      link: https://aca.nyc
+      github: https://github.com/izzee/aca
+ 
   - title: 'painting'
     component: 'MediaGrid'
     examples:

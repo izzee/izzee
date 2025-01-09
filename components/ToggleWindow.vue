@@ -22,8 +22,8 @@
       <div class="content">
         <p class="description" v-html="description" />
         <div class="links">
-          <a class="link" :href="link">Link</a>
-          <a v-if="github" class="link" :href="github">Github</a>
+          <a class="link" :href="link">link</a>
+          <a v-if="github" class="link" :href="github">code</a>
         </div>
 
       </div>
