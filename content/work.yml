@@ -31,7 +31,7 @@ categories:
       link: https://baggy.industries
 
     - title: www.aca.nyc
-      description: The portfolio website of Arthur Chabon Architects. For this project, I created a minimal, unobtrusive design, allowing the firm's work speak for itself. Developed using Nuxt.js and integrated with Decap CMS.
+      description: The portfolio website of Arthur Chabon Architects. For this project, I created a minimal, unobtrusive design, allowing the firm's work to speak for itself. Developed using Nuxt.js and integrated with Decap CMS.
       src: /images/aca.webp
       type: image
       link: https://aca.nyc
