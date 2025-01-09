@@ -37,7 +37,7 @@ categories:
       link: https://aca.nyc
       github: https://github.com/izzee/aca
  
-  - title: 'painting'
+  - title: 'paintings'
     component: 'MediaGrid'
     examples:
     - title: ''
