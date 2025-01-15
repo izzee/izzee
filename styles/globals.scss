@@ -30,7 +30,7 @@ main {
   flex-direction: inherit;
   box-sizing: border-box;
 
-  p {
+  li, p {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -39,7 +39,7 @@ main {
     padding: 32px;
     border: 16px solid transparent;
 
-    p {
+    li, p {
       font-size: 24px;
       line-height: calc(32 / 24);
     }
@@ -51,6 +51,7 @@ main {
   
   @include bp(lg) {
     padding: 64px;
+    li, 
     p {
       font-size: 32px;
       line-height: 1.5;

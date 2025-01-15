@@ -49,7 +49,6 @@
     setFocusedCategory(category)
   }, 250)
 
-
 </script>
 
 <style lang="scss" scoped>
