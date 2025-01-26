@@ -62,12 +62,19 @@ export default defineNuxtConfig({
       Inter: '300..700'
     }
   },
+  
   content: {
     highlight: {
       // Theme used in all color schemes.
       theme: 'github-light',
     }
      
+  },
+
+  nitro: {
+    prerender: {
+      routes: ['/feed.xml'],
+    }
   },
 
 })

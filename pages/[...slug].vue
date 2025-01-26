@@ -8,6 +8,9 @@
           <Post :doc="doc" />
         </ContentDoc>
       </div>
+      <div class="bottom-nav">
+        <NuxtLink to="/feed">Back</NuxtLink>
+      </div>
     </main>
   </NuxtLayout>
   </div>
@@ -25,7 +28,35 @@
 
     @include bp(sm) {
       gap: 48px;
-      
     }
+  }
+
+  .bottom-nav {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    padding: 8px 0;
+    gap: 8px;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: $lavendar;
+    z-index: 2;
+       @include bp(sm) {
+      gap: 16px;
+      a {
+        font-size: 24px;
+
+        &:hover {
+          color: $darkorange;
+        }
+      }
+    }
+    @include bp(md) {
+      a {
+        font-size: 32px;
+      }
+    }
+
   }
 </style>
