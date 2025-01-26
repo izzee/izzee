@@ -4,8 +4,15 @@
     <main>
       <Nav/>
       <div class="main-content">
-        <ContentDoc v-slot="{ doc }">
-          <Post :doc="doc" />
+        <ContentDoc >
+          <template v-slot="{ doc }">
+            <Post :doc="doc" />
+          </template>
+
+          <template #not-found>
+            <p>404</p>
+          </template>
+          
         </ContentDoc>
       </div>
       <div class="bottom-nav">
