@@ -12,6 +12,8 @@
           <template #not-found>
             <p>404</p>
           </template>
+
+          <template #empty></template>
           
         </ContentDoc>
       </div>

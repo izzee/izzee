@@ -6,15 +6,15 @@
         <div class="main-content">
           <div class="feed">
             <ContentList path="/feed" v-slot="{ list }">
-              <NuxtLink 
+              <p 
                 v-for="article in list" 
                 :key="article._path" 
                 :href="article._path"
                 class="post"
               >
                 <p>{{ article.title }}</p>
-                <p>{{formatDate(article.date)}}</p>
-              </NuxtLink>
+                <!-- <p>{{formatDate(article.date)}}</p> -->
+              </p>
             </ContentList>
           </div>
         </div>
