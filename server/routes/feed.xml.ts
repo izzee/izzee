@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
 
   const config = useAppConfig()
   const docs = await serverQueryContent(event).sort({ date: -1 }).where({ _partial: false }).find()
-  const posts = docs.filter((doc) => doc?._path?.includes('/posts'))
+  const posts = docs.filter((doc) => doc?._path?.includes('/feed'))
 
   const feed = new RSS({
     title: config.info.title,
@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
       title: post.title ?? '-',
       url: `${config.info.site_url}/${post._path}`,
       date: post.date,
-      description:'',
+      description: 'asd',
     });
   }
   const feedString = feed.xml({ indent: true });
