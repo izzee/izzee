@@ -12,8 +12,7 @@
                 :href="article._path"
                 class="post"
               >
-                <p>{{ article.title }}</p>
-                <!-- <p>{{formatDate(article.date)}}</p> -->
+                {{ article.title }}
               </p>
             </ContentList>
           </div>
