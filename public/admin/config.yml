@@ -12,7 +12,7 @@ collections:
     folder: 'content/feed'
     format: 'frontmatter'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{fields.title}}'
     editor:
       preview: false
     fields:
