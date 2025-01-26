@@ -17,9 +17,6 @@
           
         </ContentDoc>
       </div>
-      <div class="bottom-nav">
-        <NuxtLink to="/feed">Back</NuxtLink>
-      </div>
     </main>
   </NuxtLayout>
   </div>
