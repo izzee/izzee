@@ -6,9 +6,10 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: 'posts'
-    label: 'Posts'
-    folder: 'content/posts'
+  - name: 'feed'
+    label: 'Feed'
+    label_singular: 'Post'
+    folder: 'content/feed'
     format: 'frontmatter'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
