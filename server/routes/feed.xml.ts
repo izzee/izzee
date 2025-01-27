@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
       title: post.title ?? '-',
       url: `${config.info.site_url}/${post._path}`,
       date: post.date,
-      description: 'asd',
+      description: post.description ?? '-',
     });
   }
   const feedString = feed.xml({ indent: true });
