@@ -2,8 +2,10 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: static/images
-public_folder: /images
+media_library:
+  name: uploadcare
+  config:
+    publicKey: abe206fb1b85e704acdf
 
 collections:
     - name: 'feed'

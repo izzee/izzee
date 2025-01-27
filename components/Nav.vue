@@ -9,7 +9,7 @@
     </NuxtLink>
     <NuxtLink to="/work#websites" class="work-link" prefetch>
       <p>work</p>
-      <video src="/images/work.mp4" autoplay muted="true" loop playsinline/>
+      <video src="https://ucarecdn.com/baaa7dae-ece7-46aa-9d07-e310a0b3a0f7/work.mp4" autoplay muted="true" loop playsinline/>
     </NuxtLink>
     <NuxtLink to="/about" class="about-link">
       <div class="icon"/>

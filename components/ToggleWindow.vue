@@ -10,6 +10,7 @@
         <NuxtImg 
           class="website-image" 
           :src="src"
+          provider="uploadcare"
         />
       </div>
     </div>
