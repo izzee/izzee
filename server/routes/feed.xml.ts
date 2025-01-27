@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   for (const post of posts) {
     feed.item({
       title: post.title ?? '-',
-      url: `${config.info.site_url}/${post._path}`,
+      url: `${config.info.site_url}${post._path}`,
       date: post.date,
       description: post.description ?? '-',
     });
