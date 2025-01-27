@@ -1,27 +1,43 @@
 <template>
   <div>
-  <NuxtLayout>
-    <ContentDoc v-slot="{ doc }">
-    <main>
-      <Nav/>
-      <div class="main-content">
-        <div class="feed">
-        <div class="post">
-            <div class="title">{{doc.placeholder}}</div>
+    <NuxtLayout>
+      <main>
+        <Nav/>
+        <div class="main-content">
+          <div class="feed">
+            <ContentList path="/feed" v-slot="{ list }">
+              <p 
+                v-for="article in list" 
+                :key="article._path" 
+                :href="article._path"
+                class="post"
+              >
+                {{ article.title }}
+              </p>
+            </ContentList>
           </div>
         </div>
-      </div>
-    </main>
-    </ContentDoc>
-  </NuxtLayout>
+      </main>
+    </NuxtLayout>
   </div>
 </template>
+<script setup>
+  const formatDate = (unformatted) => {
+    const date = new Date(unformatted);
+    return new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(date);
+  }
+</script>
 
 <style lang="scss" scoped>
 
   main {
     background-color: $purple;
   }
+  
   .main-content {
     border-color: $lavendar;
     padding: 0;
@@ -41,23 +57,24 @@
     display:flex;
     align-items: center;
     justify-content: space-between;
-    font-size:24px;
+    font-size: 24px;
     font-weight: 500;
     color: $lavendar;
     cursor: pointer;
+
     &:nth-child(even) {
-      background-color: $lavendar;
+      background-color: $lightpurple;
+      color: $lavendar;
     }
 
-    .title {
-      margin: auto;
+    &:hover {
+      color: $yellow;
     }
 
     @include bp(sm) {
-      padding: 64px;
-      font-size:32px;
+      padding: 72px 64px;
+      font-size: 32px;
       text-align: right;
-
     }
   }
   
