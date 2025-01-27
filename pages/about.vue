@@ -5,7 +5,7 @@
         <Nav/>
         <div class="main-content">
           <div class="bio">
-            <p class="bio-text" v-html="doc.bio"/>
+            <p class="bio-text" v-html="doc.text"/>
           </div>
 
           <div class="links">
