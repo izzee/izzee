@@ -32,6 +32,8 @@ collections:
         file: 'content/work.yml'
         format: 'yaml'
         create: false
+        editor:
+          preview: false
         fields:
           - name: 'categories'
             label: Categories
