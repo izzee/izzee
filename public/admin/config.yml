@@ -68,4 +68,4 @@ collections:
           preview: false
         fields: 
           - {label: 'Title', name: 'title', widget: 'hidden' }
-          - {label: 'Text', name: 'text', widget: 'string'}
+          - {label: 'Text', name: 'text', widget: 'text'}

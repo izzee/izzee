@@ -19,14 +19,14 @@ categories:
 
     - title: code sketches
       description: A website I built to showcase creative coding sketches from my time at the Recurse Center. Each of the sketches was primarily built within a three hour time frame based on a prompt. Built using Vite, Three.js, Motion One, and&nbsp;p5.js.
-      src: /images/code-sketches.webp
+      src: https://ucarecdn.com/14653722-efb5-4af6-8ac8-3d4cb35d4237/-/preview/1000x681/
       type: image
       link: https://codesketches.netlify.app
       github: https://github.com/izzee/sketchies
 
     - title: www.baggy.industries
       description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections and showcase the group's art. Built with Next.js and integrated with Wagmi and RainbowKit. Currently in the process of being <a href="https://baggy2.netlify.app">redesigned</a>.
-      src: https://ucarecdn.com/14653722-efb5-4af6-8ac8-3d4cb35d4237/-/preview/1000x681/
+      src: https://ucarecdn.com/9df80bbf-58e4-4bcc-b4c7-172051ba50d7/-/preview/1000x681/
       type: image
       link: https://baggy.industries
 
