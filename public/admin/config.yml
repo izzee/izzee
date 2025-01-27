@@ -6,17 +6,62 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: 'feed'
-    label: 'Feed'
-    label_singular: 'Post'
-    folder: 'content/feed'
-    format: 'frontmatter'
-    create: true
-    slug: '{{fields.title}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+    - name: 'feed'
+      label: 'Feed'
+      label_singular: 'Post'
+      folder: 'content/feed'
+      format: 'frontmatter'
+      create: true
+      slug: '{{fields.title}}'
+      editor:
+        preview: false
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string' }
+        - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+        - { label: 'Description', name: 'description', widget: 'string' }
+        - { label: 'Body', name: 'body', widget: 'markdown' }
+    
+    - label: "Pages"
+      name: "pages"
+      files:      
+      - name: 'work'
+        label: 'Work'
+        label_singular: 'Project'
+        file: 'content/work.yml'
+        format: 'yaml'
+        create: false
+        fields:
+          - name: 'categories'
+            label: Categories
+            label_singular: 'Category'
+            widget: list
+            create: false
+            fields: 
+              - { name: 'title', label: 'Title', widget: 'string' }
+              - {  name: 'component', label: 'Component', widget: 'select', options: ['ToggleWindows', 'MediaGrid'] }
+              - name: examples
+                label: Examples
+                label_singular: Example
+                widget: list
+                create: false
+                fields:
+                  - {name: title, label: Title, widget: string, required: false}
+                  - {name: description, label: Description, widget: string, required: false}
+                  - {name: src, label: src, widget: image, required: false}
+                  - {name: size, label: size, widget: select, options: ['half', 'full'], required: false}
+                  - {name: type, label: Type, widget: select, options: ['image', 'embed'], required: false}
+                  - {name: link, label: Link, widget: string, required: false}
+                  - {name: github, label: Github, widget: string, required: false}
+          
+      
+      - name: 'about'
+        label: 'About'
+        file: 'content/about.yml'
+        format: 'yaml'
+        create: false
+        slug: '{{title}}'
+        editor:
+          preview: false
+        fields: 
+          - {label: 'Title', name: 'title', widget: 'hidden' }
+          - {label: 'Text', name: 'text', widget: 'string'}
