@@ -7,7 +7,6 @@
           <div class="bio">
             <p class="bio-text" v-html="doc.text"/>
           </div>
-
           <div class="links">
             <button class="link" @click="toggleForm">
               <span>
