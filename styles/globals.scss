@@ -13,6 +13,10 @@ button {
   cursor: pointer;
 }
 
+body {
+  background: $purple;
+}
+
 main {
   min-height: 100dvh;
   display: flex;

@@ -1,42 +1,37 @@
 <template>
-  <NuxtLayout>
+  <div class="main-content">
     <ContentDoc v-slot="{ doc }">
-      <main>
-        <Nav/>
-        <div class="main-content">
-          <div class="bio">
-            <p class="bio-text" v-html="doc.text"/>
-          </div>
+      <div class="bio">
+        <p class="bio-text" v-html="doc.text"/>
+      </div>
 
-          <div class="links">
-            <button class="link" @click="toggleForm">
-              <span>
-                get in touch!
-              </span>
-            </button>
-            <div class="external-links">
-              <a class="link" href="https://github.com/izzee">github</a>
-              <a class="link" href="https://are.na/isaac">are.na</a>
-              <span class="link webring">
-                <a class="webring-link" href="https://ring.recurse.com/prev?id=36">
-                  <Arrow/>
-                </a>
-                <span>
-                <a data-rc-uuid="38b9e773-49b6-4735-b4d6-ef3329094db8" href="https://ring.recurse.com/">
-                  recurse webring
-                </a>
-                </span>
-                <a class="webring-link" href="https://ring.recurse.com/next?id=36">
-                  <Arrow variant="flipped"/>
-                </a>
-              </span>
-            </div>
-          </div>
-          <Form :toggled="isFormToggled" :toggleForm="toggleForm"/>
+      <div class="links">
+        <button class="link" @click="toggleForm">
+          <span>
+            get in touch!
+          </span>
+        </button>
+        <div class="external-links">
+          <a class="link" href="https://github.com/izzee">github</a>
+          <a class="link" href="https://are.na/isaac">are.na</a>
+          <span class="link webring">
+            <a class="webring-link" href="https://ring.recurse.com/prev?id=36">
+              <Arrow/>
+            </a>
+            <span>
+            <a data-rc-uuid="38b9e773-49b6-4735-b4d6-ef3329094db8" href="https://ring.recurse.com/">
+              recurse webring
+            </a>
+            </span>
+            <a class="webring-link" href="https://ring.recurse.com/next?id=36">
+              <Arrow variant="flipped"/>
+            </a>
+          </span>
         </div>
-      </main>
+      </div>
+      <Form :toggled="isFormToggled" :toggleForm="toggleForm"/>
     </ContentDoc>
-  </NuxtLayout>
+  </div>
 </template>
 
 <script setup>
@@ -51,16 +46,17 @@
 
 <style lang="scss" scoped>
 
-  main {
-    background-color: $darkgray;
-  }
-  
   .main-content {
     justify-content: space-between;
     position: relative;
     border-color: $gray;
+    background: $darkgray;
     gap: 16px;
-    overflow: scroll;
+    overflow-y: scroll;
+    scrollbar-color: $gray $darkgray;
+    @include bp(md) {
+      overflow: hidden;
+    }
   }
 
   .bio-text {

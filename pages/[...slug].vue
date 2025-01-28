@@ -1,25 +1,18 @@
 <template>
-  <div>
-  <NuxtLayout>
-    <main>
-      <Nav/>
-      <div class="main-content">
-        <ContentDoc >
-          <template v-slot="{ doc }">
-            <Post :doc="doc" />
-          </template>
-
-          <template #not-found>
-            <p>404</p>
-          </template>
-
-          <template #empty></template>
-          
-        </ContentDoc>
-      </div>
-    </main>
-  </NuxtLayout>
-  </div>
+  <main>
+    <Nav/>
+    <div class="main-content">
+      <ContentDoc >
+        <template v-slot="{ doc }">
+          <Post :doc="doc" />
+        </template>
+        <template #not-found>
+          <p>404</p>
+        </template>
+        <template #empty></template>
+      </ContentDoc>
+    </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>

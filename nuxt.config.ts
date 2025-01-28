@@ -29,7 +29,15 @@ export default defineNuxtConfig({
           async: true
         }
       ]
-    }
+    },
+    pageTransition: { 
+      name: 'page', 
+      mode: 'out-in' 
+    },
+    layoutTransition: { 
+      name: 'layout', 
+      mode: 'out-in' 
+    },
   },
   routeRules: {
     '/': { prerender: true },
@@ -82,6 +90,7 @@ export default defineNuxtConfig({
       cdnURL: '/',
     }
   },
+  
 
 
 })

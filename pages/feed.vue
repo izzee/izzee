@@ -1,26 +1,20 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <main>
-        <Nav/>
-        <div class="main-content">
-          <div class="feed">
-            <ContentList path="/feed" v-slot="{ list }">
-              <p 
-                v-for="article in list" 
-                :key="article._path" 
-                :href="article._path"
-                class="post"
-              >
-                {{ article.title }}
-              </p>
-            </ContentList>
-          </div>
-        </div>
-      </main>
-    </NuxtLayout>
+  <div class="main-content">
+    <div class="feed">
+      <ContentList path="/feed" v-slot="{ list }">
+        <p 
+          v-for="article in list" 
+          :key="article._path" 
+          :href="article._path"
+          class="post"
+        >
+          {{ article.title }}
+        </p>
+      </ContentList>
+    </div>
   </div>
 </template>
+
 <script setup>
   const formatDate = (unformatted) => {
     const date = new Date(unformatted);
@@ -34,12 +28,10 @@
 
 <style lang="scss" scoped>
 
-  main {
-    background-color: $purple;
-  }
-  
   .main-content {
     border-color: $lavendar;
+    background: $purple;
+
     padding: 0;
     gap: 16px;
     display: flex;

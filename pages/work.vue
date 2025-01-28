@@ -1,32 +1,27 @@
 <template>
-  <NuxtLayout>
+  <div class="main-content" ref="rootElement">
     <ContentDoc v-slot="{ doc }">
-      <main>
-        <Nav/>
-        <div class="main-content" ref="rootElement">
-          <WorkCategory 
-            v-for="category in doc.categories" 
-            :title="category.title"
-            :component="category.component"
-            :examples="category.examples"
-            :rootElement="rootElement"
-            @intersect="onIntersect"
+      <WorkCategory 
+        v-for="category in doc.categories" 
+        :title="category.title"
+        :component="category.component"
+        :examples="category.examples"
+        :rootElement="rootElement"
+        @intersect="onIntersect"
+      />
+      <div class="work-nav">
+        <template v-for="(category, index) in doc.categories">
+          <span v-if="index !== 0" class="dot"/>
+          <a 
+            :class="focusedCategory === category.title && 'focused'"
+            :href="`#${category.title}`" 
+            @click="() => setFocusedCategory(category.title)"
+            v-html="category.title"
           />
-        </div>
-        <div class="work-nav">
-          <template v-for="(category, index) in doc.categories">
-            <span v-if="index !== 0" class="dot"/>
-            <a 
-              :class="focusedCategory === category.title && 'focused'"
-              :href="`#${category.title}`" 
-              @click="() => setFocusedCategory(category.title)"
-              v-html="category.title"
-            />
-          </template>
-        </div>
-      </main>
+        </template>
+      </div>
     </ContentDoc>
-  </NuxtLayout>
+  </div>
 </template>
 
 <script setup>
@@ -52,17 +47,6 @@
 </script>
 
 <style lang="scss" scoped>
-
-  main {
-    background: $mediumblue;
-    background-attachment: fixed;
-    @include bp(sm) {
-      &:before {
-        display: none;
-      }
-    }
-  }
-
   .main-content {
     text-align: center;
     align-items: center;
@@ -71,7 +55,7 @@
     border-bottom: 0;
     padding-top: 0;
     border-color: $blue;
-    background: inherit;
+    background: $mediumblue;
     scroll-behavior: smooth;
     scroll-padding-top: 16px;
     position: relative;
@@ -100,9 +84,9 @@
     }
   }
 
-
   .work-nav {
-    position: sticky;
+    width: 100%;
+    position: fixed;
     bottom: 0;
     display: flex;
     padding: 8px 0;

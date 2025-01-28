@@ -180,12 +180,12 @@
       display: flex;
       position: absolute;
       width: 100%;
+      height: 100%;
       fill: $yellow;
       opacity: 0;
       transform: translateX(100%);
       transition: transform .5s, opacity .25s;
       pointer-events: none;
-
     }
 
     @include bp(sm) {
@@ -228,7 +228,6 @@
     display: flex;
     flex-direction: column;
     width: calc(100vw - 32px);
-    transition: transform 2s;
 
     a {
       text-align: center;
@@ -243,6 +242,7 @@
 
     .home-link {
       pointer-events: none;
+      cursor: url("/images/heart.png"), auto;
 
       .arrow {
         display: none;
@@ -258,7 +258,7 @@
 
       .home-link {
         pointer-events: auto;
-        cursor: default;
+        // cursor: default;
         .icon {
           transform: scaleY(0);
           background-image: url("/images/eye.svg");
@@ -269,6 +269,7 @@
       }
 
       .about-link {
+        cursor: url("/images/thought-balloon.png"), auto;
         .icon {
           max-width: 100%;
           background-size: auto 50%;
@@ -301,6 +302,7 @@
       .work-link {
         position: relative;
         overflow: hidden;
+        cursor: url("/images/wand.png"), auto;
         p {
           z-index: 1;
           transition: transform 3s, opacity 3s, text-shadow 3s, filter 3s;
@@ -334,6 +336,8 @@
       }
 
       .feed-link {
+        cursor: url("/images/apple.png"), auto;
+
         &:hover{ 
           background-color: $red;
           .mouth {
