@@ -72,7 +72,7 @@
     border-radius: 100%;
     transition: background-color .25s;
     box-sizing: content-box;
-    font-size: 24px;;
+    font-size: 24px;
 
     background-color: $green;
 
@@ -80,18 +80,14 @@
     svg {
       fill: white;
       margin: 4px;
-      transition: transform .25s;
+      transition: transform .5s;
     }
 
     @include bp(sm) {
-      top: 16px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-
-      svg {
-        margin: 8px;
-      }
+      top: 12px;
+      right: 12px;
+      width: 40px;
+      height: 40px;
     }
     
   }
