@@ -5,34 +5,34 @@ categories:
     examples: 
     - title: www.infinity8rocks.com
       description: An online store I designed and built for the Infinity8Rocks art collective. Created to showcase the group’s eclectic visual style while balancing maximalist net art aesthetics with and clean, functional design. Built using Nuxt.js and Shopify.
-      src: https://ucarecdn.com/e3435a52-b0be-4704-bf4c-0446e6cb1f18/-/preview/1000x681/
+      src: /images/infinity8rocks.webp
       type: image
       link: https://infinity8rocks.com
       github: https://github.com/izzee/infinityrocks
 
     - title: www.disco.cloud
       description: A landing page I designed for an open-source cloud hosting startup. The design emphasizes friendliness and approachability while showcasing the product's technical sophistication. Developed using Next.js and TypeScript.
-      src: https://ucarecdn.com/d593bca5-1849-4885-bac7-f5ee6f640923/-/preview/1000x681/
+      src: /images/disco.webp
       type: image
       link: https://disco.cloud
       github: https://github.com/izzee/disco
 
     - title: code sketches
       description: A website I built to showcase creative coding sketches from my time at the Recurse Center. Each of the sketches was primarily built within a three hour time frame based on a prompt. Built using Vite, Three.js, Motion One, and&nbsp;p5.js.
-      src: https://ucarecdn.com/14653722-efb5-4af6-8ac8-3d4cb35d4237/-/preview/1000x681/
+      src: /images/code-sketches.webp
       type: image
       link: https://codesketches.netlify.app
       github: https://github.com/izzee/sketchies
 
     - title: www.baggy.industries
       description: A website for the Baggy Industries art collective. Used to launch 5 successful NFT collections and showcase the group's art. Built with Next.js and integrated with Wagmi and RainbowKit. Currently in the process of being <a href="https://baggy2.netlify.app">redesigned</a>.
-      src: https://ucarecdn.com/9df80bbf-58e4-4bcc-b4c7-172051ba50d7/-/preview/1000x681/
+      src: /images/baggy.webp
       type: image
       link: https://baggy.industries
 
     - title: www.aca.nyc
       description: The portfolio website of Arthur Chabon Architects. For this project, I created a minimal, unobtrusive design, allowing the firm's work to speak for itself. Developed using Nuxt.js and integrated with Decap CMS.
-      src: https://ucarecdn.com/1d87bf9e-40a3-4285-bc6a-8c1cff33f1f4/-/preview/1000x681/
+      src: /images/aca.webp
       type: image
       link: https://aca.nyc
       github: https://github.com/izzee/aca
@@ -43,143 +43,143 @@ categories:
     - title: ''
       type: image
       size: full
-      src: https://ucarecdn.com/9e930cbf-6d03-429c-bc30-9a7d21a807c4/-/preview/1000x565/
+      src: /images/cowboy.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/a0aad9b5-b918-4253-bf0a-e37df20a43ff/
+      src: /images/xetamorph1.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/a2fb41f4-2287-4dc4-8bd4-1ba289a3b612/-/preview/1000x1000/
+      src: /images/eye.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/fc3e1ccb-efe2-4bc1-91d5-9fb196bed67b/-/preview/1000x1000/
+      src: /images/click-demon.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/bba8dfee-22bf-4004-992a-b8fc0f0a9b9a/-/preview/1000x1000/
+      src: /images/puppet.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/9d18d0b9-8f2c-4de8-ad2f-3d38ff8447f7/-/preview/1000x1000/
+      src: /images/portrait.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/69cd3b28-587d-4e2c-a0f4-f1cff2115884/-/preview/1000x1000/
+      src: /images/flower-foot.jpg
     - title: ''
       type: image
       size: full
-      src: https://ucarecdn.com/c2512468-1cdd-4286-ae45-0c8484391f15/
+      src: /images/usbkiller.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/d495e153-e253-42b1-b651-7e02906724c9/-/preview/1000x1000/
+      src: /images/ancient.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/59c3e0ff-f5a7-4092-87f4-99108bf56eb0/-/preview/1000x1000/
+      src: /images/catch.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/2dbfaabc-4a2d-46a3-8706-b91b99a271b3/-/preview/1000x1000/
+      src: /images/isalina.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/4fbb1fed-2b2a-4edf-a2f7-fb4d30df74e9/-/preview/1000x1000/
+      src: /images/agent.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/b254527f-c1fc-4a0a-9c23-6d09646a43af/-/preview/1000x1000/
+      src: /images/bait.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/01dfea8b-f0f5-4c67-acfb-6415349e5f25/-/preview/1000x1000/
+      src: /images/birdkiller.jpg
     - title: ''
       type: image
       size: full
-      src: https://ucarecdn.com/2babbd0d-daa1-4ac8-92e6-d315b16fa0d7/-/preview/1000x562/
+      src: /images/doodle5.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/e343b6a6-d4c3-45ef-9f8e-a66e9a51d95c/-/preview/1000x1000/
+      src: /images/melting.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/b735e3db-844d-4041-9391-0d0ee043d6cc/
+      src: /images/skeleton-grin.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/88e35ac9-104d-41ae-8c99-bae54ee2bcb2/-/preview/1000x1000/
+      src: /images/slanky.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/1a36955f-9412-4974-b8c0-9bcd26b25115/
+      src: /images/throneroom.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/33672eec-1c8a-473f-bdb7-69bf67457b1c/
+      src: /images/visitor.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/3ded9210-71ec-4d5b-ad71-cc1e9cb4f5c0/
+      src: /images/zetamorph.jpg
     - title: ''
       type: image
       size: full
-      src: https://ucarecdn.com/a26e3cdf-f98b-4ddf-80b3-14bd5e038a72/-/preview/1000x639/
+      src: /images/inverted.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/9974dbc1-9144-4c90-9d28-8e7d4ee6775b/-/preview/1000x1000/
+      src: /images/horizon-zapper.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/16a6b7ea-764e-47ea-b1d2-f33315fada9a/-/preview/1000x1000/
+      src: /images/helmet.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/cb21c110-7fac-44b8-831e-a3f2d8654b95/-/preview/600x600/
+      src: /images/dispersion.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/494ce7ba-db96-45c2-aeb6-bd4d1c978119/-/preview/1000x1000/
+      src: /images/husky.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/8cc243a3-2392-4d10-bbf3-526d02548326/-/preview/1000x1000/
+      src: /images/entity.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/cfae3d81-bb2c-4119-984a-9450ba2e696d/
+      src: /images/snakehand.jpg
     - title: ''
       type: image
       size: full
-      src: https://ucarecdn.com/b4f56a00-45ad-4b3d-aecc-44349332646e/-/preview/1000x713/
+      src: /images/running-soaked.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/67f85068-55a3-48f1-9ce3-0d3ee0fda2d3/-/preview/1000x1000/
+      src: /images/dude1.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/8390a47a-d70b-4b31-a408-ef1ef354e9fc/-/preview/1000x1000/
+      src: /images/lasereyes.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/ed9ef4d4-a32a-4070-8c47-d8888c17e84f/-/preview/1000x1000/
+      src: /images/dude2.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/64ae430a-0a53-4cde-8c20-9d4557aee586/-/preview/1000x1000/
+      src: /images/pikachu.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/74bbde0c-f39f-4a6b-b953-6f121ea4b746/
+      src: /images/yugi.jpg
     - title: ''
       type: image
       size: half
-      src: https://ucarecdn.com/51cd5da6-3e77-48d9-91f7-c39d8822cacf/-/preview/1000x1000/
+      src: /images/pikachu2.jpg
 
   
   - title: 'videos'
@@ -188,7 +188,7 @@ categories:
     - title: ''
       type: image
       size: full
-      src: https://ucarecdn.com/1c0b1f36-aa82-4c09-8c9e-37984e06c391/-/preview/1000x750/
+      src: /images/projections.jpg
     - title: 'Open Sores'
       type: embed
       src: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/459918047?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Open Sores"></iframe></div>'

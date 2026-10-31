@@ -15,7 +15,6 @@
         <LazyNuxtImg 
           v-if="example.type === 'image'" 
           :src="example.src"
-          provider="uploadcare"
         />   
         <div
           class="embed-wrapper"
