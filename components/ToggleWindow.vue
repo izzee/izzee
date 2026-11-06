@@ -23,7 +23,6 @@
         <p class="description" v-html="description" />
         <div class="links">
           <a class="link" :href="link">link</a>
-          <a v-if="github" class="link" :href="github">code</a>
         </div>
 
       </div>
@@ -38,7 +37,7 @@
 
   const hasBeenToggled = ref(false);
 
-  const props = defineProps(["title", "src", "year", "description", "link", "github", "toggled", "onIntersect"])
+  const props = defineProps(["title", "src", "year", "description", "link", "toggled", "onIntersect"])
 
   const emit = defineEmits(["toggle"]);
 
