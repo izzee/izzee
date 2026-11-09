@@ -16,7 +16,6 @@
       :src="example.src"
       :description="example.description"
       :link="example.link"
-      :github="example.github"
       :options="intersectOptions"
       :onIntersect="() => onIntersect(title)"
       @toggle="setToggled(index)"
